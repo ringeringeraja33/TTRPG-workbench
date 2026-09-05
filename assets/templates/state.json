@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "campaign_id": "",
+  "revision": 0,
+  "audience": "gm-private",
+  "rules": {"system": "", "edition": "", "sources": [], "house_rules": []},
+  "session": {"number": 0, "mode": "", "dice_authority": "player", "boundaries": []},
+  "world": {"time": "", "location": "", "facts": [], "clocks": []},
+  "characters": [],
+  "npcs": [],
+  "combat": {"active": false, "round": 0, "initiative": [], "effects": []},
+  "clues": [],
+  "relationships": [],
+  "gm_secrets": [],
+  "public_facts": [],
+  "events": [],
+  "pending": {"decision": null, "roll": null},
+  "last_resolved_event_id": null,
+  "unresolved_rules": [],
+  "next_scene": ""
+}

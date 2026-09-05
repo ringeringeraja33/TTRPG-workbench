@@ -1,0 +1,6 @@
+interface:
+  display_name: "TTRPG 工作台"
+  short_description: "依据本地规则与官方资料设计模组、核验角色、开发规则并主持跑团"
+  default_prompt: "使用 $ttrpg-workbench，根据我的资料和指定规则版本完成本次跑团任务。"
+policy:
+  allow_implicit_invocation: true
