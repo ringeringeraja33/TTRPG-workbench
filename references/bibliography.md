@@ -85,3 +85,35 @@ Hite, Kenneth. *Trail of Cthulhu*；GUMSHOE系统设计：Robin D. Laws。中文
 本技能的证据账、模组走查、状态隔离和测试组织属于本项目原创工作流程。没有为这些流程虚构学术论文或官方背书。跨系统通用建议明确标为设计建议；涉及具体游戏规则时再附上述依据。
 
 仅做文件清点的其他书籍、模组、私人材料不自动成为参考文献。新增来源必须记录实际读到的章节、版本与用途；不以整份个人藏书目录代替引用列表。
+
+## COC-HARM
+
+Chaosium. “Hit Points, Wounds, and Healing.” [官方Wiki](https://cocwiki.chaosium.com/rules/hit-points-wounds-and-healing.html)。访问2026-09-06。核查单次重伤、立即死亡等号、濒死首检时机、自然恢复。与本地译本PDF102–104交叉比较，采用官方单次伤害≥最大HP条件。
+
+## DND-DEEP
+
+Wizards of the Coast. *System Reference Document 5.2.1*. [官方入口](https://www.dndbeyond.com/srd)。本地`SRD_CC_v5.2.1.pdf`。本轮重点读取PDF5–10、15–22、47–48、83、86–88、90–92、105、185、187、190，涵盖操作参考与一级战士使用的条目。未完成全部364页语义审校。
+
+## COM-LOCAL
+
+*迷雾之城快速开局手册*，本地译稿v0.75，`com迷雾之城快速开局手册v0.75.pdf`，23页。重点核查PDF9–12：动作、标签、状态、燃尽、活力。出版方Son of Oak；译稿作者和与现行版一致性未完成核实，不复制全文。
+
+## LOM-LOCAL
+
+MrGTM / MrGentleMan. *《诡秘之主》跑团规则*，本地文件标v4.0，35页，PDF2、5–6。基于CoC7的同人作品；作者自述适用序列9–6。核查SPI生成、MP替换与低资源状态入口。作者自述未获IP授权，本技能不据其免费传播声明推导授权。
+
+## GUGDOVE-425
+
+倾墨. *Fate GugDove*，规则4.2.5，`圣杯规则v4.2.5.pdf`，158页，PDF1–4。卡版本1.76.3/召唤物1.0；Type-Moon同人。与GUGDOVE-LOCAL的5.0/5.04候选分别记录。
+
+## FATE-ACTION
+
+Evil Hat Productions. *Fate Condensed*: [Taking Action, Rolling the Dice](https://fate-srd.com/fate-condensed/taking-action-rolling-dice)。访问2026-09-06。核查骰式、结果级别、四动作、援引；伤害另用FATE-HARM。概述与原创算例，不全文复制。
+
+## BITD-PROCEDURES
+
+John Harper. *Blades in the Dark SRD*: [Action Roll](https://bladesinthedark.com/action-roll)、[Resistance & Armor](https://bladesinthedark.com/resistance-armor)、[Progress Clocks](https://bladesinthedark.com/progress-clocks)、[Downtime](https://bladesinthedark.com/downtime)。访问2026-09-06。分别支持权限/加骰、抵抗/护甲、时钟、停工顺序；未用概览代替停工各子规则。
+
+## TOC-DEEP
+
+*TOC克苏鲁迷踪-玩家手册-数字版.pdf*，同TOC-LOCAL版本。新增读取PDF18–19、38–43；支持职业折扣、预算、核心线索、池支出、重试与团队互利。与通用GUMSHOE-SRD保持区分。

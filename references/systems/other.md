@@ -13,3 +13,7 @@
 ## 本页参考
 
 [GUGDOVE-LOCAL](../bibliography.md#gugdove-local)。具体核查范围以对应书目条目为准。
+
+## 本地正文补充
+
+[迷雾之城快启](city-of-mist.md)提供标签/状态/燃尽/活力流程；[同人规则差异](local-homebrew.md)确认诡秘SPI接口与圣杯4.2.5卡片版本。它们已有部分正文核查，但尚未完整认证角色和全部战斗。

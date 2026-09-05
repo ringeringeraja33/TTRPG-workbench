@@ -9,3 +9,7 @@
 ## 本页参考
 
 [GUMSHOE-SRD](../bibliography.md#gumshoe-srd)、[TOC-LOCAL](../bibliography.md#toc-local)。具体核查范围以对应书目条目为准。
+
+## 本地玩家手册已深化
+
+[克苏鲁迷踪程序](trail-of-cthulhu.md)覆盖创建预算、调查与一般检定、掷前支出和团队互利。不能把通用SRD直接当成本手册全部规则。

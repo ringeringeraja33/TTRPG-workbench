@@ -1,10 +1,68 @@
 # TTRPG Workbench
 
+[English](#english) | [简体中文](#简体中文)
+
+## English
+
+A Codex skill for TTRPG rules research, adventure design, character creation, homebrew development, and game mastering, with source citations.
+
+The skill uses local materials supplied by the user and official public rules, keeping systems and editions separate. Its primary focus is Call of Cthulhu 7th edition, with topic-specific references for D&D, Trail of Cthulhu, City of Mist, Fate Condensed, Blades in the Dark, and selected local homebrew systems. See [coverage and limitations](references/coverage.md) for the scope of support.
+
+### Usage
+
+Save the complete repository directory as `$CODEX_HOME/skills/ttrpg-workbench`. If `CODEX_HOME` is unset, use `.codex/skills/ttrpg-workbench` under your home directory. Keep `SKILL.md` and its subdirectories together.
+
+Example prompts:
+
+- “Use $ttrpg-workbench to check a CoC7 rule and cite the source and page.”
+- “Use $ttrpg-workbench to design a three-hour investigation for three players.”
+- “Use $ttrpg-workbench to create a character for a specified edition, showing choices and calculations.”
+- “Use $ttrpg-workbench as the Keeper; players roll their own dice.”
+
+Provide your own local rulebooks. Specify the library directory or invoke the skill from an existing TTRPG library. The skill locates files through the library inventory and does not depend on the author's computer paths.
+
+### Detailed rules and worked examples
+
+- [CoC7 procedures](references/systems/coc7-procedures.md) and [journalist build ledger](assets/examples/coc7-journalist.md)
+- [D&D 2024 / SRD 5.2.1 procedures](references/systems/dnd2024-procedures.md) and [level-one Fighter](assets/examples/dnd2024-fighter.md)
+- [Local rulebook topic locator](references/rule-locator.md)
+- [Original investigation scenario](assets/examples/harbor-investigation.md) and [homebrew design lab](references/rules-design-lab.md)
+
+Each procedure identifies its edition, evidence, examples, and remaining gaps. Search hits are not treated as verified rules.
+
+### References and citations
+
+- [Bibliography and source verification status](references/bibliography.md)
+- [Citation guidelines and examples](references/citation-guide.md)
+- [Third-party sources and attribution](THIRD_PARTY_NOTICES.md)
+- [Source retrieval workflow](references/evidence.md)
+
+Responses cite the materials actually used. Official rules, translator notes, GM rulings, and original design suggestions are identified separately. The repository contains original skill files; personal book collections, private campaigns, character secrets, and local build caches are excluded.
+
+The README is bilingual. Most skill instructions, references, and templates are currently written in Chinese.
+
+### Tools
+
+Python 3.11 or later is required. The dice tool uses the standard library; dependencies for reading PDFs and spreadsheets are listed in `requirements.txt`.
+
+```sh
+python -m pip install -r requirements.txt
+python -X utf8 scripts/test_tools.py
+python -X utf8 scripts/test_rules_math.py
+python -X utf8 scripts/dice.py probability 1d20 11 --mode advantage
+```
+
+See [tool documentation](references/tools.md) for commands and limitations, and [validation scope](references/validation.md) for checks performed. The skill has not undergone complete validation for every system or live playtesting of its sample adventure.
+
+---
+
+## 简体中文
+
 用于Codex的TTRPG综合技能：查询规则、设计模组、核验角色卡、评估自制规则，并提供备团、现场辅助与直接主持流程。
 
-以用户提供的本地资料和官方公开规则为依据，按系统与版本检索。当前优先支持CoC7，包含D&D、Fate Condensed、Blades、GUMSHOE、BRP及其他系统的分级参考；具体范围见 [覆盖说明](references/coverage.md)。
+以用户提供的本地资料和官方公开规则为依据，按系统与版本检索。当前优先支持CoC7，包含D&D、克苏鲁迷踪、迷雾之城、Fate Condensed、Blades及部分本地同人系统的分主题参考；具体范围见 [覆盖说明](references/coverage.md)。
 
-## 使用
+### 使用
 
 将本仓库完整目录保存为 `$CODEX_HOME/skills/ttrpg-workbench`；未设置CODEX_HOME时使用用户主目录下的 `.codex/skills/ttrpg-workbench`。保留SKILL.md及其子目录结构。
 
@@ -17,7 +75,16 @@
 
 本地规则书由用户自行提供。先指定资料根目录，或在现有TTRPG资料库中调用；技能通过资料清单定位文件，不依赖作者电脑路径。
 
-## 参考与引用
+### 详细规则与算例
+
+- [CoC7程序](references/systems/coc7-procedures.md)及[记者创建台账](assets/examples/coc7-journalist.md)
+- [D&D2024/SRD5.2.1程序](references/systems/dnd2024-procedures.md)及[一级战士](assets/examples/dnd2024-fighter.md)
+- [本地规则主题定位](references/rule-locator.md)
+- [原创调查场景](assets/examples/harbor-investigation.md)及[规则设计实验](references/rules-design-lab.md)
+
+每项程序说明版本、证据、算例和仍需查证的内容；检索命中不算规则已验证。
+
+### 参考与引用
 
 - [参考文献与来源核查状态](references/bibliography.md)
 - [引用规范和实例](references/citation-guide.md)
@@ -26,13 +93,14 @@
 
 每次回答引用实际使用的资料。官方规则、译者注、主持裁定和原创建议分开标注。仓库提供原创技能文件，不包含个人藏书、私密战役、角色秘密或本地构建缓存。
 
-## 工具
+### 工具
 
 Python 3.11及以上。骰具使用标准库；PDF、表格读取依赖见requirements.txt。
 
 ```sh
 python -m pip install -r requirements.txt
 python -X utf8 scripts/test_tools.py
+python -X utf8 scripts/test_rules_math.py
 python -X utf8 scripts/dice.py probability 1d20 11 --mode advantage
 ```
 

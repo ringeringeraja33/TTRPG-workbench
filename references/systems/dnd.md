@@ -17,3 +17,7 @@
 ## 本页参考
 
 [DND-SRD](../bibliography.md#dnd-srd)。具体核查范围以对应书目条目为准。
+
+## 2024详细程序
+
+[SRD5.2.1操作参考](dnd2024-procedures.md)包括行动经济、伤害、创建、休息和施法限制；[一级战士示例](../../assets/examples/dnd2024-fighter.md)列出具体来源与计算。其他版次从[主题页码定位](../rule-locator.md)查各自书内正文。

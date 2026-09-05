@@ -9,3 +9,7 @@
 ## 本页参考
 
 [BITD-CORE](../bibliography.md#bitd-core)。具体核查范围以对应书目条目为准。
+
+## 已深化程序
+
+[叙事系统程序](fate-blades-procedures.md)补充已查证的行动、后果与状态流程；原入口中未核验范围现以该页及[覆盖表](../coverage.md)为准。

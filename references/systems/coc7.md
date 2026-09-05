@@ -17,3 +17,7 @@
 ## 本页参考
 
 [COC-Q](../bibliography.md#coc-q)、[COC-RES](../bibliography.md#coc-res)、[COC-LOCAL-CORE](../bibliography.md#coc-local-core)、[COC-LOCAL-Q](../bibliography.md#coc-local-q)。具体核查范围以对应书目条目为准。
+
+## 深入规则与示例
+
+使用[CoC7程序](coc7-procedures.md)处理创建、近战、重伤、SAN、追逐和成长；查[记者卡台账](../../assets/examples/coc7-journalist.md)。单次伤害等于最大HP时，官方Wiki与本地译文冲突已在程序页记录并修正。
