@@ -1,10 +1,22 @@
 """Meaningful mathematical, rejection, and local-reader regression checks."""
-import tempfile, unittest, zipfile
+import tempfile, unittest, zipfile, subprocess, sys, json
 from pathlib import Path
 from dice import distribution, probability, roll
 from library import units, classify
 
 class ToolTests(unittest.TestCase):
+    def test_inventory_default_does_not_index_itself(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d)
+            (root/'规则.txt').write_text('调查规则',encoding='utf-8')
+            (root/'索引').mkdir()
+            (root/'索引'/'缓存.txt').write_text('缓存内容',encoding='utf-8')
+            (root/'AGENTS.md').write_text('目录说明',encoding='utf-8')
+            (root/'资料索引.md').write_text('索引入口',encoding='utf-8')
+            for _ in range(2):
+                subprocess.run([sys.executable, '-X', 'utf8', str(Path(__file__).with_name('library.py')), 'inventory', str(root)], check=True, capture_output=True)
+                rows=json.loads((root/'索引'/'local-inventory.json').read_text(encoding='utf-8'))
+                self.assertEqual([row['path'] for row in rows], ['规则.txt'])
     def test_dice_distribution(self):
         d=distribution('2d6'); self.assertEqual(sum(d.values()),36); self.assertEqual(d[7],6)
         f=distribution('4dF'); self.assertEqual(sum(f.values()),81); self.assertEqual(f[0],19); self.assertEqual(f[-4],1)

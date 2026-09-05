@@ -23,4 +23,23 @@ python -X utf8 scripts/test_tools.py
 
 ## 已验证算例工具
 
-`python -X utf8 scripts/test_rules_math.py`复现12组规则算例。`rules_math.py`只提供d20命中概率、购点成本、抗性次序、CoC阈值/单次伤害和GUMSHOE支出概率，不掷骰、不校验完整角色。CoC伤害函数采用官方Wiki等号修正，不处理溺水等特殊规则；不能用它覆盖所有死亡原因。
+`python -X utf8 scripts/test_rules_math.py`复现原12组规则算例。`rules_math.py`提供d20命中概率、购点成本、抗性次序、CoC阈值/单次伤害、GUMSHOE支出概率；本轮增加CoC成功等级、近战防御平手、SAN门槛、技能成长、追逐参与者AP、D&D死亡豁免与专注DC。不掷骰、不校验完整角色。CoC伤害函数采用官方Wiki等号修正，不处理溺水等特殊规则；不能用它覆盖所有死亡原因。
+
+## 可执行主持与完整检查
+
+- `session.py` 用Python标准库SQLite持久化经核定的状态。命令、事件合同和玩家投影见[会话账本](session-runtime.md)。
+- `python -X utf8 -m unittest discover -s scripts -p "test_*.py"` 运行所有工具与状态边界测试；需要requirements.txt内的既有资料读取依赖。
+- `python -X utf8 scripts/replay_acceptance.py --output "<index_root>/acceptance-new"` 在全新目录运行两个20玩家回合的预设回放；保留逐回合JSON、Markdown、冷恢复与最终状态。输出目录存在时拒绝覆盖。
+- 接入真实会话前先阅读工具边界：规则计算函数不决定内容，账本不自动执行职业能力，玩家视图也不能识别被错误标为公开的秘密文字。
+
+## 索引默认位置
+
+`python -X utf8 scripts/library.py inventory "<资料库>"`默认写入`<资料库>/索引/local-inventory.json`；仍可用`--output`显式指定位置。扫描会跳过`索引`目录及资料入口文件，避免把旧清单、缓存和核查记录再次当作规则书。存在本机路径配置时按其`index_root`传入输出路径。
+
+## Extended mechanics and scenario checks
+
+`rules_extended.py` exports `coc_volley_plan`, `coc_volley_hits`, `dnd_slot_cast`, `fate_absorb`, `fate_recovery`, `blades_vice` and `blades_downtime_cost`. Import these explicit-input functions from a script with `scripts/` on the Python path. Read [scope and sources](systems/advanced-mechanics.md) before applying results; no function rolls dice or writes campaign state.
+
+`python -X utf8 scripts/campaign_check.py <private-plan.json>` checks the graph schema documented in its module header. A nonzero exit indicates unresolved structural errors. `--player pc1` exports only explicitly visible clue records; destination IDs must also be safe before publication. This is a structural check, not proof that players can solve the mystery.
+
+For an approved finite-resource increase, submit `{"kind":"resize","actor":"pc1","resource":"hp","maximum":20}` in a sourced session event. A resource at 10/12 becomes 18/20; it is not silently fully healed. Decreasing the maximum clamps the current value. Game-specific exceptions require an explicit additional change. The Apache-licensed upstream module and its notices are included in `scripts/vendor/`.

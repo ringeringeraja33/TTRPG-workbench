@@ -1,0 +1,15 @@
+{
+  "profile": {"system": "CoC", "edition": "7e", "options": {"luck_spend": false}},
+  "actors": {
+    "pc1": {
+      "name": "林蔚",
+      "audience": ["pc1"],
+      "resources": {"hp": {"value": 12, "max": 12}, "san": {"value": 60, "max": 99}, "mp": {"value": 12, "max": 12}},
+      "conditions": []
+    }
+  },
+  "facts": [],
+  "private": {"positions": {"pc1": "N1"}, "san_day_start": 60, "san_day_loss": 0, "next_actor": "pc1", "dice_mode": "player"},
+  "pending": [],
+  "clock": 0
+}

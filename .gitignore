@@ -16,6 +16,8 @@ __pycache__/
 *.xlsx
 *.pptx
 local-inventory*
+local-paths.json
+索引/
 organization-*
 campaigns/
 private/

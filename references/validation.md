@@ -1,5 +1,15 @@
 # 验证范围
 
+## 五项目对标后的可执行验收（2026-09-06）
+
+源码新增`session.py`、`test_session.py`、`replay_acceptance.py`及规则边界函数。当前43项测试通过，包含已有资料读取/骰具测试与新增事务、并发、信息隔离、版本/资料缺失、近战平手、寡不敌众、SAN、成长、追逐AP、死亡豁免和专注DC。真实执行记录保留在本机index_root的`benchmark-2026-09-06`，不纳入技能包。
+
+`replay_acceptance.py`对CoC7与D&D分别执行20个预设玩家输入，包含调查、检定失败后改走其他路线、取得证据、伤害、防御、恢复和结团。第10回合使用新Python进程读回数据库，重复同事件不再扣资源；继续到20。CoC终态HP8、图书馆84；D&D终态HP12、Second Wind2、花费1颗生命骰。所有骰子都是标记过的test fixture，未真人参与。
+
+角色卡补全财产/背景和装备/负重，战士给出1→5已选升级路径；1→20勇士表是来源支持的操作索引。SAN、追逐、死亡、专注为独立边界测试，不能声称都出现在20回合场景中。现阶段尚无陌生玩家自由输入压力测试、上游五项目完整测试、完整载具/自动火力/法术交互验证。
+
+首次测试发现Windows测试数据库未关闭与Python缺openpyxl；明确关闭测试连接，换用已有完整依赖运行时后重跑通过。可复现命令见[工具说明](tools.md)。下面保留此前构建历史，不把历史纸面演练计为新增自动化测试。
+
 以下首表为初始构建历史记录（2026-09-06），本轮深化结果见后文；技能创建验证与行为演练；没有真人试跑和全系统完整认证。
 
 |检查|实际结果|边界|
@@ -36,3 +46,9 @@
 | 资料缺失 | 迷雾快启不包含完整主题问卷，明确不认证完整自建角色 | 保留缺口，不借别系统填空 |
 
 本轮规则释义有来源锚点；主题定位表117项仅是全文候选命中，不计入“已核查规则数量”。完整文本缓存保留本地，技能仅含原创归纳、引用和示例。
+
+## Second deepening pass: 2026-09-06
+
+55 automated tests pass in the bundled Python environment with `requirements.txt` dependencies. This supersedes the earlier count above. New checks cover declared volleys and wasted ammunition, extreme-range hits, slot expenditure on different turns, consequence absorption, vice overindulgence, war downtime costs, resource upgrades and transactional rollback, broken scenario references and player projections.
+
+The earlier statements that Fighter weight had not been calculated and session recovery was only a paper exercise describe the earlier pass. The current worked build includes weight; the executable ledger and two twenty-turn replays now test actual disk state and fresh-process recovery. Full class/spell coverage, complete vehicle collisions, rituals and live-player evaluation remain unverified. Upstream projects were source-reviewed; their full test suites were not run.

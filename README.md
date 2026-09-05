@@ -21,7 +21,13 @@ Example prompts:
 
 Provide your own local rulebooks. Specify the library directory or invoke the skill from an existing TTRPG library. The skill locates files through the library inventory and does not depend on the author's computer paths.
 
+### Local paths and indexes
+
+Keep the Git source checkout separate from your book collection. An optional, untracked `local-paths.json` in the skill directory sets `source_root`, `library_root`, and `index_root`. Personal inventories, topic/page indexes, verification records, and extraction caches belong in the library’s `索引` directory, not in the source repository. The inventory command defaults to that directory when `--output` is omitted.
+
 ### Detailed rules and worked examples
+
+The local executable workflow now includes [CoC7](references/systems/coc7-table.md) and [SRD 5.2.1](references/systems/dnd2024-table.md) table procedures, a [transactional campaign ledger](references/session-runtime.md), player-specific projections, and an [original short scenario](assets/examples/lockhouse.md). `scripts/replay_acceptance.py` exercises 20 scripted player turns per system, with a fresh-process recovery at turn 10. This is deterministic simulated acceptance, not live-player testing or certification of every class and spell.
 
 - [CoC7 procedures](references/systems/coc7-procedures.md) and [journalist build ledger](assets/examples/coc7-journalist.md)
 - [D&D 2024 / SRD 5.2.1 procedures](references/systems/dnd2024-procedures.md) and [level-one Fighter](assets/examples/dnd2024-fighter.md)
@@ -75,7 +81,13 @@ See [tool documentation](references/tools.md) for commands and limitations, and 
 
 本地规则书由用户自行提供。先指定资料根目录，或在现有TTRPG资料库中调用；技能通过资料清单定位文件，不依赖作者电脑路径。
 
+### 本机路径与索引
+
+Git源码库与个人资料库分别维护。技能目录可用不纳入Git的`local-paths.json`设置`source_root`、`library_root`和`index_root`。资料清单、主题页码索引、核查记录和提取缓存统一存入资料库的`索引`目录，不放入源码仓库。清单命令省略`--output`时默认使用该目录。
+
 ### 详细规则与算例
+
+本轮新增[CoC7桌上包](references/systems/coc7-table.md)、[SRD5.2.1桌上包](references/systems/dnd2024-table.md)、[事务会话账本与玩家投影](references/session-runtime.md)、[原创短模组](assets/examples/lockhouse.md)。记者补齐背景财产，战士补齐负重与升级路径。`scripts/replay_acceptance.py`分别执行20个预设玩家回合，并在第10回合由新进程恢复。这是确定性模拟验收，尚无真人桌测或全职业全法术认证。
 
 - [CoC7程序](references/systems/coc7-procedures.md)及[记者创建台账](assets/examples/coc7-journalist.md)
 - [D&D2024/SRD5.2.1程序](references/systems/dnd2024-procedures.md)及[一级战士](assets/examples/dnd2024-fighter.md)
@@ -105,3 +117,9 @@ python -X utf8 scripts/dice.py probability 1d20 11 --mode advantage
 ```
 
 完整命令和限制见 [工具说明](references/tools.md)。规则与行为验证范围见 [验证说明](references/validation.md)。未进行全部系统的完整认证或真人模组试跑。
+
+## Upstream-informed expansion
+
+The [adoption map](references/upstream-adoption.md) records five pinned source reviews, licensing choices and implementation boundaries. This release adds an English skill entry, persistent preparation workflows, source-checked advanced mechanics, scenario graph checks, and an Apache-licensed bounded-resource module integrated with transactional advancement. Chinese interaction and existing Chinese rule references remain supported.
+
+Run `python -X utf8 -m unittest discover -s scripts -p "test_*.py"` (55 tests) and the two twenty-turn replays described above. Tests cover implemented cases; they do not establish complete system or live-GM competence. Workspace installation uses `.agents/skills/ttrpg-workbench/`, preserving the complete directory structure.

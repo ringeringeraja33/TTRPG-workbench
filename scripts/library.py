@@ -40,7 +40,7 @@ def units(path):
 
 def inventory(root):
     for p in sorted(root.rglob('*')):
-        if not p.is_file() or any(x in {'.obsidian','.git','ttrpg-workbench','ttrpg-workbench-audit','__pycache__'} for x in p.relative_to(root).parts): continue
+        if not p.is_file() or p.name in {'AGENTS.md', '资料索引.md'} or any(x in {'.obsidian','.git','索引','ttrpg-workbench','ttrpg-workbench-audit','__pycache__'} for x in p.relative_to(root).parts): continue
         row={'path':p.relative_to(root).as_posix(),'bytes':p.stat().st_size,'format':p.suffix.lower(),'system_candidate':classify(p.name),'edition_candidate':'; '.join(re.findall(r'(?i)v?\d+(?:\.\d+)+|[567]版|3[Rr]|[57][Ee]',p.name)) or 'unverified','language':'unverified','authority':'unverified; filename is not provenance','kind':'character sheet' if re.search('角色卡|人物卡|自动卡|空白卡|示例卡',p.name) else 'module/handout' if '燃烧的星辰' in p.parts else 'unclassified','content_status':'not inspected'}
         try:
             with p.open('rb') as f: row['sha256']=hashlib.file_digest(f,'sha256').hexdigest()
@@ -59,10 +59,12 @@ def inventory(root):
 
 def main():
     ap=argparse.ArgumentParser(); sub=ap.add_subparsers(dest='mode',required=True)
-    inv=sub.add_parser('inventory'); inv.add_argument('root',type=Path); inv.add_argument('--output',type=Path,required=True)
+    inv=sub.add_parser('inventory'); inv.add_argument('root',type=Path); inv.add_argument('--output',type=Path)
     read=sub.add_parser('read'); read.add_argument('file',type=Path); read.add_argument('--query'); read.add_argument('--start',type=int,default=1); read.add_argument('--end',type=int); read.add_argument('--limit',type=int,default=8); read.add_argument('--chars',type=int,default=2500)
     a=ap.parse_args()
     if a.mode=='inventory':
+        if a.output is None:
+            a.output = a.root / '索引' / 'local-inventory.json'
         rows=list(inventory(a.root)); a.output.parent.mkdir(parents=True,exist_ok=True)
         a.output.write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         print(json.dumps({'files':len(rows),'output':str(a.output)},ensure_ascii=False))

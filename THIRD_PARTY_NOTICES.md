@@ -1,5 +1,14 @@
 # 第三方来源与署名
 
+## Reused skill implementation and workflows
+
+- `scripts/vendor/sagasmith_resources.py` is an unmodified copy of `packages/domain/src/sagasmith_dnd/resources.py` from SagaSmith D&D, revision `065ec82b179b2b9da8af967afb02cbe5b265e4cf`. Copyright 2026 SagaSmithAI contributors. Apache License 2.0: [license](scripts/vendor/LICENSE-SagaSmith), [original NOTICE](scripts/vendor/NOTICE-SagaSmith). The finite-counter integration in `scripts/session.py` is local code. No SRD data bundle was copied with this module.
+- `references/prep-persistence.md` adapts Sue's `coc-kp-host/references/prep_persistence.md`, revision `9fedf60613b5f4c599a4128f6ce1d5da5bfebaaf`. Copyright (c) 2026 Sue. [MIT license](scripts/vendor/LICENSE-coc-kp-host). Changes and additional checks are identified in the adapted document.
+- `references/session-lifecycle.md` adapts AntTheLimey's gm-apprentice session preparation instructions, revision `b9912ea7219e55215ce0c2f87247e410ab8d903a`. That adapted file remains CC BY-SA 4.0; [license](scripts/vendor/LICENSE-gm-apprentice). Its source and changes are identified in the file. This does not relicense unrelated project files.
+- claude-dnd-skill (AGPL-3.0) and RePoG (Apache-2.0) informed the source review. Their code was not copied. See [adoption map](references/upstream-adoption.md).
+
+New English Fate and Blades summaries are paraphrases under the same source attributions below; references to Chinese adaptation also describe the existing Chinese documents. The corresponding helper functions encode limited mechanics with the stated source boundaries.
+
 本项目以原创工作流程、规则短释义、模板和代码组织TTRPG任务。参考游戏名称用于来源识别，不表示获得出版方认可。书目及使用位置见 [参考与引用列表](references/bibliography.md)。未附商业规则书、模组正文、插图或私人角色卡。
 
 ## Dungeons & Dragons SRD
