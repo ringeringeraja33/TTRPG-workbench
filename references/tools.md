@@ -59,3 +59,7 @@ Read [SRD class/spell operation](systems/dnd-class-spell-package.md) for `srd_ca
 ## Background design packs
 
 `python -X utf8 scripts/background_design.py <pack.json> --chargen <spec.json>` checks a CoC7 pack against an existing build profile; `--player` exports only explicit public fields. See [contract and limits](background-design-tool.md).
+
+## Local corpus, card and handout tools
+
+Read [corpus-use](corpus-use.md) for `corpus.py build/search/review`, optional scan/CHM/DOC readers and `sheet_audit.py`. Read [corpus-preparation](corpus-preparation.md) for `handout_manifest.py` recipient projections. `local_rules.py <operation> <input.json>` supports `jiangshan_parry`, `jiangshan_death`, `toc_safe_rest` and `toc_psychotherapy`; see [source boundaries](systems/corpus-adapters.md). These return previews and pending rulings, without silently changing the session ledger.

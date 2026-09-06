@@ -4,6 +4,8 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 
 def classify(name):
+    if re.search(r'(?i)TOC|迷踪', name):
+        return 'Trail of Cthulhu; edition needs confirmation'
     rules = [(r'COC|CoC|Cthulhu|克苏鲁|调查员|守秘人|燃烧的星辰', 'CoC family; edition needs confirmation'), (r'3R|3r', 'D&D 3.5 candidate'), (r'5E|5e', 'D&D 5e; 2014/2024 unresolved'), (r'Pathfinder','Pathfinder; file version is not game edition'), (r'TOC|迷踪','Trail of Cthulhu'), (r'BRP','BRP; edition unresolved'), (r'圣杯|Fate Gug','Fate franchise fan rules; not Evil Hat Fate'), (r'方舟|泰拉','Arknights fan rules'), (r'诡秘|诡团','Lord of Mysteries fan rules'), (r'战锤|黑暗异端','Warhammer family'), (r'迷雾之城','City of Mist'), (r'龙族|混血种','Dragon Raja fan rules')]
     for pattern, system in rules:
         if re.search(pattern,name): return system

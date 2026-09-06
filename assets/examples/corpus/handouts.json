@@ -1,0 +1,30 @@
+{
+  "revealed_facts": ["entered-station"],
+  "handouts": [
+    {
+      "id": "station-map",
+      "audience": "players",
+      "released": true,
+      "requires": ["entered-station"],
+      "player_title": "Station floor plan",
+      "player_text": "The waiting room connects to the platform and the ticket office.",
+      "selected_variant": "public-text",
+      "variants": {
+        "public-text": {"review": "player-safe"},
+        "gm-key": {"review": "gm-only"}
+      },
+      "gm_note": "Original text-only fixture. Attach real paths and SHA-256 values before using --root."
+    },
+    {
+      "id": "private-message",
+      "audience": "individual",
+      "recipients": ["pc1"],
+      "released": false,
+      "requires": ["message-opened"],
+      "player_title": "A sealed message",
+      "player_text": "The supply clerk asks you to return a borrowed key.",
+      "selected_variant": "text",
+      "variants": {"text": {"review": "player-safe"}}
+    }
+  ]
+}

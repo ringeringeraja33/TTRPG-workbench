@@ -9,11 +9,11 @@ Deliver playable procedures, traceable rulings and recoverable sessions. Read [c
 
 ## Start
 
-Read optional `local-paths.json` for `source_root`, `library_root` and `index_root`; explicit user paths take precedence. Put inventories, downloaded research, extraction caches and verification records in `index_root`, outside the distributable skill.
+Start with the bundled procedures, examples and bibliography. They can be used without the maintainer's books, local paths or private indexes. Cite author/publisher, title, edition and chapter/page; omit filesystem paths, cache locations, hashes and internal source IDs from user-facing citations. Local ingestion is optional and applies only when working with materials available to the current user.
 
 1. Identify the mode: rule lookup, adventure review/design, character creation/advancement, homebrew, rulebook authoring/revision, preparation, live assistance or direct GM play. Reuse established campaign decisions. Clarify a missing system or edition if it changes resolution; otherwise proceed with labelled reversible assumptions.
 2. For an original ruleset, use a project version and design decisions instead of forcing an existing system. Lock system, edition/printing, language, supplements, errata, house rules and creation method. Read [evidence policy](references/evidence.md). Check the book's own edition statement; filenames and third-party skills are not rule authority.
-3. Load only the necessary references below, then the actual rule passages. A short system summary is never sufficient evidence for an unresolved mechanic.
+3. Load the relevant bundled procedures and use their verified scope directly. For an unresolved mechanic or an uncovered exception, consult official public sources or materials supplied by the current user. Do not require access to the maintainer's originals, and do not claim a fresh original-source check when relying on the bundled synthesis.
 4. Deliver the result, sources actually consulted, unresolved dependencies and the state needed for the next action. A simple rule question needs a direct answer, not every template.
 
 ## Routing
@@ -22,6 +22,8 @@ Read optional `local-paths.json` for `source_root`, `library_root` and `index_ro
 |---|---|
 | System/source selection | [Coverage](references/coverage.md), corresponding `references/systems/` entry, [topic locator](references/rule-locator.md), [public discovery](references/public-systems.md) |
 | Citations | [Bibliography](references/bibliography.md), [citation guide](references/citation-guide.md), [evidence](references/evidence.md) |
+| Absorb a local folder, read scans/CHM/old DOC, audit automatic cards | [Corpus ingestion and retrieval](references/corpus-use.md), [edition-specific corpus adapters](references/systems/corpus-adapters.md); use the private hash-bound index |
+| Mixed module documents, image variants, handouts, GM guides and design influences | [Corpus-informed preparation](references/corpus-preparation.md); inspect every selected asset before player release |
 | Adventure preparation/review | [Adventures](references/adventures.md), [persistent preparation](references/prep-persistence.md), [session lifecycle](references/session-lifecycle.md) |
 | Characters and advancement | [Characters](references/characters.md), selected system procedures and worked build |
 | Historical background/style needs skills, items, scene frameworks or design ideas | [Background design](references/background-design.md), [pack template](assets/templates/background-design.md); actively research actual history and comparable module material |
@@ -38,6 +40,7 @@ Read optional `local-paths.json` for `source_root`, `library_root` and `index_ro
 
 - Separate rule paraphrase, official clarification, translator commentary, GM ruling and original design. Missing evidence stays unresolved; do not invent page numbers or official intent.
 - PDF pages are one-based. Verify printed page numbers separately; never transfer offsets between files. On failed search, consider synonyms, scans and extraction limitations.
+- Source attribution does not require the recipient to possess the original. State unresolved rules precisely; do not turn missing local files into a prerequisite for supported workflows. During optional ingestion, verify available originals and keep technical provenance private. Keep spreadsheet saved values separate from recalculated results and preserve source-specific resource domains.
 - Players choose their actions. Do not invent their thoughts, silently roll for them, or overwrite established facts. System-mandated temporary loss of control must stay within agreed boundaries. Use agreed player rolls or actual dice-tool output; label all fixture inputs as simulated.
 - Resolve intent, permission, stakes, rule, roll and consequence before applying resource changes. `rules_math.py` and `rules_extended.py` calculate bounded mechanics, not complete action legality. `session.py` applies one sourced event atomically. A missing rule becomes pending without speculative spending.
 - Each event binds the full rule profile, expected revision and unique operation ID. Repeated identical requests return the prior result. Reused IDs with changed contents or stale revisions must fail. Resume by reading the saved state and pending decisions, not reconstructing them from chat.
@@ -53,4 +56,4 @@ Run `python -X utf8 -m unittest discover -s scripts -p "test_*.py"` with the dep
 
 Current acceptance scope excludes live-player evaluation at the user's request. Do not keep it as a blocking task or defer source-backed implementation on that basis. Validate rule sources, explicit examples, automated boundaries, persistence and recovery. Distinguish complete source access from exhaustive automatic resolution of every interaction.
 
-Example requests: “核查 CoC7 闪避平手，引用本地正文”; “Create an SRD 5.2.1 Fighter and show every choice”; “担任 KP，玩家自行掷骰，保存每次结算”; “Audit this scenario's clue routes and recovery state.”
+Example requests: “核查 CoC7 闪避平手，给出书名、版本和页码”; “Create an SRD 5.2.1 Fighter and show every choice”; “担任 KP，玩家自行掷骰，保存每次结算”; “Audit this scenario's clue routes and recovery state.”
