@@ -1,0 +1,88 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "id": "battery",
+      "revision": 2,
+      "file": "before/equipment.md",
+      "depends_on": [],
+      "contract": {
+        "trigger": "Recharge or shoot",
+        "authority": "Player declares; host confirms target",
+        "inputs": "Charge and station",
+        "procedure": "Pay 1 before shot; recharge +2 clamped",
+        "costs": "Shot 1; recharge one action",
+        "outcomes": "0 to 4 charge",
+        "duration": "Until spent",
+        "exceptions": "No negative charge; no silent old-version migration",
+        "example": "3+2 clamps at4",
+        "boundary": "Old1/6 migrates to1/4"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "creation",
+      "file": "before/creation.md",
+      "audience": "player",
+      "bindings": {
+        "battery": 1
+      },
+      "claims": {
+        "battery.maximum": "Focus*2"
+      }
+    },
+    {
+      "id": "equipment",
+      "file": "before/equipment.md",
+      "audience": "player",
+      "bindings": {
+        "battery": 2
+      },
+      "claims": {
+        "battery.maximum": 4
+      }
+    },
+    {
+      "id": "card",
+      "file": "before/card.md",
+      "audience": "player",
+      "bindings": {
+        "battery": 1
+      },
+      "claims": {
+        "battery.maximum": "Focus*2"
+      }
+    },
+    {
+      "id": "example",
+      "file": "before/example.md",
+      "audience": "player",
+      "bindings": {
+        "battery": 1
+      },
+      "claims": {
+        "battery.maximum": "Focus*2"
+      }
+    },
+    {
+      "id": "quick-reference",
+      "file": "before/quick-reference.md",
+      "audience": "player",
+      "bindings": {
+        "battery": 1
+      },
+      "claims": {
+        "battery.maximum": "Focus*2"
+      }
+    }
+  ],
+  "issues": [
+    {
+      "id": "capacity",
+      "material": true,
+      "status": "open",
+      "evidence": "Synthetic D-7 selects fixed4; see conflict.md for resolution and migration"
+    }
+  ]
+}

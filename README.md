@@ -131,3 +131,11 @@ The [SRD source package](references/systems/dnd-class-spell-package.md) reads al
 ## Background-aware character creation
 
 When given a module’s period, place and style, the skill now [researches an appropriate creation specification](references/background-chargen.md), using history and actual comparable character material. It separates source rules from original adjustments and produces distinct player and GM documents. [Three eras and six complete proposed cards](assets/examples/background-chargen/README.md) exercise budgets, skill changes, equipment and party coverage. The numerical adapter supports CoC7; other systems retain their own creation rules. Current automated suite:74 tests.
+
+## Original rulebook authoring
+
+Use `$ttrpg-workbench` to turn a concept or notes into playable rules, expand chapters, reconcile contradictions, or assemble a quickstart. The [workflow](references/rulebook-authoring.md) maintains terminology, source decisions and cross-chapter dependencies. [Three original cases](assets/examples/rulebook/index.md) include a two-character, twenty-turn prototype and an explicit dependency checker. Private user drafts remain outside the distributable examples.
+
+中文示例：“用 $ttrpg-workbench，把这些零散笔记整理成可玩的原创规则书，保留既定设定与术语，补齐操作程序、角色卡、算例和修订记录。”
+
+Rulebook authoring adds 14 test groups; the current complete automated suite contains 88 tests.

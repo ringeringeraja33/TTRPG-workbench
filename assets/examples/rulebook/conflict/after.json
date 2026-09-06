@@ -1,0 +1,88 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "id": "battery",
+      "revision": 2,
+      "file": "after/equipment.md",
+      "depends_on": [],
+      "contract": {
+        "trigger": "Recharge or shoot",
+        "authority": "Player declares; host confirms target",
+        "inputs": "Charge and station",
+        "procedure": "Pay 1 before shot; recharge +2 clamped",
+        "costs": "Shot 1; recharge one action",
+        "outcomes": "0 to 4 charge",
+        "duration": "Until spent",
+        "exceptions": "No negative charge; no silent old-version migration",
+        "example": "3+2 clamps at4",
+        "boundary": "Old1/6 migrates to1/4"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "creation",
+      "file": "after/creation.md",
+      "audience": "player",
+      "bindings": {
+        "battery": 2
+      },
+      "claims": {
+        "battery.maximum": 4
+      }
+    },
+    {
+      "id": "equipment",
+      "file": "after/equipment.md",
+      "audience": "player",
+      "bindings": {
+        "battery": 2
+      },
+      "claims": {
+        "battery.maximum": 4
+      }
+    },
+    {
+      "id": "card",
+      "file": "after/card.md",
+      "audience": "player",
+      "bindings": {
+        "battery": 2
+      },
+      "claims": {
+        "battery.maximum": 4
+      }
+    },
+    {
+      "id": "example",
+      "file": "after/example.md",
+      "audience": "player",
+      "bindings": {
+        "battery": 2
+      },
+      "claims": {
+        "battery.maximum": 4
+      }
+    },
+    {
+      "id": "quick-reference",
+      "file": "after/quick-reference.md",
+      "audience": "player",
+      "bindings": {
+        "battery": 2
+      },
+      "claims": {
+        "battery.maximum": 4
+      }
+    }
+  ],
+  "issues": [
+    {
+      "id": "capacity",
+      "material": true,
+      "status": "resolved",
+      "evidence": "Synthetic D-7 selects fixed4; see conflict.md for resolution and migration"
+    }
+  ]
+}

@@ -51,3 +51,7 @@ Read [SRD class/spell operation](systems/dnd-class-spell-package.md) for `srd_ca
 ## Background character creation audit
 
 `python -X utf8 scripts/background_chargen.py <spec.json>` audits an explicitly configured CoC7 profile: occupation/interest budgets, skill bases and caps, resources, approved equipment and wealth, party capabilities. `--player` emits only card fields. Unknown editions fail; missing evidence or unapproved house rules produce a draft. The profile is reviewed source data, not untrusted executable code. Historical and semantic checks remain part of [the workflow](background-chargen.md). Reproducible inputs: [three cases](../assets/examples/background-chargen/README.md).
+
+## Rulebook authoring tools
+
+`python -X utf8 scripts/rulebook_check.py <project.json> --changed <rule-id>` reports registered conflicts, stale references and affected artifacts. Read [manifest contract](rulebook-manifest.md). `python -X utf8 scripts/rulebook_demo.py --output <new-private-directory>` runs the original Dream Archaeology 0.2 example with twenty simulated player turns and exact one-action probabilities. It is a fixture-specific engine; see [authoring cases](../assets/examples/rulebook/index.md).

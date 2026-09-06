@@ -1,0 +1,254 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "id": "R-create",
+      "revision": 2,
+      "file": "rules.md",
+      "depends_on": [],
+      "contract": {
+        "trigger": "Before expedition",
+        "authority": "Players choose identity and allocate 2,1,0",
+        "inputs": "Names, links, three memories each",
+        "procedure": "Record approaches, 0 strain and owned gear",
+        "costs": "No currency; allocation sums to three",
+        "outcomes": "Two legal distinct archaeologists",
+        "duration": "One expedition; growth only at ending",
+        "exceptions": "No combat subsystem",
+        "example": "A: Trace 2, Listen 1, Weave 0",
+        "boundary": "Reject duplicate ranks or memory IDs"
+      }
+    },
+    {
+      "id": "R-memory",
+      "revision": 2,
+      "file": "rules.md",
+      "depends_on": [
+        "R-create"
+      ],
+      "contract": {
+        "trigger": "On agreed exchange turn",
+        "authority": "Both players consent",
+        "inputs": "One owned card each",
+        "procedure": "Swap ID, text and freshness intact",
+        "costs": "One shared turn",
+        "outcomes": "Ownership changes; supply conserved",
+        "duration": "Faded until expedition ends",
+        "exceptions": "No refresh, duplication or negative stock",
+        "example": "Faded A-1 exchanged for fresh B-2",
+        "boundary": "Trade back preserves faded A-1"
+      }
+    },
+    {
+      "id": "R-delve",
+      "revision": 2,
+      "file": "rules.md",
+      "depends_on": [
+        "R-memory",
+        "R-strain",
+        "R-support"
+      ],
+      "contract": {
+        "trigger": "Risky archive action",
+        "authority": "Player chooses method; GM confirms access",
+        "inputs": "Approach, d6, 0-2 fresh cards, pending help",
+        "procedure": "Pay then sum; settle progress and strain",
+        "costs": "One turn; fade named cards",
+        "outcomes": "5+ gives 2/0, 3-4 gives 1/1, 1-2 gives 0/2",
+        "duration": "Consequences persist across scene",
+        "exceptions": "No natural exceptions; retry is new turn",
+        "example": "2+2+1+1=6 gives progress 2",
+        "boundary": "Total 2 at strain 5 caps at 6"
+      }
+    },
+    {
+      "id": "R-strain",
+      "revision": 2,
+      "file": "rules.md",
+      "depends_on": [
+        "R-create"
+      ],
+      "contract": {
+        "trigger": "Own recovery turn",
+        "authority": "Player chooses grounding detail",
+        "inputs": "Current strain and once-per-scene flag",
+        "procedure": "Subtract 2, floor 0, set used flag",
+        "costs": "One turn",
+        "outcomes": "Strain reduced; no memory refresh",
+        "duration": "Until next scene for used flag",
+        "exceptions": "At strain 6 recovery remains legal",
+        "example": "Strain 6 becomes 4",
+        "boundary": "Second recovery fails without spending"
+      }
+    },
+    {
+      "id": "R-support",
+      "revision": 2,
+      "file": "rules.md",
+      "depends_on": [
+        "R-memory",
+        "R-strain"
+      ],
+      "contract": {
+        "trigger": "Help turn",
+        "authority": "Helper chooses method; other must be nonfractured",
+        "inputs": "One fresh owned card; no existing help",
+        "procedure": "Fade card and set other help to 1",
+        "costs": "One turn and one memory",
+        "outcomes": "Next delve +1",
+        "duration": "Expires this scene; consumed next delve",
+        "exceptions": "No stacking or self-help",
+        "example": "B helps A, A adds one",
+        "boundary": "Helping already helped target fails"
+      }
+    },
+    {
+      "id": "R-scene",
+      "revision": 2,
+      "file": "rules.md",
+      "depends_on": [
+        "R-delve",
+        "R-support",
+        "R-strain"
+      ],
+      "contract": {
+        "trigger": "Fifth shared turn",
+        "authority": "Resolve consequences then GM reveals outcome",
+        "inputs": "Progress and turn track",
+        "procedure": "At 5 complete; otherwise damaged then onward",
+        "costs": "Five accepted actions per scene",
+        "outcomes": "Archive count and state reset",
+        "duration": "Four scenes; strain/cards persist",
+        "exceptions": "Safe acts no progress; wait prevents deadlock",
+        "example": "Progress 3 yields damaged fragment",
+        "boundary": "Final-turn strain still applies at full progress"
+      }
+    },
+    {
+      "id": "R-grow",
+      "revision": 2,
+      "file": "rules.md",
+      "depends_on": [
+        "R-scene"
+      ],
+      "contract": {
+        "trigger": "Expedition ending",
+        "authority": "Each player chooses or declines",
+        "inputs": "At least two archives and unused growth",
+        "procedure": "Raise one approach below 2 by 1; mark used",
+        "costs": "No resource change",
+        "outcomes": "One improved approach or declined reward",
+        "duration": "Once at this expedition end",
+        "exceptions": "Later campaign preparation undefined",
+        "example": "A Listen 1 becomes 2",
+        "boundary": "Reject second growth"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "book",
+      "file": "rules.md",
+      "audience": "player",
+      "bindings": {
+        "R-create": 2,
+        "R-memory": 2,
+        "R-delve": 2,
+        "R-strain": 2,
+        "R-support": 2,
+        "R-scene": 2,
+        "R-grow": 2
+      },
+      "claims": {
+        "strain.maximum": 6,
+        "scene.turns": 5
+      }
+    },
+    {
+      "id": "cards",
+      "file": "characters.md",
+      "audience": "player",
+      "bindings": {
+        "R-create": 2,
+        "R-memory": 2,
+        "R-delve": 2,
+        "R-strain": 2,
+        "R-support": 2,
+        "R-scene": 2,
+        "R-grow": 2
+      },
+      "claims": {
+        "strain.maximum": 6,
+        "scene.turns": 5
+      }
+    },
+    {
+      "id": "quickstart",
+      "file": "quickstart.md",
+      "audience": "player",
+      "bindings": {
+        "R-create": 2,
+        "R-memory": 2,
+        "R-delve": 2,
+        "R-strain": 2,
+        "R-support": 2,
+        "R-scene": 2,
+        "R-grow": 2
+      },
+      "claims": {
+        "strain.maximum": 6,
+        "scene.turns": 5
+      }
+    },
+    {
+      "id": "scenario",
+      "file": "scenario.md",
+      "audience": "gm",
+      "bindings": {
+        "R-create": 2,
+        "R-memory": 2,
+        "R-delve": 2,
+        "R-strain": 2,
+        "R-support": 2,
+        "R-scene": 2,
+        "R-grow": 2
+      },
+      "claims": {
+        "strain.maximum": 6,
+        "scene.turns": 5
+      }
+    },
+    {
+      "id": "playthrough",
+      "file": "playthrough.md",
+      "audience": "gm",
+      "bindings": {
+        "R-create": 2,
+        "R-memory": 2,
+        "R-delve": 2,
+        "R-strain": 2,
+        "R-support": 2,
+        "R-scene": 2,
+        "R-grow": 2
+      },
+      "claims": {
+        "strain.maximum": 6,
+        "scene.turns": 5
+      }
+    }
+  ],
+  "issues": [
+    {
+      "id": "campaign-memory",
+      "material": false,
+      "status": "open",
+      "evidence": "rules.md ends after one expedition; new campaign preparation requires a new design decision"
+    },
+    {
+      "id": "help-cost",
+      "material": false,
+      "status": "open",
+      "evidence": "playthrough.md: help has low expected progress per turn in a simplified two-action comparison; rules executable but balance unresolved"
+    }
+  ]
+}

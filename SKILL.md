@@ -1,6 +1,6 @@
 ---
 name: ttrpg-workbench
-description: Research edition-specific TTRPG rules, prepare adventures, research historical settings to design character creation specifications, create and audit characters, design homebrew, and run persistent GM/KP/DM sessions. Use for TTRPG, 跑团, 车卡规范, 时代背景适配, 备团, 主持, campaigns, character advancement, and rulebook design.
+description: Research edition-specific TTRPG rules, prepare adventures, research historical settings to design character creation specifications, create and audit characters, design and write original rulebooks, design homebrew, and run persistent GM/KP/DM sessions. Use for TTRPG, 跑团, 车卡规范, 时代背景适配, 备团, 主持, campaigns, character advancement, and rulebook design.
 ---
 
 # TTRPG Workbench
@@ -11,8 +11,8 @@ Deliver playable procedures, traceable rulings and recoverable sessions. Read [c
 
 Read optional `local-paths.json` for `source_root`, `library_root` and `index_root`; explicit user paths take precedence. Put inventories, downloaded research, extraction caches and verification records in `index_root`, outside the distributable skill.
 
-1. Identify the mode: rule lookup, adventure review/design, character creation/advancement, homebrew, preparation, live assistance or direct GM play. Reuse established campaign decisions. Clarify a missing system or edition if it changes resolution; otherwise proceed with labelled reversible assumptions.
-2. Lock system, edition/printing, language, supplements, errata, house rules and creation method. Read [evidence policy](references/evidence.md). Check the book's own edition statement; filenames and third-party skills are not rule authority.
+1. Identify the mode: rule lookup, adventure review/design, character creation/advancement, homebrew, rulebook authoring/revision, preparation, live assistance or direct GM play. Reuse established campaign decisions. Clarify a missing system or edition if it changes resolution; otherwise proceed with labelled reversible assumptions.
+2. For an original ruleset, use a project version and design decisions instead of forcing an existing system. Lock system, edition/printing, language, supplements, errata, house rules and creation method. Read [evidence policy](references/evidence.md). Check the book's own edition statement; filenames and third-party skills are not rule authority.
 3. Load only the necessary references below, then the actual rule passages. A short system summary is never sufficient evidence for an unresolved mechanic.
 4. Deliver the result, sources actually consulted, unresolved dependencies and the state needed for the next action. A simple rule question needs a direct answer, not every template.
 
@@ -29,6 +29,7 @@ Read optional `local-paths.json` for `source_root`, `library_root` and `index_ro
 | Automatic fire, spell-slot turns, consequences, vice | [Advanced mechanics](references/systems/advanced-mechanics.md); read its explicit limitations |
 | All SRD class/spell source lookup and multiclassing | [Class and spell package](references/systems/dnd-class-spell-package.md), `scripts/srd_catalog.py`, `scripts/class_magic.py` |
 | CoC vehicle collisions and ritual casting | [Vehicle and ritual package](references/systems/coc-vehicles-rituals.md), `scripts/coc_vehicle_magic.py` |
+| Original rulebook / notes / chapter revision / quickstart | [Rulebook authoring](references/rulebook-authoring.md), [project template](assets/templates/rulebook-project.md), [three authoring cases](assets/examples/rulebook/index.md) |
 | Homebrew / probabilities | [Rules design](references/rules-design.md), [design lab](references/rules-design-lab.md) |
 | Tools / output / acceptance | [Tools](references/tools.md), [templates](assets/templates/index.md), [validation](references/validation.md), [upstream adoption](references/upstream-adoption.md) |
 

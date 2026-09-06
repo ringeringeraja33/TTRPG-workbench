@@ -38,3 +38,7 @@ Live-player evaluation is excluded from the requested work and is not a pending 
 ## Background-aware creation
 
 Added an actively researched history/module-to-chargen workflow, player/GM templates and three historical fixture profiles with six complete proposed characters. The numerical adapter covers CoC7 only and checks configured rules/availability; it does not independently establish historical facts. Other systems use the workflow with their native creation rules. Sources lacking allocation ledgers do not become invented official budgets.
+
+## Original rulebook authoring
+
+[Authoring workflow](rulebook-authoring.md) now covers concept intake, note organization, chapter revision and conflict repair. The manifest checker validates explicit dependencies and claims. A separate original dream-game prototype demonstrates two characters and twenty simulated turns; it is not a generic rules engine or a balance certification.

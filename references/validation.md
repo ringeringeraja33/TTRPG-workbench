@@ -60,3 +60,7 @@ The earlier statements that Fighter weight had not been calculated and session r
 ## Background creation acceptance
 
 74 tests pass, including nine new groups covering three eras/six cards, exact budgets, caps, specialty eligibility, edition conflicts, missing sources, approval status, anachronistic equipment, wealth arithmetic and private-field exclusion. Guard/Healer sheets in the Dark Ages pack were rendered because PDF extraction omitted their filled fields. The Down Darker Trails preview contains only six pages, so its official creation budget remains unverified; those fixture occupations are explicitly original house rules. Scope: configured CoC7 arithmetic and reviewed evidence, not universal historical or multi-system certification.
+
+## Rulebook authoring acceptance
+
+The original [three authoring cases](../assets/examples/rulebook/index.md) cover a concept, scattered diceless notes and contradictory battery rules. Fourteen new test groups exercise explicit manifest claims/dependencies, source paths, player/GM dependencies, resource conservation, invalid actions, fracture/recovery and versioned state. The dream example runs twenty declared player actions, including fresh-process recovery after ten, and exact one-action probability enumeration. Full-suite target after this addition: 88 tests. Prose was reviewed against the example cards and narrative companion; no independent agent or live-player evaluation is claimed. Structural validation cannot discover undeclared prose contradictions.
