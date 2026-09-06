@@ -26,6 +26,8 @@ Read optional `local-paths.json` for `source_root`, `library_root` and `index_ro
 | Characters and advancement | [Characters](references/characters.md), selected system procedures and worked build |
 | Direct hosting / recovery | [Hosting](references/hosting.md), [ledger](references/session-runtime.md), [CoC7 table package](references/systems/coc7-table.md) or [SRD 5.2.1 table package](references/systems/dnd2024-table.md) |
 | Automatic fire, spell-slot turns, consequences, vice | [Advanced mechanics](references/systems/advanced-mechanics.md); read its explicit limitations |
+| All SRD class/spell source lookup and multiclassing | [Class and spell package](references/systems/dnd-class-spell-package.md), `scripts/srd_catalog.py`, `scripts/class_magic.py` |
+| CoC vehicle collisions and ritual casting | [Vehicle and ritual package](references/systems/coc-vehicles-rituals.md), `scripts/coc_vehicle_magic.py` |
 | Homebrew / probabilities | [Rules design](references/rules-design.md), [design lab](references/rules-design-lab.md) |
 | Tools / output / acceptance | [Tools](references/tools.md), [templates](assets/templates/index.md), [validation](references/validation.md), [upstream adoption](references/upstream-adoption.md) |
 
@@ -45,5 +47,7 @@ Read optional `local-paths.json` for `source_root`, `library_root` and `index_ro
 ## Verify
 
 Run `python -X utf8 -m unittest discover -s scripts -p "test_*.py"` with the dependencies in `requirements.txt`. Run `python -X utf8 scripts/replay_acceptance.py --output <new-private-index-directory>` for two deterministic twenty-turn campaign replays including cold recovery. Record errors and fixes. These are simulated inputs, not independent GM evaluation or live-player testing.
+
+Current acceptance scope excludes live-player evaluation at the user's request. Do not keep it as a blocking task or defer source-backed implementation on that basis. Validate rule sources, explicit examples, automated boundaries, persistence and recovery. Distinguish complete source access from exhaustive automatic resolution of every interaction.
 
 Example requests: “核查 CoC7 闪避平手，引用本地正文”; “Create an SRD 5.2.1 Fighter and show every choice”; “担任 KP，玩家自行掷骰，保存每次结算”; “Audit this scenario's clue routes and recovery state.”

@@ -52,3 +52,7 @@
 55 automated tests pass in the bundled Python environment with `requirements.txt` dependencies. This supersedes the earlier count above. New checks cover declared volleys and wasted ammunition, extreme-range hits, slot expenditure on different turns, consequence absorption, vice overindulgence, war downtime costs, resource upgrades and transactional rollback, broken scenario references and player projections.
 
 The earlier statements that Fighter weight had not been calculated and session recovery was only a paper exercise describe the earlier pass. The current worked build includes weight; the executable ledger and two twenty-turn replays now test actual disk state and fresh-process recovery. Full class/spell coverage, complete vehicle collisions, rituals and live-player evaluation remain unverified. Upstream projects were source-reviewed; their full test suites were not run.
+
+## Source-backed completion pass
+
+65 automated tests cover the implemented boundaries, including cold-process ritual-cost recovery. An actual-source integration check separately reads all 339 SRD spells, checks their 339 Casting Time headers and 12 class source ranges, and saves the index outside the skill. This validates coverage of extraction, not every possible rules interaction. Live-player testing is explicitly outside acceptance scope and is no longer a pending task.

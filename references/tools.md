@@ -43,3 +43,7 @@ python -X utf8 scripts/test_tools.py
 `python -X utf8 scripts/campaign_check.py <private-plan.json>` checks the graph schema documented in its module header. A nonzero exit indicates unresolved structural errors. `--player pc1` exports only explicitly visible clue records; destination IDs must also be safe before publication. This is a structural check, not proof that players can solve the mystery.
 
 For an approved finite-resource increase, submit `{"kind":"resize","actor":"pc1","resource":"hp","maximum":20}` in a sourced session event. A resource at 10/12 becomes 18/20; it is not silently fully healed. Decreasing the maximum clamps the current value. Game-specific exceptions require an explicit additional change. The Apache-licensed upstream module and its notices are included in `scripts/vendor/`.
+
+## Source-backed class, spell, vehicle and ritual tools
+
+Read [SRD class/spell operation](systems/dnd-class-spell-package.md) for `srd_catalog.py` full-entry lookup and `class_magic.py` multiclass/HP/Counterspell functions. Read [CoC vehicles and rituals](systems/coc-vehicles-rituals.md) for `coc_vehicle_magic.py`. These helpers return proposed changes; apply them with source citations through `session.py`. The SRD reader validates the source hash and checks all 339 spell headers before returning results.

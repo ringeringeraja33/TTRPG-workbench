@@ -28,3 +28,9 @@
 - [主题页码定位](rule-locator.md)、[来源书目](bibliography.md)、[复现与验证](validation.md)。
 
 新增系统应依次落实来源身份、程序、例外、角色台账和场景演练。未验证的部分按任务查证；不得通过复制别的系统摘要填满空白。
+
+## Source-backed completion pass
+
+The SRD package now reads all 12 class chapters and all 339 spell entries from the verified 5.2.1 PDF, including cross-page text. Added multiclass slot calculation, class-order fixed HP and Counterspell settlement. CoC now has collision severity/units/occupant procedures and learning, first-cast, interruption and backlash procedures with numerical helpers. See [SRD package](systems/dnd-class-spell-package.md) and [CoC package](systems/coc-vehicles-rituals.md). Earlier statements that these had no procedure refer to the preceding release.
+
+Live-player evaluation is excluded from the requested work and is not a pending acceptance gate. Remaining scope distinctions: non-SRD publications, fractional-Build vehicles and source-specific exceptions require their actual source; all-entry retrieval does not claim exhaustive automatic adjudication of every possible interaction.
