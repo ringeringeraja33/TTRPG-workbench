@@ -64,3 +64,7 @@ The earlier statements that Fighter weight had not been calculated and session r
 ## Rulebook authoring acceptance
 
 The original [three authoring cases](../assets/examples/rulebook/index.md) cover a concept, scattered diceless notes and contradictory battery rules. Fourteen new test groups exercise explicit manifest claims/dependencies, source paths, player/GM dependencies, resource conservation, invalid actions, fracture/recovery and versioned state. The dream example runs twenty declared player actions, including fresh-process recovery after ten, and exact one-action probability enumeration. Full-suite target after this addition: 88 tests. Prose was reviewed against the example cards and narrative companion; no independent agent or live-player evaluation is claimed. Structural validation cannot discover undeclared prose contradictions.
+
+## Background design extension
+
+Ten additional test groups validate three packs against six existing CoC7 builds, nine scenes, alternative paths without special items/skills, source gaps, edition conflicts, base/budget changes and public projection. Manual walkthroughs also check delay thresholds and exhausted writing supplies. Full suite after this extension: 98 tests. Source provenance records distinguish current page reads from a previously verified LOC article now returning access errors. The graph checks do not certify historical accuracy or semantic clue sufficiency.

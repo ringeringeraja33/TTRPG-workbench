@@ -41,3 +41,5 @@ For each spec create two distinct, complete proposed characters: characteristics
 Run the numerical adapter only for its declared system. It validates the configured arithmetic and equipment allowlist; it does not authenticate sources or infer an item's history. A missing source or unresolved rule produces a **draft**, not false certification. Wrong edition fails. If the user wants a different system, return to that system's native creation rules.
 
 The bundled [three cases and six cards](../assets/examples/background-chargen/README.md) are acceptance fixtures, not universal templates for all historical campaigns. Their approved house rules belong only to those fixtures. Test ordinary and adversarial inputs: budget overrun, unknown specialty, false base override, cap violation, anachronistic equipment, source missing, version mismatch and player export leakage. Live-player validation is outside scope.
+
+For skills, equipment, linked scenes and expansion ideas beyond creation, continue with [background design](background-design.md). Reuse audited builds rather than creating conflicting copies.

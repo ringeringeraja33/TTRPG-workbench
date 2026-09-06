@@ -42,3 +42,7 @@ Added an actively researched history/module-to-chargen workflow, player/GM templ
 ## Original rulebook authoring
 
 [Authoring workflow](rulebook-authoring.md) now covers concept intake, note organization, chapter revision and conflict repair. The manifest checker validates explicit dependencies and claims. A separate original dream-game prototype demonstrates two characters and twenty simulated turns; it is not a generic rules engine or a balance certification.
+
+## Background-driven design
+
+The [design workflow](background-design.md) connects historical research, native skill budgets, operational items and linked scenes. Three fixture extensions reuse six audited CoC7 characters and provide nine original scenes. Numerical support remains CoC7; history and clue semantics require source/prose review.

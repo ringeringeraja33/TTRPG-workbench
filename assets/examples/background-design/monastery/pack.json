@@ -1,0 +1,266 @@
+{
+  "profile": {
+    "system": "CoC",
+    "edition": "7e",
+    "setting_id": "monastery",
+    "variant": "original historical adaptation; not licensed supplement profile"
+  },
+  "premise": "Around 1000, at a fictional monastery in southern England. A village disputes its winter grain obligation. Investigate through manuscripts, witnesses and the delivery route; restrained, ambiguous folk horror.",
+  "sources": {
+    "history": {
+      "status": "read",
+      "locator": "https://www.bl.uk/about/projects/medieval-england-and-france",
+      "scope": "Opened 2026-09-06: 700-1200 England/France manuscript project overview. Supports manuscript culture, not exact village institutions, literacy rates, prices or individual tools. Detailed site content unavailable; all local arrangements and equipment quantities are original allocations."
+    },
+    "core": {
+      "status": "read",
+      "locator": "PDF31 occupational patterns; PDF37 finance; PDF44 skills",
+      "scope": "Reuse previously audited CoC7 bases and creation profile; no new occupation formula."
+    },
+    "house": {
+      "status": "read",
+      "locator": "gm.md",
+      "scope": "Original test-only scene allocations and clue routes; not official published module rules."
+    }
+  },
+  "skills": [
+    {
+      "id": "Read Write Latin",
+      "name": "Read Write Latin",
+      "treatment": "retain configured base; period-specific application",
+      "base": 1,
+      "cap": 80,
+      "source": "house",
+      "use": "Read the wording of a dated obligation; script and language remain separate from spoken fluency.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Track",
+      "name": "Track",
+      "treatment": "retain configured base; period-specific application",
+      "base": 10,
+      "cap": 80,
+      "source": "house",
+      "use": "Compare cart and foot trails on a plausible surface; a trail alone does not identify motive.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Library Use",
+      "name": "Library Use",
+      "treatment": "retain configured base; period-specific application",
+      "base": 5,
+      "cap": 80,
+      "source": "house",
+      "use": "Find a relevant document with permission; this is not automatic access to a locked archive.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Persuade",
+      "name": "Persuade",
+      "treatment": "retain configured base; period-specific application",
+      "base": 10,
+      "cap": 80,
+      "source": "house",
+      "use": "Negotiate a specific concession from a willing interlocutor; cannot dictate beliefs.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    }
+  ],
+  "items": [
+    {
+      "id": "copy-kit",
+      "name": "Writing kit",
+      "source": "house",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Prepare a witnessed handwritten copy after access is granted.",
+      "effect": "Preserves the observed wording for comparison; no bonus die or automatic translation.",
+      "limits": "One kit; ink and writing surface sufficient for three short copies by explicit allocation.",
+      "upkeep": "Mark each copy; after three, request supplies from the custodian.",
+      "substitute": "Ask a literate custodian to read aloud; record oral testimony."
+    },
+    {
+      "id": "route-cord",
+      "name": "Measuring cord",
+      "source": "house",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Lay beside visible wheel impressions with the guide.",
+      "effect": "Compare widths at two locations; agreement is supporting evidence, not proof of identity.",
+      "limits": "One cord, no climbing or load-bearing rating supplied.",
+      "upkeep": "Dry and return it; if lost, use counted paces with lower precision.",
+      "substitute": "Compare the route with a local cart driver."
+    },
+    {
+      "id": "witness-token",
+      "name": "Host introduction token",
+      "source": "house",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Present the fictional steward's marked token to request a hearing.",
+      "effect": "Establishes who sent the party; the recipient still decides access.",
+      "limits": "One loaned token, no universal legal or religious authority.",
+      "upkeep": "Return at departure; loss can be explained by the steward in person.",
+      "substitute": "Attend the public petition hour."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "archive",
+      "title": "Cold archive",
+      "purpose": "Establish what the obligation says.",
+      "entry": "Wet stone and an empty space between stitched leaves. Reach it through the preceding lead; the first scene is the agreed starting appointment.",
+      "exit_condition": "Follow the next lead or leave with an explicitly incomplete report at the final scene.",
+      "npc": "Sister Maud wants the archive intact; she will supervise reading but refuses removing originals.",
+      "objects": "Binding holes, surviving dates, a copied tally.",
+      "clue": "The missing leaf concerns a delivery at the lower ford, not an accusation of witchcraft.",
+      "pressure": "Original shared delay counter starts at 0. Each failed specialist attempt or ordinary route adds 1; at the first total of 3 the primary NPC leaves. The named ordinary-route contact stays available. Further delays do not remove that contact. No automatic HP/SAN loss.",
+      "exit": false,
+      "routes": [
+        {
+          "id": "archive-technical",
+          "method": "Compare surviving wording under supervision.",
+          "skills": [
+            "Read Write Latin"
+          ],
+          "items": [
+            "copy-kit"
+          ],
+          "success": "ford",
+          "failure": "archive",
+          "cost": "One investigative attempt; on failure add one delay and use a different route or meet native-system retry conditions.",
+          "outcome": "Success: The missing leaf concerns a delivery at the lower ford, not an accusation of witchcraft. Failure: A failed reading leaves the date uncertain; Maud can name the ford from her own account."
+        },
+        {
+          "id": "archive-social",
+          "method": "Negotiate the specific cooperation described in the NPC entry.",
+          "skills": [
+            "Persuade"
+          ],
+          "items": [],
+          "success": "ford",
+          "failure": "archive",
+          "cost": "An interview and an offered favor; decline or failed persuasion leaves the ordinary route available.",
+          "outcome": "Success gains a more precise account with permission; failure withholds that cooperation, not every onward lead."
+        },
+        {
+          "id": "archive-ordinary",
+          "method": "At the public bell, lay attendant Ead orally repeats the delivery destination: the lower ford. Ead remains available even when Maud leaves; this identifies the place without proving the missing wording.",
+          "skills": [],
+          "items": [],
+          "success": "ford",
+          "failure": "ford",
+          "cost": "One delay; no special equipment or successful skill roll. Accept less precise evidence and the stated access limits.",
+          "outcome": "After a failed specialized attempt, take this separate limited lead and pay the ordinary delay. At the public bell, lay attendant Ead orally repeats the delivery destination: the lower ford. Ead remains available even when Maud leaves; this identifies the place without proving the missing wording."
+        }
+      ]
+    },
+    {
+      "id": "ford",
+      "title": "Lower ford",
+      "purpose": "Identify which delivery actually crossed.",
+      "entry": "Deep wheel tracks disappear into reeds. Reach it through the preceding lead; the first scene is the agreed starting appointment.",
+      "exit_condition": "Follow the next lead or leave with an explicitly incomplete report at the final scene.",
+      "npc": "Carter Oswin wants payment and fears blame; he offers his route in exchange for help identifying the disputed load.",
+      "objects": "Wheel impressions, spilled grain, a repaired gate.",
+      "clue": "A second cart diverted part of the load toward the petition house.",
+      "pressure": "Original shared delay counter starts at 0. Each failed specialist attempt or ordinary route adds 1; at the first total of 3 the primary NPC leaves. The named ordinary-route contact stays available. Further delays do not remove that contact. No automatic HP/SAN loss.",
+      "exit": false,
+      "routes": [
+        {
+          "id": "ford-technical",
+          "method": "Compare tracks and travel direction without claiming a unique match.",
+          "skills": [
+            "Track"
+          ],
+          "items": [
+            "route-cord"
+          ],
+          "success": "hearing",
+          "failure": "ford",
+          "cost": "One investigative attempt; on failure add one delay and use a different route or meet native-system retry conditions.",
+          "outcome": "Success: A second cart diverted part of the load toward the petition house. Failure: Rain destroys fine marks after failure; Oswin can describe the petition-house delivery, without identifying the second driver."
+        },
+        {
+          "id": "ford-social",
+          "method": "Negotiate the specific cooperation described in the NPC entry.",
+          "skills": [
+            "Persuade"
+          ],
+          "items": [],
+          "success": "hearing",
+          "failure": "ford",
+          "cost": "An interview and an offered favor; decline or failed persuasion leaves the ordinary route available.",
+          "outcome": "Success gains a more precise account with permission; failure withholds that cooperation, not every onward lead."
+        },
+        {
+          "id": "ford-ordinary",
+          "method": "At the ford gate, cart-minder Wyn describes a delivery to the petition house. Wyn stays on duty after Oswin leaves; the account names no second driver and requires no track identification.",
+          "skills": [],
+          "items": [],
+          "success": "hearing",
+          "failure": "hearing",
+          "cost": "One delay; no special equipment or successful skill roll. Accept less precise evidence and the stated access limits.",
+          "outcome": "After a failed specialized attempt, take this separate limited lead and pay the ordinary delay. At the ford gate, cart-minder Wyn describes a delivery to the petition house. Wyn stays on duty after Oswin leaves; the account names no second driver and requires no track identification."
+        }
+      ]
+    },
+    {
+      "id": "hearing",
+      "title": "Petition house",
+      "purpose": "Decide how to present a disputed obligation.",
+      "entry": "A household recites a different count beside an unlit hearth. Reach it through the preceding lead; the first scene is the agreed starting appointment.",
+      "exit_condition": "Follow the next lead or leave with an explicitly incomplete report at the final scene.",
+      "npc": "Steward Aelf wants an orderly settlement; a tenant asks that names be heard privately.",
+      "objects": "Witness list, public tally, seal impression.",
+      "clue": "The witnesses distinguish a changed obligation from an accounting error; motives remain open to interpretation.",
+      "pressure": "Original shared delay counter starts at 0. Each failed specialist attempt or ordinary route adds 1; at the first total of 3 the primary NPC leaves. The named ordinary-route contact stays available. Further delays do not remove that contact. No automatic HP/SAN loss.",
+      "exit": true,
+      "routes": [
+        {
+          "id": "hearing-technical",
+          "method": "Locate the matching public tally at an invited hearing.",
+          "skills": [
+            "Library Use"
+          ],
+          "items": [
+            "witness-token"
+          ],
+          "success": "END",
+          "failure": "hearing",
+          "cost": "One investigative attempt; on failure add one delay and use a different route or meet native-system retry conditions.",
+          "outcome": "Success: The witnesses distinguish a changed obligation from an accounting error; motives remain open to interpretation. Failure: Failure means the original tally is withheld; a public oral petition still records the discrepancy, but cannot prove the exact wording."
+        },
+        {
+          "id": "hearing-social",
+          "method": "Negotiate the specific cooperation described in the NPC entry.",
+          "skills": [
+            "Persuade"
+          ],
+          "items": [],
+          "success": "END",
+          "failure": "hearing",
+          "cost": "An interview and an offered favor; decline or failed persuasion leaves the ordinary route available.",
+          "outcome": "Success gains a more precise account with permission; failure withholds that cooperation, not every onward lead."
+        },
+        {
+          "id": "hearing-ordinary",
+          "method": "At the public petition hour, announcer Leof repeats the competing grain counts. If the steward is absent the announcement still occurs; the party can report disagreement but cannot certify the original wording.",
+          "skills": [],
+          "items": [],
+          "success": "END",
+          "failure": "END",
+          "cost": "One delay; no special equipment or successful skill roll. Accept less precise evidence and the stated access limits.",
+          "outcome": "After a failed specialized attempt, take this separate limited lead and pay the ordinary delay. At the public petition hour, announcer Leof repeats the competing grain counts. If the steward is absent the announcement still occurs; the party can report disagreement but cannot certify the original wording."
+        }
+      ]
+    }
+  ],
+  "start": "archive",
+  "gm_secret": "GM_ONLY_BACKGROUND_DESIGN_SECRET: original case resolution; never project this field."
+}

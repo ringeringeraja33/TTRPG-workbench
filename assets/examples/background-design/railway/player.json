@@ -1,0 +1,83 @@
+{
+  "status": "passed explicit checks",
+  "premise": "1884, a fictional Colorado railway town. A freight receipt conflicts with a station timetable. Procedural frontier investigation with outdoor pursuit; firearms and horses are not automatically granted.",
+  "skills": [
+    {
+      "id": "Electrical Repair",
+      "name": "Electrical Repair",
+      "treatment": "retain configured base; period-specific application",
+      "base": 10,
+      "cap": 80,
+      "use": "Inspect permitted telegraph apparatus; does not grant radio/computer expertise.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Track",
+      "name": "Track",
+      "treatment": "retain configured base; period-specific application",
+      "base": 10,
+      "cap": 80,
+      "use": "Follow a usable physical trail; weather and surfaces limit evidence.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Mechanical Repair",
+      "name": "Mechanical Repair",
+      "treatment": "retain configured base; period-specific application",
+      "base": 10,
+      "cap": 80,
+      "use": "Inspect a mechanical fault after access; cannot establish a human motive by itself.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Persuade",
+      "name": "Persuade",
+      "treatment": "retain configured base; period-specific application",
+      "base": 10,
+      "cap": 80,
+      "use": "Ask for a specific favor or explanation; a timetable is not a confession.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    }
+  ],
+  "items": [
+    {
+      "id": "message-copy",
+      "name": "Station message copy",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Compare the sender, recipient and time notation with a permitted station log.",
+      "effect": "Shows the recorded message exactly as supplied; no guarantee it is truthful.",
+      "limits": "One employer-provided copy; access covers this message only.",
+      "upkeep": "Keep dry; if damaged, request a clerk's recollection at a delay cost.",
+      "substitute": "Ask the clerk to identify the destination and uncertainty orally."
+    },
+    {
+      "id": "route-sketch",
+      "name": "Track-inspection sketch",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Mark a public inspection route and compare observed landmarks.",
+      "effect": "Helps communicate locations; does not locate tracks or grant a Navigate bonus.",
+      "limits": "One fictional employer sketch, not a surveyed map or travel ticket.",
+      "upkeep": "Update only observed landmarks; replace through the station office.",
+      "substitute": "Travel with the local inspector on the public path."
+    },
+    {
+      "id": "repair-kit",
+      "name": "Repair kit",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Inspect an isolated, nonoperating lock or latch with the owner's permission.",
+      "effect": "Enables ordinary repair work under core skill rules; no automatic success or damage bonus.",
+      "limits": "One loan; does not authorize railway operation, sabotage or work on moving equipment.",
+      "upkeep": "Return parts after use; a missing part requires a station mechanic.",
+      "substitute": "Have the authorized mechanic inspect it and report findings."
+    }
+  ]
+}

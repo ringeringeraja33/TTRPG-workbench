@@ -55,3 +55,7 @@ Read [SRD class/spell operation](systems/dnd-class-spell-package.md) for `srd_ca
 ## Rulebook authoring tools
 
 `python -X utf8 scripts/rulebook_check.py <project.json> --changed <rule-id>` reports registered conflicts, stale references and affected artifacts. Read [manifest contract](rulebook-manifest.md). `python -X utf8 scripts/rulebook_demo.py --output <new-private-directory>` runs the original Dream Archaeology 0.2 example with twenty simulated player turns and exact one-action probabilities. It is a fixture-specific engine; see [authoring cases](../assets/examples/rulebook/index.md).
+
+## Background design packs
+
+`python -X utf8 scripts/background_design.py <pack.json> --chargen <spec.json>` checks a CoC7 pack against an existing build profile; `--player` exports only explicit public fields. See [contract and limits](background-design-tool.md).

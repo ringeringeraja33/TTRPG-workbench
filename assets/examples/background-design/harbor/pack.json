@@ -1,0 +1,266 @@
+{
+  "profile": {
+    "system": "CoC",
+    "edition": "7e",
+    "setting_id": "harbor",
+    "variant": "original historical adaptation; not licensed supplement profile"
+  },
+  "premise": "1925, a fictional New York harbor office. A missing-cargo complaint threatens a worker's livelihood. Documentary and social noir investigation; no real historical person is accused.",
+  "sources": {
+    "history": {
+      "status": "read",
+      "locator": "https://www.archives.gov/publications/prologue/2011/fall/smugglers-bootleggers-scofflaws",
+      "scope": "Opened 2026-09-06: Ellen NicKenzie Lawson, Prologue Fall 2011, maritime smuggling and Coast Guard records. Supports coastal/documentary context. Article late-1920s technology does not establish 1925 personal radio access. No historical individual, legal permission or market price is imported."
+    },
+    "core": {
+      "status": "read",
+      "locator": "PDF31 occupational patterns; PDF37 finance; PDF44 skills",
+      "scope": "Reuse previously audited CoC7 bases and creation profile; no new occupation formula."
+    },
+    "house": {
+      "status": "read",
+      "locator": "gm.md",
+      "scope": "Original test-only scene allocations and clue routes; not official published module rules."
+    }
+  },
+  "skills": [
+    {
+      "id": "Accounting",
+      "name": "Accounting",
+      "treatment": "retain configured base; period-specific application",
+      "base": 5,
+      "cap": 80,
+      "source": "core",
+      "use": "Compare entries and totals; inconsistent accounts do not by themselves establish fraud.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Spot Hidden",
+      "name": "Spot Hidden",
+      "treatment": "retain configured base; period-specific application",
+      "base": 25,
+      "cap": 80,
+      "source": "core",
+      "use": "Notice accessible physical details; does not grant access to private cargo.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Law",
+      "name": "Law",
+      "treatment": "retain configured base; period-specific application",
+      "base": 5,
+      "cap": 80,
+      "source": "core",
+      "use": "Interpret an available document within the selected setting; not current legal advice or automatic official authority.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Persuade",
+      "name": "Persuade",
+      "treatment": "retain configured base; period-specific application",
+      "base": 10,
+      "cap": 80,
+      "source": "core",
+      "use": "Negotiate an interview or permission; a credential does not compel cooperation.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    }
+  ],
+  "items": [
+    {
+      "id": "ledger-copy",
+      "name": "Ledger copy",
+      "source": "house",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Compare this supplied copy with a consenting clerk's entry.",
+      "effect": "Preserves a recorded quantity for comparison; authenticity and missing context remain questions.",
+      "limits": "One employer copy; contains no police or Coast Guard access permit.",
+      "upkeep": "Keep provenance notes; loss leaves the original clerk as an alternative.",
+      "substitute": "Ask the clerk to explain the entry in front of a witness."
+    },
+    {
+      "id": "inspection-card",
+      "name": "Inspection request card",
+      "source": "house",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Present a fictional employer's request for a supervised look at an idle crate.",
+      "effect": "Identifies the request; the owner may refuse or offer a public viewing.",
+      "limits": "One signed request, not a warrant, badge or universal dock pass.",
+      "upkeep": "Record who grants permission; if refused, use the public-facing label or a witness.",
+      "substitute": "View an exposed delivery label from the public side."
+    },
+    {
+      "id": "receipt-book",
+      "name": "Receipt notebook",
+      "source": "house",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Write down a voluntary account and let the speaker check the wording.",
+      "effect": "Separates observed quantities from allegations; no persuasion bonus or binding legal effect.",
+      "limits": "Three blank statement leaves are a scenario allocation.",
+      "upkeep": "One leaf per account; if exhausted use an oral statement witnessed by both characters.",
+      "substitute": "Conduct a witnessed oral interview without a written statement."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "ledger",
+      "title": "Freight office",
+      "purpose": "Identify which quantity is disputed.",
+      "entry": "A damp ledger carries two different totals. Reach it through the preceding lead; the first scene is the agreed starting appointment.",
+      "exit_condition": "Follow the next lead or leave with an explicitly incomplete report at the final scene.",
+      "npc": "Clerk Neri wants the worker treated fairly but fears losing employment; she shares a selected entry.",
+      "objects": "Ledger copy, delivery list, blotter.",
+      "clue": "The discrepancy belongs to a quayside transfer, not the entire ship's cargo.",
+      "pressure": "Original shared delay counter starts at 0. Each failed specialist attempt or ordinary route adds 1; at the first total of 3 the primary NPC leaves. The named ordinary-route contact stays available. Further delays do not remove that contact. No automatic HP/SAN loss.",
+      "exit": false,
+      "routes": [
+        {
+          "id": "ledger-technical",
+          "method": "Compare the two entries and their recorded units.",
+          "skills": [
+            "Accounting"
+          ],
+          "items": [
+            "ledger-copy"
+          ],
+          "success": "quay",
+          "failure": "ledger",
+          "cost": "One investigative attempt; on failure add one delay and use a different route or meet native-system retry conditions.",
+          "outcome": "Success: The discrepancy belongs to a quayside transfer, not the entire ship's cargo. Failure: Failure leaves the amount uncertain; Neri identifies the relevant quay and the limit of her knowledge."
+        },
+        {
+          "id": "ledger-social",
+          "method": "Negotiate the specific cooperation described in the NPC entry.",
+          "skills": [
+            "Persuade"
+          ],
+          "items": [],
+          "success": "quay",
+          "failure": "ledger",
+          "cost": "An interview and an offered favor; decline or failed persuasion leaves the ordinary route available.",
+          "outcome": "Success gains a more precise account with permission; failure withholds that cooperation, not every onward lead."
+        },
+        {
+          "id": "ledger-ordinary",
+          "method": "Dispatch runner Jo orally repeats the selected quay from the public delivery board. Jo remains assigned after Neri leaves; the exact disputed quantity remains unconfirmed.",
+          "skills": [],
+          "items": [],
+          "success": "quay",
+          "failure": "quay",
+          "cost": "One delay; no special equipment or successful skill roll. Accept less precise evidence and the stated access limits.",
+          "outcome": "After a failed specialized attempt, take this separate limited lead and pay the ordinary delay. Dispatch runner Jo orally repeats the selected quay from the public delivery board. Jo remains assigned after Neri leaves; the exact disputed quantity remains unconfirmed."
+        }
+      ]
+    },
+    {
+      "id": "quay",
+      "title": "Public quay",
+      "purpose": "Find who observed the transfer.",
+      "entry": "An exposed crate label flaps behind a railing. Reach it through the preceding lead; the first scene is the agreed starting appointment.",
+      "exit_condition": "Follow the next lead or leave with an explicitly incomplete report at the final scene.",
+      "npc": "Porter Ellis wants no trespass; he offers a public view and names a witness in return for accurate attribution.",
+      "objects": "Visible label, request card, porter's shift note.",
+      "clue": "A receipt was carried to a nearby lodging house before the cargo complaint.",
+      "pressure": "Original shared delay counter starts at 0. Each failed specialist attempt or ordinary route adds 1; at the first total of 3 the primary NPC leaves. The named ordinary-route contact stays available. Further delays do not remove that contact. No automatic HP/SAN loss.",
+      "exit": false,
+      "routes": [
+        {
+          "id": "quay-technical",
+          "method": "Inspect the permitted crate exterior and visible label.",
+          "skills": [
+            "Spot Hidden"
+          ],
+          "items": [
+            "inspection-card"
+          ],
+          "success": "lodging",
+          "failure": "quay",
+          "cost": "One investigative attempt; on failure add one delay and use a different route or meet native-system retry conditions.",
+          "outcome": "Success: A receipt was carried to a nearby lodging house before the cargo complaint. Failure: Failure or refused access prevents close inspection; Ellis supplies a slower witness route without confirming the hidden crate contents."
+        },
+        {
+          "id": "quay-social",
+          "method": "Negotiate the specific cooperation described in the NPC entry.",
+          "skills": [
+            "Persuade"
+          ],
+          "items": [],
+          "success": "lodging",
+          "failure": "quay",
+          "cost": "An interview and an offered favor; decline or failed persuasion leaves the ordinary route available.",
+          "outcome": "Success gains a more precise account with permission; failure withholds that cooperation, not every onward lead."
+        },
+        {
+          "id": "quay-ordinary",
+          "method": "Public porter Pat names the nearby lodging-house witness from a delivery recollection. Pat remains after Ellis leaves; no crate contents or private cargo access is granted.",
+          "skills": [],
+          "items": [],
+          "success": "lodging",
+          "failure": "lodging",
+          "cost": "One delay; no special equipment or successful skill roll. Accept less precise evidence and the stated access limits.",
+          "outcome": "After a failed specialized attempt, take this separate limited lead and pay the ordinary delay. Public porter Pat names the nearby lodging-house witness from a delivery recollection. Pat remains after Ellis leaves; no crate contents or private cargo access is granted."
+        }
+      ]
+    },
+    {
+      "id": "lodging",
+      "title": "Lodging-house interview",
+      "purpose": "Choose what to report and how to protect a source.",
+      "entry": "A tired witness asks that names stay off the public notice. Reach it through the preceding lead; the first scene is the agreed starting appointment.",
+      "exit_condition": "Follow the next lead or leave with an explicitly incomplete report at the final scene.",
+      "npc": "Witness Ro fears retaliation; they agree to describe the handover if identity stays private.",
+      "objects": "Receipt notebook, voluntary account, returned stub.",
+      "clue": "The handover account contradicts the accusation but leaves the final cargo recipient unresolved.",
+      "pressure": "Original shared delay counter starts at 0. Each failed specialist attempt or ordinary route adds 1; at the first total of 3 the primary NPC leaves. The named ordinary-route contact stays available. Further delays do not remove that contact. No automatic HP/SAN loss.",
+      "exit": true,
+      "routes": [
+        {
+          "id": "lodging-technical",
+          "method": "Clarify what the existing receipt claims, then record a voluntary statement.",
+          "skills": [
+            "Law"
+          ],
+          "items": [
+            "receipt-book"
+          ],
+          "success": "END",
+          "failure": "lodging",
+          "cost": "One investigative attempt; on failure add one delay and use a different route or meet native-system retry conditions.",
+          "outcome": "Success: The handover account contradicts the accusation but leaves the final cargo recipient unresolved. Failure: Failure leaves the receipt's implications unresolved; a witnessed oral account can still correct the chronology without a legal conclusion."
+        },
+        {
+          "id": "lodging-social",
+          "method": "Negotiate the specific cooperation described in the NPC entry.",
+          "skills": [
+            "Persuade"
+          ],
+          "items": [],
+          "success": "END",
+          "failure": "lodging",
+          "cost": "An interview and an offered favor; decline or failed persuasion leaves the ordinary route available.",
+          "outcome": "Success gains a more precise account with permission; failure withholds that cooperation, not every onward lead."
+        },
+        {
+          "id": "lodging-ordinary",
+          "method": "With Ro's standing fixture permission, lodging keeper Kit repeats an anonymous handover chronology. Kit remains when Ro leaves; no source identity or legal conclusion is disclosed.",
+          "skills": [],
+          "items": [],
+          "success": "END",
+          "failure": "END",
+          "cost": "One delay; no special equipment or successful skill roll. Accept less precise evidence and the stated access limits.",
+          "outcome": "After a failed specialized attempt, take this separate limited lead and pay the ordinary delay. With Ro's standing fixture permission, lodging keeper Kit repeats an anonymous handover chronology. Kit remains when Ro leaves; no source identity or legal conclusion is disclosed."
+        }
+      ]
+    }
+  ],
+  "start": "ledger",
+  "gm_secret": "GM_ONLY_BACKGROUND_DESIGN_SECRET: original case resolution; never project this field."
+}

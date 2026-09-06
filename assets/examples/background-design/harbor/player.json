@@ -1,0 +1,83 @@
+{
+  "status": "passed explicit checks",
+  "premise": "1925, a fictional New York harbor office. A missing-cargo complaint threatens a worker's livelihood. Documentary and social noir investigation; no real historical person is accused.",
+  "skills": [
+    {
+      "id": "Accounting",
+      "name": "Accounting",
+      "treatment": "retain configured base; period-specific application",
+      "base": 5,
+      "cap": 80,
+      "use": "Compare entries and totals; inconsistent accounts do not by themselves establish fraud.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Spot Hidden",
+      "name": "Spot Hidden",
+      "treatment": "retain configured base; period-specific application",
+      "base": 25,
+      "cap": 80,
+      "use": "Notice accessible physical details; does not grant access to private cargo.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Law",
+      "name": "Law",
+      "treatment": "retain configured base; period-specific application",
+      "base": 5,
+      "cap": 80,
+      "use": "Interpret an available document within the selected setting; not current legal advice or automatic official authority.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Persuade",
+      "name": "Persuade",
+      "treatment": "retain configured base; period-specific application",
+      "base": 10,
+      "cap": 80,
+      "use": "Negotiate an interview or permission; a credential does not compel cooperation.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    }
+  ],
+  "items": [
+    {
+      "id": "ledger-copy",
+      "name": "Ledger copy",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Compare this supplied copy with a consenting clerk's entry.",
+      "effect": "Preserves a recorded quantity for comparison; authenticity and missing context remain questions.",
+      "limits": "One employer copy; contains no police or Coast Guard access permit.",
+      "upkeep": "Keep provenance notes; loss leaves the original clerk as an alternative.",
+      "substitute": "Ask the clerk to explain the entry in front of a witness."
+    },
+    {
+      "id": "inspection-card",
+      "name": "Inspection request card",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Present a fictional employer's request for a supervised look at an idle crate.",
+      "effect": "Identifies the request; the owner may refuse or offer a public viewing.",
+      "limits": "One signed request, not a warrant, badge or universal dock pass.",
+      "upkeep": "Record who grants permission; if refused, use the public-facing label or a witness.",
+      "substitute": "View an exposed delivery label from the public side."
+    },
+    {
+      "id": "receipt-book",
+      "name": "Receipt notebook",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Write down a voluntary account and let the speaker check the wording.",
+      "effect": "Separates observed quantities from allegations; no persuasion bonus or binding legal effect.",
+      "limits": "Three blank statement leaves are a scenario allocation.",
+      "upkeep": "One leaf per account; if exhausted use an oral statement witnessed by both characters.",
+      "substitute": "Conduct a witnessed oral interview without a written statement."
+    }
+  ]
+}

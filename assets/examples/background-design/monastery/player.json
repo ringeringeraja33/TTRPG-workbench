@@ -1,0 +1,83 @@
+{
+  "status": "passed explicit checks",
+  "premise": "Around 1000, at a fictional monastery in southern England. A village disputes its winter grain obligation. Investigate through manuscripts, witnesses and the delivery route; restrained, ambiguous folk horror.",
+  "skills": [
+    {
+      "id": "Read Write Latin",
+      "name": "Read Write Latin",
+      "treatment": "retain configured base; period-specific application",
+      "base": 1,
+      "cap": 80,
+      "use": "Read the wording of a dated obligation; script and language remain separate from spoken fluency.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Track",
+      "name": "Track",
+      "treatment": "retain configured base; period-specific application",
+      "base": 10,
+      "cap": 80,
+      "use": "Compare cart and foot trails on a plausible surface; a trail alone does not identify motive.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Library Use",
+      "name": "Library Use",
+      "treatment": "retain configured base; period-specific application",
+      "base": 5,
+      "cap": 80,
+      "use": "Find a relevant document with permission; this is not automatic access to a locked archive.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Persuade",
+      "name": "Persuade",
+      "treatment": "retain configured base; period-specific application",
+      "base": 10,
+      "cap": 80,
+      "use": "Negotiate a specific concession from a willing interlocutor; cannot dictate beliefs.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    }
+  ],
+  "items": [
+    {
+      "id": "copy-kit",
+      "name": "Writing kit",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Prepare a witnessed handwritten copy after access is granted.",
+      "effect": "Preserves the observed wording for comparison; no bonus die or automatic translation.",
+      "limits": "One kit; ink and writing surface sufficient for three short copies by explicit allocation.",
+      "upkeep": "Mark each copy; after three, request supplies from the custodian.",
+      "substitute": "Ask a literate custodian to read aloud; record oral testimony."
+    },
+    {
+      "id": "route-cord",
+      "name": "Measuring cord",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Lay beside visible wheel impressions with the guide.",
+      "effect": "Compare widths at two locations; agreement is supporting evidence, not proof of identity.",
+      "limits": "One cord, no climbing or load-bearing rating supplied.",
+      "upkeep": "Dry and return it; if lost, use counted paces with lower precision.",
+      "substitute": "Compare the route with a local cart driver."
+    },
+    {
+      "id": "witness-token",
+      "name": "Host introduction token",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Present the fictional steward's marked token to request a hearing.",
+      "effect": "Establishes who sent the party; the recipient still decides access.",
+      "limits": "One loaned token, no universal legal or religious authority.",
+      "upkeep": "Return at departure; loss can be explained by the steward in person.",
+      "substitute": "Attend the public petition hour."
+    }
+  ]
+}

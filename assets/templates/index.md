@@ -14,3 +14,5 @@
 - [Background-aware creation specification](background-chargen.md): separate player rules, GM research/adaptation ledger and six-card acceptance workflow.
 
 - [Rulebook project](rulebook-project.md): original rules, chapter dependencies, terminology, revision and playable validation.
+
+- [Background design pack](background-design.md): sourced skill/item treatments, connected GM scenes and separate public materials.

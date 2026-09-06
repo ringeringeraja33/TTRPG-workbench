@@ -8,7 +8,7 @@ Three original settings, two proposed characters each. All use explicitly approv
 | 1884 Colorado railway town; freight/field pursuit | [Player](railway/player.md) | [GM](railway/gm.md) | [JSON](railway/spec.json) |
 | 1925 New York harbor; documentary/social investigation | [Player](harbor/player.md) | [GM](harbor/gm.md) | [JSON](harbor/spec.json) |
 
-Run `python -X utf 8 scripts/background_chargen.py assets/examples/background-chargen/monastery/spec.json`; add `--player` for a whitelisted card export. Repeat for railway and harbor. Each `cards.json` is the checked player projection; each `player.md` includes the complete skill table, not only invested skills. `spec.json` contains a synthetic GM secret used in leakage tests, so do not hand that file to players.
+Run `python -X utf8 scripts/background_chargen.py assets/examples/background-chargen/monastery/spec.json`; add `--player` for a whitelisted card export. Repeat for railway and harbor. Each `cards.json` is the checked player projection; each `player.md` includes the complete skill table, not only invested skills. `spec.json` contains a synthetic GM secret used in leakage tests, so do not hand that file to players.
 
 Six controlled attribute sets use the same fixed numbers, explicitly declared as test inputs, so role/setting comparisons do not confuse better attributes with better rules. All characters are age 28; the supplied EDU improvement result 60 does not improve EDU 70. The guide uses EDU×2+STR×2=240 occupation points; the other profiles use EDU×4=280 or EDU×2+DEX×2=280. Everyone spends INT×2=150 interest points. Different budgets preserve the declared formula rather than forcing equal final percentages.
 

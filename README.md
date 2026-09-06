@@ -139,3 +139,11 @@ Use `$ttrpg-workbench` to turn a concept or notes into playable rules, expand ch
 中文示例：“用 $ttrpg-workbench，把这些零散笔记整理成可玩的原创规则书，保留既定设定与术语，补齐操作程序、角色卡、算例和修订记录。”
 
 Rulebook authoring adds 14 test groups; the current complete automated suite contains 88 tests.
+
+## Skills, items and scenes from a historical brief
+
+Use `$ttrpg-workbench` with a period, location and style to research and design skills, equipment, linked scenes and expansion ideas. The [workflow](references/background-design.md) separates historical evidence, existing rules, inference and original allowances. [Three packs](assets/examples/background-design/index.md) reuse six complete characters and add nine scenes with alternative routes and separate public materials.
+
+中文调用：“根据这个模组的时代背景与风格，研究并设计技能、物品和三个关联场景，说明点数、装备来源和替代路线，分别输出玩家版与主持版。”
+
+Background-design extension: 10 new test groups, 98 tests in the complete suite.

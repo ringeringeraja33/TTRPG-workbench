@@ -1,0 +1,266 @@
+{
+  "profile": {
+    "system": "CoC",
+    "edition": "7e",
+    "setting_id": "railway",
+    "variant": "original historical adaptation; not licensed supplement profile"
+  },
+  "premise": "1884, a fictional Colorado railway town. A freight receipt conflicts with a station timetable. Procedural frontier investigation with outdoor pursuit; firearms and horses are not automatically granted.",
+  "sources": {
+    "history": {
+      "status": "read",
+      "locator": "https://blogs.loc.gov/law/2024/11/whose-time-is-it-anyway-a-brief-history-of-standardized-time-zones-in-the-united-states/",
+      "scope": "Prior background-chargen review read the 1883 standard-time and telegraph discussion. On 2026-09-06 current search returned relevant excerpts, direct article access returned 403; alternative LOC guide returned 429. Current pack does not claim fresh full-text access. The town, wiring, local clock disagreement and access permissions are original assumptions; no exact offset or price is inferred."
+    },
+    "core": {
+      "status": "read",
+      "locator": "PDF31 occupational patterns; PDF37 finance; PDF44 skills",
+      "scope": "Reuse previously audited CoC7 bases and creation profile; no new occupation formula."
+    },
+    "house": {
+      "status": "read",
+      "locator": "gm.md",
+      "scope": "Original test-only scene allocations and clue routes; not official published module rules."
+    }
+  },
+  "skills": [
+    {
+      "id": "Electrical Repair",
+      "name": "Electrical Repair",
+      "treatment": "retain configured base; period-specific application",
+      "base": 10,
+      "cap": 80,
+      "source": "core",
+      "use": "Inspect permitted telegraph apparatus; does not grant radio/computer expertise.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Track",
+      "name": "Track",
+      "treatment": "retain configured base; period-specific application",
+      "base": 10,
+      "cap": 80,
+      "source": "core",
+      "use": "Follow a usable physical trail; weather and surfaces limit evidence.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Mechanical Repair",
+      "name": "Mechanical Repair",
+      "treatment": "retain configured base; period-specific application",
+      "base": 10,
+      "cap": 80,
+      "source": "core",
+      "use": "Inspect a mechanical fault after access; cannot establish a human motive by itself.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    },
+    {
+      "id": "Persuade",
+      "name": "Persuade",
+      "treatment": "retain configured base; period-specific application",
+      "base": 10,
+      "cap": 80,
+      "source": "core",
+      "use": "Ask for a specific favor or explanation; a timetable is not a confession.",
+      "limit": "No new points or bonus dice; occupational eligibility remains in the linked creation specification."
+    }
+  ],
+  "items": [
+    {
+      "id": "message-copy",
+      "name": "Station message copy",
+      "source": "house",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Compare the sender, recipient and time notation with a permitted station log.",
+      "effect": "Shows the recorded message exactly as supplied; no guarantee it is truthful.",
+      "limits": "One employer-provided copy; access covers this message only.",
+      "upkeep": "Keep dry; if damaged, request a clerk's recollection at a delay cost.",
+      "substitute": "Ask the clerk to identify the destination and uncertainty orally."
+    },
+    {
+      "id": "route-sketch",
+      "name": "Track-inspection sketch",
+      "source": "house",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Mark a public inspection route and compare observed landmarks.",
+      "effect": "Helps communicate locations; does not locate tracks or grant a Navigate bonus.",
+      "limits": "One fictional employer sketch, not a surveyed map or travel ticket.",
+      "upkeep": "Update only observed landmarks; replace through the station office.",
+      "substitute": "Travel with the local inspector on the public path."
+    },
+    {
+      "id": "repair-kit",
+      "name": "Repair kit",
+      "source": "house",
+      "availability": "scenario allocation",
+      "acquisition": "Optional equipment supplied at the relevant scene by its fictional custodian; not added to starting cards.",
+      "quantity": 1,
+      "price_basis": "Explicit loan or supply allocation, no purchase or historically asserted price.",
+      "procedure": "Inspect an isolated, nonoperating lock or latch with the owner's permission.",
+      "effect": "Enables ordinary repair work under core skill rules; no automatic success or damage bonus.",
+      "limits": "One loan; does not authorize railway operation, sabotage or work on moving equipment.",
+      "upkeep": "Return parts after use; a missing part requires a station mechanic.",
+      "substitute": "Have the authorized mechanic inspect it and report findings."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "office",
+      "title": "Station office",
+      "purpose": "Separate time notation from the cargo allegation.",
+      "entry": "Two clocks disagree with a handwritten receipt. Reach it through the preceding lead; the first scene is the agreed starting appointment.",
+      "exit_condition": "Follow the next lead or leave with an explicitly incomplete report at the final scene.",
+      "npc": "Clerk Mara wants the station cleared of theft accusations; she will explain log conventions but not release every message.",
+      "objects": "Message copy, wall clock, freight destination list.",
+      "clue": "The notation discrepancy points to the loading siding; it does not prove a theft.",
+      "pressure": "Original shared delay counter starts at 0. Each failed specialist attempt or ordinary route adds 1; at the first total of 3 the primary NPC leaves. The named ordinary-route contact stays available. Further delays do not remove that contact. No automatic HP/SAN loss.",
+      "exit": false,
+      "routes": [
+        {
+          "id": "office-technical",
+          "method": "Ask how the apparatus and log were used, then inspect a permitted connection.",
+          "skills": [
+            "Electrical Repair"
+          ],
+          "items": [
+            "message-copy"
+          ],
+          "success": "siding",
+          "failure": "office",
+          "cost": "One investigative attempt; on failure add one delay and use a different route or meet native-system retry conditions.",
+          "outcome": "Success: The notation discrepancy points to the loading siding; it does not prove a theft. Failure: A failed inspection delays confirmation; Mara names the siding but cannot vouch for the disputed timestamp."
+        },
+        {
+          "id": "office-social",
+          "method": "Negotiate the specific cooperation described in the NPC entry.",
+          "skills": [
+            "Persuade"
+          ],
+          "items": [],
+          "success": "siding",
+          "failure": "office",
+          "cost": "An interview and an offered favor; decline or failed persuasion leaves the ordinary route available.",
+          "outcome": "Success gains a more precise account with permission; failure withholds that cooperation, not every onward lead."
+        },
+        {
+          "id": "office-ordinary",
+          "method": "Platform porter Ames orally reads the loading destination from the public freight notice: the siding. Ames remains on shift after Mara leaves; the disputed timestamp is not confirmed.",
+          "skills": [],
+          "items": [],
+          "success": "siding",
+          "failure": "siding",
+          "cost": "One delay; no special equipment or successful skill roll. Accept less precise evidence and the stated access limits.",
+          "outcome": "After a failed specialized attempt, take this separate limited lead and pay the ordinary delay. Platform porter Ames orally reads the loading destination from the public freight notice: the siding. Ames remains on shift after Mara leaves; the disputed timestamp is not confirmed."
+        }
+      ]
+    },
+    {
+      "id": "siding",
+      "title": "Loading siding",
+      "purpose": "Determine which route the wagon took.",
+      "entry": "Crate splinters lie beside a public footpath. Reach it through the preceding lead; the first scene is the agreed starting appointment.",
+      "exit_condition": "Follow the next lead or leave with an explicitly incomplete report at the final scene.",
+      "npc": "Inspector Cole wants the line safe; he trades a guided look for an accurate damage report.",
+      "objects": "Route sketch, wagon impressions, broken packing strip.",
+      "clue": "A wagon proceeded to the inland storehouse, not the outbound platform.",
+      "pressure": "Original shared delay counter starts at 0. Each failed specialist attempt or ordinary route adds 1; at the first total of 3 the primary NPC leaves. The named ordinary-route contact stays available. Further delays do not remove that contact. No automatic HP/SAN loss.",
+      "exit": false,
+      "routes": [
+        {
+          "id": "siding-technical",
+          "method": "Compare fresh impressions along the permitted path.",
+          "skills": [
+            "Track"
+          ],
+          "items": [
+            "route-sketch"
+          ],
+          "success": "store",
+          "failure": "siding",
+          "cost": "One investigative attempt; on failure add one delay and use a different route or meet native-system retry conditions.",
+          "outcome": "Success: A wagon proceeded to the inland storehouse, not the outbound platform. Failure: Wind obscures the marks; Cole offers a slower guided route without confirming the exact wagon."
+        },
+        {
+          "id": "siding-social",
+          "method": "Negotiate the specific cooperation described in the NPC entry.",
+          "skills": [
+            "Persuade"
+          ],
+          "items": [],
+          "success": "store",
+          "failure": "siding",
+          "cost": "An interview and an offered favor; decline or failed persuasion leaves the ordinary route available.",
+          "outcome": "Success gains a more precise account with permission; failure withholds that cooperation, not every onward lead."
+        },
+        {
+          "id": "siding-ordinary",
+          "method": "Crossing attendant Beck describes the public path to the inland storehouse. Beck remains posted when Cole leaves; the route gives access without confirming which wagon made the tracks.",
+          "skills": [],
+          "items": [],
+          "success": "store",
+          "failure": "store",
+          "cost": "One delay; no special equipment or successful skill roll. Accept less precise evidence and the stated access limits.",
+          "outcome": "After a failed specialized attempt, take this separate limited lead and pay the ordinary delay. Crossing attendant Beck describes the public path to the inland storehouse. Beck remains posted when Cole leaves; the route gives access without confirming which wagon made the tracks."
+        }
+      ]
+    },
+    {
+      "id": "store",
+      "title": "Inland storehouse",
+      "purpose": "Reconstruct the failed transfer.",
+      "entry": "A strained latch catches on an uneven door. Reach it through the preceding lead; the first scene is the agreed starting appointment.",
+      "exit_condition": "Follow the next lead or leave with an explicitly incomplete report at the final scene.",
+      "npc": "Storekeeper Venn fears a negligence claim; he permits a witnessed inspection and can offer an oral account.",
+      "objects": "Latch, packing list, signed arrival stub.",
+      "clue": "The cargo remained inland during an unrecorded repair; responsibility depends on whose instructions were followed.",
+      "pressure": "Original shared delay counter starts at 0. Each failed specialist attempt or ordinary route adds 1; at the first total of 3 the primary NPC leaves. The named ordinary-route contact stays available. Further delays do not remove that contact. No automatic HP/SAN loss.",
+      "exit": true,
+      "routes": [
+        {
+          "id": "store-technical",
+          "method": "Inspect the idle latch with a mechanic and compare the arrival stub.",
+          "skills": [
+            "Mechanical Repair"
+          ],
+          "items": [
+            "repair-kit"
+          ],
+          "success": "END",
+          "failure": "store",
+          "cost": "One investigative attempt; on failure add one delay and use a different route or meet native-system retry conditions.",
+          "outcome": "Success: The cargo remained inland during an unrecorded repair; responsibility depends on whose instructions were followed. Failure: Failure leaves the mechanical cause unresolved; the witnessed oral account still establishes where the cargo waited."
+        },
+        {
+          "id": "store-social",
+          "method": "Negotiate the specific cooperation described in the NPC entry.",
+          "skills": [
+            "Persuade"
+          ],
+          "items": [],
+          "success": "END",
+          "failure": "store",
+          "cost": "An interview and an offered favor; decline or failed persuasion leaves the ordinary route available.",
+          "outcome": "Success gains a more precise account with permission; failure withholds that cooperation, not every onward lead."
+        },
+        {
+          "id": "store-ordinary",
+          "method": "Relief worker Dale gives the public arrival time from the shift handover. Dale stays after Venn leaves; the party can report that cargo waited here while the mechanical cause remains unresolved.",
+          "skills": [],
+          "items": [],
+          "success": "END",
+          "failure": "END",
+          "cost": "One delay; no special equipment or successful skill roll. Accept less precise evidence and the stated access limits.",
+          "outcome": "After a failed specialized attempt, take this separate limited lead and pay the ordinary delay. Relief worker Dale gives the public arrival time from the shift handover. Dale stays after Venn leaves; the party can report that cargo waited here while the mechanical cause remains unresolved."
+        }
+      ]
+    }
+  ],
+  "start": "office",
+  "gm_secret": "GM_ONLY_BACKGROUND_DESIGN_SECRET: original case resolution; never project this field."
+}
