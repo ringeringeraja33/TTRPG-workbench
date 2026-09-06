@@ -56,3 +56,7 @@ The earlier statements that Fighter weight had not been calculated and session r
 ## Source-backed completion pass
 
 65 automated tests cover the implemented boundaries, including cold-process ritual-cost recovery. An actual-source integration check separately reads all 339 SRD spells, checks their 339 Casting Time headers and 12 class source ranges, and saves the index outside the skill. This validates coverage of extraction, not every possible rules interaction. Live-player testing is explicitly outside acceptance scope and is no longer a pending task.
+
+## Background creation acceptance
+
+74 tests pass, including nine new groups covering three eras/six cards, exact budgets, caps, specialty eligibility, edition conflicts, missing sources, approval status, anachronistic equipment, wealth arithmetic and private-field exclusion. Guard/Healer sheets in the Dark Ages pack were rendered because PDF extraction omitted their filled fields. The Down Darker Trails preview contains only six pages, so its official creation budget remains unverified; those fixture occupations are explicitly original house rules. Scope: configured CoC7 arithmetic and reviewed evidence, not universal historical or multi-system certification.

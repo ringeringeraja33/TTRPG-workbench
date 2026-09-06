@@ -47,3 +47,7 @@ For an approved finite-resource increase, submit `{"kind":"resize","actor":"pc1"
 ## Source-backed class, spell, vehicle and ritual tools
 
 Read [SRD class/spell operation](systems/dnd-class-spell-package.md) for `srd_catalog.py` full-entry lookup and `class_magic.py` multiclass/HP/Counterspell functions. Read [CoC vehicles and rituals](systems/coc-vehicles-rituals.md) for `coc_vehicle_magic.py`. These helpers return proposed changes; apply them with source citations through `session.py`. The SRD reader validates the source hash and checks all 339 spell headers before returning results.
+
+## Background character creation audit
+
+`python -X utf8 scripts/background_chargen.py <spec.json>` audits an explicitly configured CoC7 profile: occupation/interest budgets, skill bases and caps, resources, approved equipment and wealth, party capabilities. `--player` emits only card fields. Unknown editions fail; missing evidence or unapproved house rules produce a draft. The profile is reviewed source data, not untrusted executable code. Historical and semantic checks remain part of [the workflow](background-chargen.md). Reproducible inputs: [three cases](../assets/examples/background-chargen/README.md).

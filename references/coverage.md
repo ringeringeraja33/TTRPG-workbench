@@ -34,3 +34,7 @@
 The SRD package now reads all 12 class chapters and all 339 spell entries from the verified 5.2.1 PDF, including cross-page text. Added multiclass slot calculation, class-order fixed HP and Counterspell settlement. CoC now has collision severity/units/occupant procedures and learning, first-cast, interruption and backlash procedures with numerical helpers. See [SRD package](systems/dnd-class-spell-package.md) and [CoC package](systems/coc-vehicles-rituals.md). Earlier statements that these had no procedure refer to the preceding release.
 
 Live-player evaluation is excluded from the requested work and is not a pending acceptance gate. Remaining scope distinctions: non-SRD publications, fractional-Build vehicles and source-specific exceptions require their actual source; all-entry retrieval does not claim exhaustive automatic adjudication of every possible interaction.
+
+## Background-aware creation
+
+Added an actively researched history/module-to-chargen workflow, player/GM templates and three historical fixture profiles with six complete proposed characters. The numerical adapter covers CoC7 only and checks configured rules/availability; it does not independently establish historical facts. Other systems use the workflow with their native creation rules. Sources lacking allocation ledgers do not become invented official budgets.

@@ -1,6 +1,6 @@
 ---
 name: ttrpg-workbench
-description: Research edition-specific TTRPG rules, prepare adventures, create and audit characters, design homebrew, and run persistent GM/KP/DM sessions using local books and official sources. Use for TTRPG, 跑团, 车卡, 备团, 主持, campaigns, character advancement, and rulebook design.
+description: Research edition-specific TTRPG rules, prepare adventures, research historical settings to design character creation specifications, create and audit characters, design homebrew, and run persistent GM/KP/DM sessions. Use for TTRPG, 跑团, 车卡规范, 时代背景适配, 备团, 主持, campaigns, character advancement, and rulebook design.
 ---
 
 # TTRPG Workbench
@@ -24,6 +24,7 @@ Read optional `local-paths.json` for `source_root`, `library_root` and `index_ro
 | Citations | [Bibliography](references/bibliography.md), [citation guide](references/citation-guide.md), [evidence](references/evidence.md) |
 | Adventure preparation/review | [Adventures](references/adventures.md), [persistent preparation](references/prep-persistence.md), [session lifecycle](references/session-lifecycle.md) |
 | Characters and advancement | [Characters](references/characters.md), selected system procedures and worked build |
+| A module's historical background or style needs creation rules | [Background-aware creation](references/background-chargen.md); actively research history and comparable creation material, then separate source rules from house changes |
 | Direct hosting / recovery | [Hosting](references/hosting.md), [ledger](references/session-runtime.md), [CoC7 table package](references/systems/coc7-table.md) or [SRD 5.2.1 table package](references/systems/dnd2024-table.md) |
 | Automatic fire, spell-slot turns, consequences, vice | [Advanced mechanics](references/systems/advanced-mechanics.md); read its explicit limitations |
 | All SRD class/spell source lookup and multiclassing | [Class and spell package](references/systems/dnd-class-spell-package.md), `scripts/srd_catalog.py`, `scripts/class_magic.py` |

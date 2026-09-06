@@ -127,3 +127,7 @@ Run `python -X utf8 -m unittest discover -s scripts -p "test_*.py"` (55 tests) a
 ## Class, spell, vehicle and ritual source packages
 
 The [SRD source package](references/systems/dnd-class-spell-package.md) reads all 12 classes and 339 spell entries from the verified official 5.2.1 PDF. It adds multiclass slot, fixed HP and Counterspell settlement helpers. The [CoC package](references/systems/coc-vehicles-rituals.md) adds collision, occupant injury, ritual learning, first casting and backlash procedures. Full automatic interaction resolution is distinct from full source retrieval. Current tests: 65. Live-player evaluation is outside this project task’s acceptance scope.
+
+## Background-aware character creation
+
+When given a module’s period, place and style, the skill now [researches an appropriate creation specification](references/background-chargen.md), using history and actual comparable character material. It separates source rules from original adjustments and produces distinct player and GM documents. [Three eras and six complete proposed cards](assets/examples/background-chargen/README.md) exercise budgets, skill changes, equipment and party coverage. The numerical adapter supports CoC7; other systems retain their own creation rules. Current automated suite:74 tests.

@@ -10,3 +10,5 @@
 - [测试记录](test-record.md)：保留实际输入、结果和限制。
 
 模板里的空字段是待填写表单，不代表技能未完成。简单任务只保留必要字段。
+
+- [Background-aware creation specification](background-chargen.md): separate player rules, GM research/adaptation ledger and six-card acceptance workflow.

@@ -1,0 +1,413 @@
+{
+  "profile": {
+    "system": "CoC",
+    "edition": "7e",
+    "setting_id": "monastery",
+    "variant": "original historical adaptation; not licensed supplement profile"
+  },
+  "public_premise": "1000 CE, fictional southern English monastery; Restricted archive and rural investigation",
+  "sources": {
+    "core": {
+      "title": "CoC7 local core v1.2.1",
+      "locator": "PDF31 occupational patterns; PDF37 finance; PDF44 skills",
+      "status": "read"
+    },
+    "house": {
+      "title": "Original fixture adaptation",
+      "locator": "gm.md: rule changes; approved for these fixtures only",
+      "status": "read"
+    },
+    "history": {
+      "title": "1000 CE, fictional southern English monastery",
+      "locator": "https://www.bl.uk/about/projects/medieval-england-and-france",
+      "status": "read"
+    }
+  },
+  "rule_sources": [
+    "core",
+    "house",
+    "history"
+  ],
+  "house_rules_approved": true,
+  "pending": [],
+  "skill_bases": {
+    "Accounting": 5,
+    "Anthropology": 1,
+    "Appraise": 5,
+    "Archaeology": 1,
+    "Charm": 15,
+    "Climb": 20,
+    "Cthulhu Mythos": 0,
+    "Disguise": 5,
+    "Dodge": "DEX/2",
+    "Fast Talk": 5,
+    "Fighting Brawl": 25,
+    "First Aid": 30,
+    "History": 5,
+    "Intimidate": 15,
+    "Jump": 20,
+    "Law": 5,
+    "Library Use": 5,
+    "Listen": 20,
+    "Locksmith": 1,
+    "Mechanical Repair": 10,
+    "Medicine": 1,
+    "Natural World": 10,
+    "Navigate": 10,
+    "Occult": 5,
+    "Operate Heavy Machinery": 1,
+    "Own Language": "EDU",
+    "Persuade": 10,
+    "Pilot Boat": 1,
+    "Psychology": 10,
+    "Psychoanalysis": 1,
+    "Ride": 5,
+    "Sleight of Hand": 10,
+    "Spot Hidden": 25,
+    "Stealth": 20,
+    "Survival": 10,
+    "Swim": 20,
+    "Throw": 20,
+    "Track": 10,
+    "Craft Calligraphy": 5,
+    "Read Write Latin": 1,
+    "Spoken Latin": 1,
+    "Read Write Own Language": 1,
+    "Status": 0
+  },
+  "skill_cap": 80,
+  "interest_formula": {
+    "INT": 2
+  },
+  "no_interest": [
+    "Status",
+    "Cthulhu Mythos"
+  ],
+  "wealth_skill": "Status",
+  "equipment_allowlist": [
+    "wool clothing",
+    "travel bag",
+    "bread and water",
+    "writing kit",
+    "walking staff"
+  ],
+  "coverage_threshold": 50,
+  "team_capabilities": {
+    "scholarship": [
+      "Library Use",
+      "Accounting"
+    ],
+    "travel": [
+      "Ride",
+      "Navigate",
+      "Track"
+    ],
+    "social": [
+      "Persuade",
+      "Psychology"
+    ]
+  },
+  "occupations": {
+    "Scribe": {
+      "formula": {
+        "EDU": 4
+      },
+      "skills": [
+        "Craft Calligraphy",
+        "History",
+        "Library Use",
+        "Read Write Latin",
+        "Persuade",
+        "Psychology",
+        "Spot Hidden",
+        "First Aid",
+        "Status"
+      ],
+      "wealth_range": [
+        10,
+        30
+      ],
+      "authority": "house: eight skills plus wealth; formula selected for role training"
+    },
+    "Guide": {
+      "formula": {
+        "EDU": 2,
+        "STR": 2
+      },
+      "skills": [
+        "Ride",
+        "Natural World",
+        "Navigate",
+        "Track",
+        "Persuade",
+        "Psychology",
+        "Spot Hidden",
+        "First Aid",
+        "Status"
+      ],
+      "wealth_range": [
+        10,
+        30
+      ],
+      "authority": "house: eight skills plus wealth; formula selected for role training"
+    }
+  },
+  "characters": [
+    {
+      "id": "monastery1",
+      "profile": {
+        "system": "CoC",
+        "edition": "7e",
+        "setting_id": "monastery",
+        "variant": "original historical adaptation; not licensed supplement profile"
+      },
+      "name": "抄写员 艾文",
+      "occupation": "Scribe",
+      "age": 28,
+      "attributes": {
+        "STR": 50,
+        "CON": 60,
+        "SIZ": 65,
+        "DEX": 70,
+        "APP": 55,
+        "INT": 75,
+        "POW": 60,
+        "EDU": 70
+      },
+      "luck": 50,
+      "generation": "Fixed test characteristics; no dice claimed. These controlled inputs isolate differences in occupation and setting.",
+      "age_check": "Age 28: one EDU improvement check; simulated d100 result = 60, at or below EDU 70, so no increase.",
+      "allocations": [
+        {
+          "skill": "Craft Calligraphy",
+          "occupation": 35,
+          "interest": 10
+        },
+        {
+          "skill": "History",
+          "occupation": 25,
+          "interest": 0
+        },
+        {
+          "skill": "Library Use",
+          "occupation": 50,
+          "interest": 10
+        },
+        {
+          "skill": "Read Write Latin",
+          "occupation": 29,
+          "interest": 0
+        },
+        {
+          "skill": "Persuade",
+          "occupation": 40,
+          "interest": 10
+        },
+        {
+          "skill": "Psychology",
+          "occupation": 30,
+          "interest": 20
+        },
+        {
+          "skill": "Spot Hidden",
+          "occupation": 35,
+          "interest": 10
+        },
+        {
+          "skill": "First Aid",
+          "occupation": 16,
+          "interest": 14
+        },
+        {
+          "skill": "Status",
+          "occupation": 20,
+          "interest": 0
+        },
+        {
+          "skill": "Dodge",
+          "occupation": 0,
+          "interest": 25
+        },
+        {
+          "skill": "Stealth",
+          "occupation": 0,
+          "interest": 31
+        },
+        {
+          "skill": "Listen",
+          "occupation": 0,
+          "interest": 20
+        }
+      ],
+      "equipment": [
+        "wool clothing",
+        "travel bag",
+        "bread and water",
+        "writing kit"
+      ],
+      "languages": {
+        "native": "Old English spoken",
+        "additional": "Only listed language skills; no automatic Latin literacy. Language access is scenario house policy."
+      },
+      "wealth": {
+        "cash": 10,
+        "unit": "fictional travel tokens",
+        "assets": 0,
+        "authority": "House travel grant; not a historical exchange rate",
+        "equipment_cost": 0,
+        "equipment_ownership": "Listed existing personal goods; loan/credential granted by fictional employer; no vehicle, horse, camera or firearm included."
+      },
+      "background": {
+        "appearance": "Ink-stained cuffs",
+        "belief": "Keep promises and verify claims",
+        "important_person": "A sibling employed by the same patron",
+        "place": "The public meeting room",
+        "treasured_item": "A letter of introduction",
+        "trait": "Careful but willing to ask questions",
+        "connection": "Both engaged by the same fictional employer; partners on a delivery discrepancy inquiry",
+        "motivation": "Resolve the missing delivery and protect an acquaintance",
+        "conditions": "No prior injury, phobia, known Mythos spell or trauma; editable original proposal."
+      },
+      "combat": {
+        "brawl": "Base25, 1d3+DB; one attack, melee",
+        "dodge": "Derived from skill ledger",
+        "armor": 0,
+        "weapon": "None; staff/tools used only as tools until a weapon profile is sourced"
+      }
+    },
+    {
+      "id": "monastery2",
+      "profile": {
+        "system": "CoC",
+        "edition": "7e",
+        "setting_id": "monastery",
+        "variant": "original historical adaptation; not licensed supplement profile"
+      },
+      "name": "驿路向导 罗文",
+      "occupation": "Guide",
+      "age": 28,
+      "attributes": {
+        "STR": 50,
+        "CON": 60,
+        "SIZ": 65,
+        "DEX": 70,
+        "APP": 55,
+        "INT": 75,
+        "POW": 60,
+        "EDU": 70
+      },
+      "luck": 50,
+      "generation": "Fixed test characteristics; no dice claimed. These controlled inputs isolate differences in occupation and setting.",
+      "age_check": "Age 28: one EDU improvement check; simulated d100 result = 60, at or below EDU 70, so no increase.",
+      "allocations": [
+        {
+          "skill": "Ride",
+          "occupation": 35,
+          "interest": 10
+        },
+        {
+          "skill": "Natural World",
+          "occupation": 25,
+          "interest": 0
+        },
+        {
+          "skill": "Navigate",
+          "occupation": 10,
+          "interest": 10
+        },
+        {
+          "skill": "Track",
+          "occupation": 29,
+          "interest": 0
+        },
+        {
+          "skill": "Persuade",
+          "occupation": 40,
+          "interest": 10
+        },
+        {
+          "skill": "Psychology",
+          "occupation": 30,
+          "interest": 20
+        },
+        {
+          "skill": "Spot Hidden",
+          "occupation": 35,
+          "interest": 10
+        },
+        {
+          "skill": "First Aid",
+          "occupation": 16,
+          "interest": 14
+        },
+        {
+          "skill": "Status",
+          "occupation": 20,
+          "interest": 0
+        },
+        {
+          "skill": "Dodge",
+          "occupation": 0,
+          "interest": 25
+        },
+        {
+          "skill": "Stealth",
+          "occupation": 0,
+          "interest": 31
+        },
+        {
+          "skill": "Listen",
+          "occupation": 0,
+          "interest": 20
+        }
+      ],
+      "equipment": [
+        "wool clothing",
+        "travel bag",
+        "bread and water",
+        "walking staff"
+      ],
+      "languages": {
+        "native": "Old English spoken",
+        "additional": "Only listed language skills; no automatic Latin literacy. Language access is scenario house policy."
+      },
+      "wealth": {
+        "cash": 10,
+        "unit": "fictional travel tokens",
+        "assets": 0,
+        "authority": "House travel grant; not a historical exchange rate",
+        "equipment_cost": 0,
+        "equipment_ownership": "Listed existing personal goods; loan/credential granted by fictional employer; no vehicle, horse, camera or firearm included."
+      },
+      "background": {
+        "appearance": "Patched working coat",
+        "belief": "Keep promises and verify claims",
+        "important_person": "A sibling employed by the same patron",
+        "place": "The public meeting room",
+        "treasured_item": "A letter of introduction",
+        "trait": "Careful but willing to ask questions",
+        "connection": "Both engaged by the same fictional employer; partners on a delivery discrepancy inquiry",
+        "motivation": "Resolve the missing delivery and protect an acquaintance",
+        "conditions": "No prior injury, phobia, known Mythos spell or trauma; editable original proposal."
+      },
+      "combat": {
+        "brawl": "Base25, 1d3+DB; one attack, melee",
+        "dodge": "Derived from skill ledger",
+        "armor": 0,
+        "weapon": "None; staff/tools used only as tools until a weapon profile is sourced"
+      }
+    }
+  ],
+  "gm_private": {
+    "hidden_answer": "GM_ONLY_FIXTURE_SECRET",
+    "alternate_routes": [
+      "A custodian can read a record aloud",
+      "A delivery trail can establish sequence without the archive"
+    ]
+  },
+  "wealth_policy": {
+    "starting_cash": 10,
+    "asset_total": 0,
+    "unit": "fictional travel tokens"
+  }
+}

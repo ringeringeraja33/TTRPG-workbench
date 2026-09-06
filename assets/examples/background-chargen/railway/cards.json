@@ -1,0 +1,611 @@
+{
+  "status": "passed configured arithmetic",
+  "cards": [
+    {
+      "id": "railway1",
+      "name": "电报员 艾文",
+      "occupation": "Telegrapher",
+      "age": 28,
+      "attributes": {
+        "STR": 50,
+        "CON": 60,
+        "SIZ": 65,
+        "DEX": 70,
+        "APP": 55,
+        "INT": 75,
+        "POW": 60,
+        "EDU": 70
+      },
+      "luck": 50,
+      "generation": "Fixed test characteristics; no dice claimed. These controlled inputs isolate differences in occupation and setting.",
+      "age_check": "Age 28: one EDU improvement check; simulated d100 result = 60, at or below EDU 70, so no increase.",
+      "skills": {
+        "Accounting": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Anthropology": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Appraise": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Archaeology": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Charm": {
+          "regular": 15,
+          "hard": 7,
+          "extreme": 3
+        },
+        "Climb": {
+          "regular": 20,
+          "hard": 10,
+          "extreme": 4
+        },
+        "Cthulhu Mythos": {
+          "regular": 0,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Disguise": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Dodge": {
+          "regular": 60,
+          "hard": 30,
+          "extreme": 12
+        },
+        "Drive Auto": {
+          "regular": 20,
+          "hard": 10,
+          "extreme": 4
+        },
+        "Electrical Repair": {
+          "regular": 55,
+          "hard": 27,
+          "extreme": 11
+        },
+        "Fast Talk": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Fighting Brawl": {
+          "regular": 25,
+          "hard": 12,
+          "extreme": 5
+        },
+        "Firearms Handgun": {
+          "regular": 20,
+          "hard": 10,
+          "extreme": 4
+        },
+        "Firearms Rifle": {
+          "regular": 25,
+          "hard": 12,
+          "extreme": 5
+        },
+        "First Aid": {
+          "regular": 60,
+          "hard": 30,
+          "extreme": 12
+        },
+        "History": {
+          "regular": 30,
+          "hard": 15,
+          "extreme": 6
+        },
+        "Intimidate": {
+          "regular": 15,
+          "hard": 7,
+          "extreme": 3
+        },
+        "Jump": {
+          "regular": 20,
+          "hard": 10,
+          "extreme": 4
+        },
+        "Law": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Library Use": {
+          "regular": 80,
+          "hard": 40,
+          "extreme": 16
+        },
+        "Listen": {
+          "regular": 40,
+          "hard": 20,
+          "extreme": 8
+        },
+        "Locksmith": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Mechanical Repair": {
+          "regular": 10,
+          "hard": 5,
+          "extreme": 2
+        },
+        "Medicine": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Natural World": {
+          "regular": 10,
+          "hard": 5,
+          "extreme": 2
+        },
+        "Navigate": {
+          "regular": 10,
+          "hard": 5,
+          "extreme": 2
+        },
+        "Occult": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Operate Heavy Machinery": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Own Language": {
+          "regular": 70,
+          "hard": 35,
+          "extreme": 14
+        },
+        "Persuade": {
+          "regular": 60,
+          "hard": 30,
+          "extreme": 12
+        },
+        "Pilot Boat": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Psychology": {
+          "regular": 60,
+          "hard": 30,
+          "extreme": 12
+        },
+        "Psychoanalysis": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Ride": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Sleight of Hand": {
+          "regular": 10,
+          "hard": 5,
+          "extreme": 2
+        },
+        "Spot Hidden": {
+          "regular": 70,
+          "hard": 35,
+          "extreme": 14
+        },
+        "Stealth": {
+          "regular": 51,
+          "hard": 25,
+          "extreme": 10
+        },
+        "Survival": {
+          "regular": 10,
+          "hard": 5,
+          "extreme": 2
+        },
+        "Swim": {
+          "regular": 20,
+          "hard": 10,
+          "extreme": 4
+        },
+        "Throw": {
+          "regular": 20,
+          "hard": 10,
+          "extreme": 4
+        },
+        "Track": {
+          "regular": 10,
+          "hard": 5,
+          "extreme": 2
+        },
+        "Other Language Latin": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Other Language Spanish": {
+          "regular": 30,
+          "hard": 15,
+          "extreme": 6
+        },
+        "Craft Calligraphy": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Craft Photography": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Credit Rating": {
+          "regular": 20,
+          "hard": 10,
+          "extreme": 4
+        }
+      },
+      "occupation_spent": 280,
+      "occupation_budget": 280,
+      "interest_spent": 150,
+      "derived": {
+        "hp": 12,
+        "mp": 12,
+        "san": 60,
+        "san_max": 99,
+        "build": 0,
+        "db": "0",
+        "mov": 8
+      },
+      "equipment": [
+        "work clothing",
+        "travel bag",
+        "bread and water",
+        "notebook"
+      ],
+      "languages": {
+        "native": "English spoken/read",
+        "additional": "Only listed language skills; no automatic Latin literacy. Language access is scenario house policy."
+      },
+      "background": {
+        "appearance": "Ink-stained cuffs",
+        "belief": "Keep promises and verify claims",
+        "important_person": "A sibling employed by the same patron",
+        "place": "The public meeting room",
+        "treasured_item": "A letter of introduction",
+        "trait": "Careful but willing to ask questions",
+        "connection": "Both engaged by the same fictional employer; partners on a delivery discrepancy inquiry",
+        "motivation": "Resolve the missing delivery and protect an acquaintance",
+        "conditions": "No prior injury, phobia, known Mythos spell or trauma; editable original proposal."
+      },
+      "wealth": {
+        "cash": 40,
+        "unit": "USD",
+        "assets": 1000,
+        "authority": "1920s core CR20=40cash/1000assets; railway uses these only as an explicit scenario grant, not 1884 price evidence",
+        "equipment_cost": 0,
+        "equipment_ownership": "Listed existing personal goods; loan/credential granted by fictional employer; no vehicle, horse, camera or firearm included."
+      },
+      "combat": {
+        "brawl": "Base25, 1d3+DB; one attack, melee",
+        "dodge": "Derived from skill ledger",
+        "armor": 0,
+        "weapon": "None; staff/tools used only as tools until a weapon profile is sourced"
+      }
+    },
+    {
+      "id": "railway2",
+      "name": "线路巡检员 罗文",
+      "occupation": "Track inspector",
+      "age": 28,
+      "attributes": {
+        "STR": 50,
+        "CON": 60,
+        "SIZ": 65,
+        "DEX": 70,
+        "APP": 55,
+        "INT": 75,
+        "POW": 60,
+        "EDU": 70
+      },
+      "luck": 50,
+      "generation": "Fixed test characteristics; no dice claimed. These controlled inputs isolate differences in occupation and setting.",
+      "age_check": "Age 28: one EDU improvement check; simulated d100 result = 60, at or below EDU 70, so no increase.",
+      "skills": {
+        "Accounting": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Anthropology": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Appraise": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Archaeology": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Charm": {
+          "regular": 15,
+          "hard": 7,
+          "extreme": 3
+        },
+        "Climb": {
+          "regular": 20,
+          "hard": 10,
+          "extreme": 4
+        },
+        "Cthulhu Mythos": {
+          "regular": 0,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Disguise": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Dodge": {
+          "regular": 60,
+          "hard": 30,
+          "extreme": 12
+        },
+        "Drive Auto": {
+          "regular": 20,
+          "hard": 10,
+          "extreme": 4
+        },
+        "Electrical Repair": {
+          "regular": 10,
+          "hard": 5,
+          "extreme": 2
+        },
+        "Fast Talk": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Fighting Brawl": {
+          "regular": 25,
+          "hard": 12,
+          "extreme": 5
+        },
+        "Firearms Handgun": {
+          "regular": 20,
+          "hard": 10,
+          "extreme": 4
+        },
+        "Firearms Rifle": {
+          "regular": 25,
+          "hard": 12,
+          "extreme": 5
+        },
+        "First Aid": {
+          "regular": 60,
+          "hard": 30,
+          "extreme": 12
+        },
+        "History": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Intimidate": {
+          "regular": 15,
+          "hard": 7,
+          "extreme": 3
+        },
+        "Jump": {
+          "regular": 20,
+          "hard": 10,
+          "extreme": 4
+        },
+        "Law": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Library Use": {
+          "regular": 20,
+          "hard": 10,
+          "extreme": 4
+        },
+        "Listen": {
+          "regular": 40,
+          "hard": 20,
+          "extreme": 8
+        },
+        "Locksmith": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Mechanical Repair": {
+          "regular": 55,
+          "hard": 27,
+          "extreme": 11
+        },
+        "Medicine": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Natural World": {
+          "regular": 35,
+          "hard": 17,
+          "extreme": 7
+        },
+        "Navigate": {
+          "regular": 70,
+          "hard": 35,
+          "extreme": 14
+        },
+        "Occult": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Operate Heavy Machinery": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Own Language": {
+          "regular": 70,
+          "hard": 35,
+          "extreme": 14
+        },
+        "Persuade": {
+          "regular": 60,
+          "hard": 30,
+          "extreme": 12
+        },
+        "Pilot Boat": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Psychology": {
+          "regular": 60,
+          "hard": 30,
+          "extreme": 12
+        },
+        "Psychoanalysis": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Ride": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Sleight of Hand": {
+          "regular": 10,
+          "hard": 5,
+          "extreme": 2
+        },
+        "Spot Hidden": {
+          "regular": 70,
+          "hard": 35,
+          "extreme": 14
+        },
+        "Stealth": {
+          "regular": 51,
+          "hard": 25,
+          "extreme": 10
+        },
+        "Survival": {
+          "regular": 10,
+          "hard": 5,
+          "extreme": 2
+        },
+        "Swim": {
+          "regular": 20,
+          "hard": 10,
+          "extreme": 4
+        },
+        "Throw": {
+          "regular": 20,
+          "hard": 10,
+          "extreme": 4
+        },
+        "Track": {
+          "regular": 39,
+          "hard": 19,
+          "extreme": 7
+        },
+        "Other Language Latin": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Other Language Spanish": {
+          "regular": 1,
+          "hard": 0,
+          "extreme": 0
+        },
+        "Craft Calligraphy": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Craft Photography": {
+          "regular": 5,
+          "hard": 2,
+          "extreme": 1
+        },
+        "Credit Rating": {
+          "regular": 20,
+          "hard": 10,
+          "extreme": 4
+        }
+      },
+      "occupation_spent": 280,
+      "occupation_budget": 280,
+      "interest_spent": 150,
+      "derived": {
+        "hp": 12,
+        "mp": 12,
+        "san": 60,
+        "san_max": 99,
+        "build": 0,
+        "db": "0",
+        "mov": 8
+      },
+      "equipment": [
+        "work clothing",
+        "travel bag",
+        "bread and water",
+        "repair kit"
+      ],
+      "languages": {
+        "native": "English spoken/read",
+        "additional": "Only listed language skills; no automatic Latin literacy. Language access is scenario house policy."
+      },
+      "background": {
+        "appearance": "Patched working coat",
+        "belief": "Keep promises and verify claims",
+        "important_person": "A sibling employed by the same patron",
+        "place": "The public meeting room",
+        "treasured_item": "A letter of introduction",
+        "trait": "Careful but willing to ask questions",
+        "connection": "Both engaged by the same fictional employer; partners on a delivery discrepancy inquiry",
+        "motivation": "Resolve the missing delivery and protect an acquaintance",
+        "conditions": "No prior injury, phobia, known Mythos spell or trauma; editable original proposal."
+      },
+      "wealth": {
+        "cash": 40,
+        "unit": "USD",
+        "assets": 1000,
+        "authority": "1920s core CR20=40cash/1000assets; railway uses these only as an explicit scenario grant, not 1884 price evidence",
+        "equipment_cost": 0,
+        "equipment_ownership": "Listed existing personal goods; loan/credential granted by fictional employer; no vehicle, horse, camera or firearm included."
+      },
+      "combat": {
+        "brawl": "Base25, 1d3+DB; one attack, melee",
+        "dodge": "Derived from skill ledger",
+        "armor": 0,
+        "weapon": "None; staff/tools used only as tools until a weapon profile is sourced"
+      }
+    }
+  ]
+}

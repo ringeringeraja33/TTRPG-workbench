@@ -1,0 +1,417 @@
+{
+  "profile": {
+    "system": "CoC",
+    "edition": "7e",
+    "setting_id": "railway",
+    "variant": "original historical adaptation; not licensed supplement profile"
+  },
+  "public_premise": "1884 CE, fictional Colorado rail town; Missing freight and outdoor pursuit",
+  "sources": {
+    "core": {
+      "title": "CoC7 local core v1.2.1",
+      "locator": "PDF31 occupational patterns; PDF37 finance; PDF44 skills",
+      "status": "read"
+    },
+    "house": {
+      "title": "Original fixture adaptation",
+      "locator": "gm.md: rule changes; approved for these fixtures only",
+      "status": "read"
+    },
+    "history": {
+      "title": "1884 CE, fictional Colorado rail town",
+      "locator": "https://blogs.loc.gov/law/2024/11/whose-time-is-it-anyway-a-brief-history-of-standardized-time-zones-in-the-united-states/",
+      "status": "read"
+    }
+  },
+  "rule_sources": [
+    "core",
+    "house",
+    "history"
+  ],
+  "house_rules_approved": true,
+  "pending": [],
+  "skill_bases": {
+    "Accounting": 5,
+    "Anthropology": 1,
+    "Appraise": 5,
+    "Archaeology": 1,
+    "Charm": 15,
+    "Climb": 20,
+    "Cthulhu Mythos": 0,
+    "Disguise": 5,
+    "Dodge": "DEX/2",
+    "Drive Auto": 20,
+    "Electrical Repair": 10,
+    "Fast Talk": 5,
+    "Fighting Brawl": 25,
+    "Firearms Handgun": 20,
+    "Firearms Rifle": 25,
+    "First Aid": 30,
+    "History": 5,
+    "Intimidate": 15,
+    "Jump": 20,
+    "Law": 5,
+    "Library Use": 20,
+    "Listen": 20,
+    "Locksmith": 1,
+    "Mechanical Repair": 10,
+    "Medicine": 1,
+    "Natural World": 10,
+    "Navigate": 10,
+    "Occult": 5,
+    "Operate Heavy Machinery": 1,
+    "Own Language": "EDU",
+    "Persuade": 10,
+    "Pilot Boat": 1,
+    "Psychology": 10,
+    "Psychoanalysis": 1,
+    "Ride": 5,
+    "Sleight of Hand": 10,
+    "Spot Hidden": 25,
+    "Stealth": 20,
+    "Survival": 10,
+    "Swim": 20,
+    "Throw": 20,
+    "Track": 10,
+    "Other Language Latin": 1,
+    "Other Language Spanish": 1,
+    "Craft Calligraphy": 5,
+    "Craft Photography": 5,
+    "Credit Rating": 0
+  },
+  "skill_cap": 80,
+  "interest_formula": {
+    "INT": 2
+  },
+  "no_interest": [
+    "Credit Rating",
+    "Cthulhu Mythos"
+  ],
+  "wealth_skill": "Credit Rating",
+  "equipment_allowlist": [
+    "work clothing",
+    "travel bag",
+    "bread and water",
+    "notebook",
+    "repair kit"
+  ],
+  "coverage_threshold": 50,
+  "team_capabilities": {
+    "records": [
+      "Library Use",
+      "Accounting"
+    ],
+    "fieldwork": [
+      "Mechanical Repair",
+      "Navigate",
+      "Track"
+    ],
+    "social": [
+      "Persuade",
+      "Psychology"
+    ]
+  },
+  "occupations": {
+    "Telegrapher": {
+      "formula": {
+        "EDU": 4
+      },
+      "skills": [
+        "Electrical Repair",
+        "History",
+        "Library Use",
+        "Other Language Spanish",
+        "Persuade",
+        "Psychology",
+        "Spot Hidden",
+        "First Aid",
+        "Credit Rating"
+      ],
+      "wealth_range": [
+        10,
+        30
+      ],
+      "authority": "house: eight skills plus wealth; formula selected for role training"
+    },
+    "Track inspector": {
+      "formula": {
+        "EDU": 2,
+        "DEX": 2
+      },
+      "skills": [
+        "Mechanical Repair",
+        "Natural World",
+        "Navigate",
+        "Track",
+        "Persuade",
+        "Psychology",
+        "Spot Hidden",
+        "First Aid",
+        "Credit Rating"
+      ],
+      "wealth_range": [
+        10,
+        30
+      ],
+      "authority": "house: eight skills plus wealth; formula selected for role training"
+    }
+  },
+  "characters": [
+    {
+      "id": "railway1",
+      "profile": {
+        "system": "CoC",
+        "edition": "7e",
+        "setting_id": "railway",
+        "variant": "original historical adaptation; not licensed supplement profile"
+      },
+      "name": "电报员 艾文",
+      "occupation": "Telegrapher",
+      "age": 28,
+      "attributes": {
+        "STR": 50,
+        "CON": 60,
+        "SIZ": 65,
+        "DEX": 70,
+        "APP": 55,
+        "INT": 75,
+        "POW": 60,
+        "EDU": 70
+      },
+      "luck": 50,
+      "generation": "Fixed test characteristics; no dice claimed. These controlled inputs isolate differences in occupation and setting.",
+      "age_check": "Age 28: one EDU improvement check; simulated d100 result = 60, at or below EDU 70, so no increase.",
+      "allocations": [
+        {
+          "skill": "Electrical Repair",
+          "occupation": 35,
+          "interest": 10
+        },
+        {
+          "skill": "History",
+          "occupation": 25,
+          "interest": 0
+        },
+        {
+          "skill": "Library Use",
+          "occupation": 50,
+          "interest": 10
+        },
+        {
+          "skill": "Other Language Spanish",
+          "occupation": 29,
+          "interest": 0
+        },
+        {
+          "skill": "Persuade",
+          "occupation": 40,
+          "interest": 10
+        },
+        {
+          "skill": "Psychology",
+          "occupation": 30,
+          "interest": 20
+        },
+        {
+          "skill": "Spot Hidden",
+          "occupation": 35,
+          "interest": 10
+        },
+        {
+          "skill": "First Aid",
+          "occupation": 16,
+          "interest": 14
+        },
+        {
+          "skill": "Credit Rating",
+          "occupation": 20,
+          "interest": 0
+        },
+        {
+          "skill": "Dodge",
+          "occupation": 0,
+          "interest": 25
+        },
+        {
+          "skill": "Stealth",
+          "occupation": 0,
+          "interest": 31
+        },
+        {
+          "skill": "Listen",
+          "occupation": 0,
+          "interest": 20
+        }
+      ],
+      "equipment": [
+        "work clothing",
+        "travel bag",
+        "bread and water",
+        "notebook"
+      ],
+      "languages": {
+        "native": "English spoken/read",
+        "additional": "Only listed language skills; no automatic Latin literacy. Language access is scenario house policy."
+      },
+      "wealth": {
+        "cash": 40,
+        "unit": "USD",
+        "assets": 1000,
+        "authority": "1920s core CR20=40cash/1000assets; railway uses these only as an explicit scenario grant, not 1884 price evidence",
+        "equipment_cost": 0,
+        "equipment_ownership": "Listed existing personal goods; loan/credential granted by fictional employer; no vehicle, horse, camera or firearm included."
+      },
+      "background": {
+        "appearance": "Ink-stained cuffs",
+        "belief": "Keep promises and verify claims",
+        "important_person": "A sibling employed by the same patron",
+        "place": "The public meeting room",
+        "treasured_item": "A letter of introduction",
+        "trait": "Careful but willing to ask questions",
+        "connection": "Both engaged by the same fictional employer; partners on a delivery discrepancy inquiry",
+        "motivation": "Resolve the missing delivery and protect an acquaintance",
+        "conditions": "No prior injury, phobia, known Mythos spell or trauma; editable original proposal."
+      },
+      "combat": {
+        "brawl": "Base25, 1d3+DB; one attack, melee",
+        "dodge": "Derived from skill ledger",
+        "armor": 0,
+        "weapon": "None; staff/tools used only as tools until a weapon profile is sourced"
+      }
+    },
+    {
+      "id": "railway2",
+      "profile": {
+        "system": "CoC",
+        "edition": "7e",
+        "setting_id": "railway",
+        "variant": "original historical adaptation; not licensed supplement profile"
+      },
+      "name": "线路巡检员 罗文",
+      "occupation": "Track inspector",
+      "age": 28,
+      "attributes": {
+        "STR": 50,
+        "CON": 60,
+        "SIZ": 65,
+        "DEX": 70,
+        "APP": 55,
+        "INT": 75,
+        "POW": 60,
+        "EDU": 70
+      },
+      "luck": 50,
+      "generation": "Fixed test characteristics; no dice claimed. These controlled inputs isolate differences in occupation and setting.",
+      "age_check": "Age 28: one EDU improvement check; simulated d100 result = 60, at or below EDU 70, so no increase.",
+      "allocations": [
+        {
+          "skill": "Mechanical Repair",
+          "occupation": 35,
+          "interest": 10
+        },
+        {
+          "skill": "Natural World",
+          "occupation": 25,
+          "interest": 0
+        },
+        {
+          "skill": "Navigate",
+          "occupation": 50,
+          "interest": 10
+        },
+        {
+          "skill": "Track",
+          "occupation": 29,
+          "interest": 0
+        },
+        {
+          "skill": "Persuade",
+          "occupation": 40,
+          "interest": 10
+        },
+        {
+          "skill": "Psychology",
+          "occupation": 30,
+          "interest": 20
+        },
+        {
+          "skill": "Spot Hidden",
+          "occupation": 35,
+          "interest": 10
+        },
+        {
+          "skill": "First Aid",
+          "occupation": 16,
+          "interest": 14
+        },
+        {
+          "skill": "Credit Rating",
+          "occupation": 20,
+          "interest": 0
+        },
+        {
+          "skill": "Dodge",
+          "occupation": 0,
+          "interest": 25
+        },
+        {
+          "skill": "Stealth",
+          "occupation": 0,
+          "interest": 31
+        },
+        {
+          "skill": "Listen",
+          "occupation": 0,
+          "interest": 20
+        }
+      ],
+      "equipment": [
+        "work clothing",
+        "travel bag",
+        "bread and water",
+        "repair kit"
+      ],
+      "languages": {
+        "native": "English spoken/read",
+        "additional": "Only listed language skills; no automatic Latin literacy. Language access is scenario house policy."
+      },
+      "wealth": {
+        "cash": 40,
+        "unit": "USD",
+        "assets": 1000,
+        "authority": "1920s core CR20=40cash/1000assets; railway uses these only as an explicit scenario grant, not 1884 price evidence",
+        "equipment_cost": 0,
+        "equipment_ownership": "Listed existing personal goods; loan/credential granted by fictional employer; no vehicle, horse, camera or firearm included."
+      },
+      "background": {
+        "appearance": "Patched working coat",
+        "belief": "Keep promises and verify claims",
+        "important_person": "A sibling employed by the same patron",
+        "place": "The public meeting room",
+        "treasured_item": "A letter of introduction",
+        "trait": "Careful but willing to ask questions",
+        "connection": "Both engaged by the same fictional employer; partners on a delivery discrepancy inquiry",
+        "motivation": "Resolve the missing delivery and protect an acquaintance",
+        "conditions": "No prior injury, phobia, known Mythos spell or trauma; editable original proposal."
+      },
+      "combat": {
+        "brawl": "Base25, 1d3+DB; one attack, melee",
+        "dodge": "Derived from skill ledger",
+        "armor": 0,
+        "weapon": "None; staff/tools used only as tools until a weapon profile is sourced"
+      }
+    }
+  ],
+  "gm_private": {
+    "hidden_answer": "GM_ONLY_FIXTURE_SECRET",
+    "alternate_routes": [
+      "A custodian can read a record aloud",
+      "A delivery trail can establish sequence without the archive"
+    ]
+  },
+  "wealth_policy": {
+    "starting_cash": 40,
+    "asset_total": 1000,
+    "unit": "USD"
+  }
+}
