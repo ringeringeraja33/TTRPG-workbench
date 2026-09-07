@@ -25,6 +25,8 @@ Start with the bundled procedures, examples and bibliography. They can be used w
 | Absorb a local folder, read scans/CHM/old DOC, audit automatic cards | [Corpus ingestion and retrieval](references/corpus-use.md), [edition-specific corpus adapters](references/systems/corpus-adapters.md); use the private hash-bound index |
 | Mixed module documents, image variants, handouts, GM guides and design influences | [Corpus-informed preparation](references/corpus-preparation.md); inspect every selected asset before player release |
 | Adventure preparation/review | [Adventures](references/adventures.md), [persistent preparation](references/prep-persistence.md), [session lifecycle](references/session-lifecycle.md) |
+| Evidence routes, missing clues, split-party knowledge | [Investigation audit](references/investigation.md), `scripts/investigation.py` |
+| Session recap and next preparation | [Branch-aware review](references/session-review.md), `scripts/session_review.py` |
 | Characters and advancement | [Characters](references/characters.md), selected system procedures and worked build |
 | Historical background/style needs skills, items, scene frameworks or design ideas | [Background design](references/background-design.md), [pack template](assets/templates/background-design.md); actively research actual history and comparable module material |
 | A module's historical background or style needs creation rules | [Background-aware creation](references/background-chargen.md); actively research history and comparable creation material, then separate source rules from house changes |
@@ -51,6 +53,8 @@ Start with the bundled procedures, examples and bibliography. They can be used w
 - Reuse upstream material according to its license and retain attribution. Forum anecdotes suggest test cases; verify mechanics against the selected official edition. Do not equate publicly readable material with redistribution permission.
 
 ## Verify
+
+Run `python -X utf8 scripts/capabilities.py --check` to detect stale generated coverage. Edit `references/capabilities.json` for current capability claims; keep historical results in the linked history files.
 
 Run `python -X utf8 -m unittest discover -s scripts -p "test_*.py"` with the dependencies in `requirements.txt`. Run `python -X utf8 scripts/replay_acceptance.py --output <new-private-index-directory>` for two deterministic twenty-turn campaign replays including cold recovery. Record errors and fixes. These are simulated inputs, not independent GM evaluation or live-player testing.
 

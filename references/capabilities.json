@@ -1,0 +1,182 @@
+{
+  "schema": 1,
+  "updated": "2026-09-07",
+  "capabilities": [
+    {
+      "id": "coc7",
+      "name": "CoC7 core and table procedures",
+      "reference": "systems/coc7-table.md",
+      "limits": "Core creation, combat, SAN, chase and growth procedures; worked journalist and simulated replay. Not all occupations, monsters or exceptions.",
+      "source": "supported",
+      "retrieval": "partial",
+      "procedure": "supported",
+      "arithmetic": "partial",
+      "interaction": "partial"
+    },
+    {
+      "id": "coc-special",
+      "name": "CoC7 automatic fire, vehicles and rituals",
+      "reference": "systems/coc-vehicles-rituals.md",
+      "limits": "Sourced bounded helpers; consult advanced-mechanics.md for volleys. Fractional-Build vehicles and source-specific exceptions remain source-dependent.",
+      "source": "supported",
+      "retrieval": "partial",
+      "procedure": "supported",
+      "arithmetic": "partial",
+      "interaction": "partial"
+    },
+    {
+      "id": "srd-core",
+      "name": "D&D SRD 5.2.1 core",
+      "reference": "systems/dnd2024-table.md",
+      "limits": "Core table procedures, Fighter build and advancement examples, ledger replay. Does not include non-SRD books.",
+      "source": "supported",
+      "retrieval": "partial",
+      "procedure": "supported",
+      "arithmetic": "partial",
+      "interaction": "partial"
+    },
+    {
+      "id": "srd-catalog",
+      "name": "SRD classes and spells",
+      "reference": "systems/dnd-class-spell-package.md",
+      "limits": "Source-bound reader covers 12 class ranges and 339 spell entries when the verified PDF is available. Multiclass slots, fixed HP and Counterspell helpers; not every class/spell interaction.",
+      "source": "supported",
+      "retrieval": "supported",
+      "procedure": "partial",
+      "arithmetic": "partial",
+      "interaction": "partial"
+    },
+    {
+      "id": "toc",
+      "name": "Trail of Cthulhu",
+      "reference": "systems/trail-of-cthulhu.md",
+      "limits": "Creation, pools and investigation procedures; source-specific safe-rest and psychotherapy helpers in corpus-adapters.md. No full campaign certification.",
+      "source": "supported",
+      "retrieval": "partial",
+      "procedure": "partial",
+      "arithmetic": "partial",
+      "interaction": "partial"
+    },
+    {
+      "id": "mist",
+      "name": "City of Mist v0.75 quickstart",
+      "reference": "systems/city-of-mist.md",
+      "limits": "Quickstart moves, tags and statuses; full theme questionnaires and long-term advancement are outside this source.",
+      "source": "supported",
+      "retrieval": "partial",
+      "procedure": "partial",
+      "arithmetic": "none",
+      "interaction": "partial"
+    },
+    {
+      "id": "fate",
+      "name": "Fate Condensed",
+      "reference": "systems/fate-blades-procedures.md",
+      "limits": "Creation, actions and aspects; bounded consequence absorption/recovery helpers. No exhaustive stunt or campaign validation.",
+      "source": "supported",
+      "retrieval": "partial",
+      "procedure": "partial",
+      "arithmetic": "partial",
+      "interaction": "partial"
+    },
+    {
+      "id": "blades",
+      "name": "Blades in the Dark",
+      "reference": "systems/blades.md",
+      "limits": "Core actions/resistance and bounded vice/downtime helpers. Full crew, trauma and flashback interactions remain uncovered.",
+      "source": "supported",
+      "retrieval": "partial",
+      "procedure": "partial",
+      "arithmetic": "partial",
+      "interaction": "partial"
+    },
+    {
+      "id": "homebrew",
+      "name": "Local homebrew adapters",
+      "reference": "systems/local-homebrew.md",
+      "limits": "Edition-bound interfaces and selected local_rules.py operations. No complete GugDove, Jiangshan or other homebrew engine.",
+      "source": "partial",
+      "retrieval": "partial",
+      "procedure": "partial",
+      "arithmetic": "partial",
+      "interaction": "partial"
+    },
+    {
+      "id": "other",
+      "name": "Other systems and older editions",
+      "reference": "systems/corpus-adapters.md",
+      "limits": "BRP, older D&D, Pathfinder, Warhammer and other materials require source-specific edition and topic checks. Extraction is not rule verification.",
+      "source": "partial",
+      "retrieval": "partial",
+      "procedure": "partial",
+      "arithmetic": "none",
+      "interaction": "none"
+    },
+    {
+      "id": "corpus",
+      "name": "Optional corpus and handout processing",
+      "reference": "corpus-use.md",
+      "limits": "PDF, scan/OCR, CHM and old DOC adapters depend on available tools; card audit and recipient manifests. Full-text caches stay private.",
+      "source": "not-applicable",
+      "retrieval": "supported",
+      "procedure": "supported",
+      "arithmetic": "not-applicable",
+      "interaction": "partial"
+    },
+    {
+      "id": "background",
+      "name": "Historical creation and scene packs",
+      "reference": "background-design.md",
+      "limits": "Three reviewed example packs, six CoC7 builds and nine scenes; configured arithmetic does not establish historical truth or semantic clue sufficiency.",
+      "source": "supported",
+      "retrieval": "partial",
+      "procedure": "supported",
+      "arithmetic": "partial",
+      "interaction": "partial"
+    },
+    {
+      "id": "authoring",
+      "name": "Original rulebook and design lab",
+      "reference": "rulebook-authoring.md",
+      "limits": "Explicit manifest dependencies, conflict repair and dream-game prototype. Undeclared prose contradictions and general balance are not automatically certified.",
+      "source": "not-applicable",
+      "retrieval": "not-applicable",
+      "procedure": "supported",
+      "arithmetic": "partial",
+      "interaction": "partial"
+    },
+    {
+      "id": "ledger",
+      "name": "Persistent session ledger",
+      "reference": "session-runtime.md",
+      "limits": "Atomic sourced events, revisions, replay, rollback and audience projection. Stores adjudicated outcomes, not complete action legality.",
+      "source": "not-applicable",
+      "retrieval": "not-applicable",
+      "procedure": "supported",
+      "arithmetic": "not-applicable",
+      "interaction": "supported"
+    },
+    {
+      "id": "investigation",
+      "name": "Evidence dependency audit",
+      "reference": "investigation.md",
+      "limits": "AND/OR dependencies, unseeded cycles, missing evidence, bottlenecks and split knowledge. Declared logic only; not proof of fictional persuasiveness.",
+      "source": "not-applicable",
+      "retrieval": "not-applicable",
+      "procedure": "supported",
+      "arithmetic": "not-applicable",
+      "interaction": "partial"
+    },
+    {
+      "id": "review",
+      "name": "Branch-aware recap and next preparation",
+      "reference": "session-review.md",
+      "limits": "Read-only current facts, active events, source revisions and explicit prep notes. No automatic inference of beliefs or triggering of GM plans.",
+      "source": "not-applicable",
+      "retrieval": "not-applicable",
+      "procedure": "supported",
+      "arithmetic": "not-applicable",
+      "interaction": "partial"
+    }
+  ]
+}

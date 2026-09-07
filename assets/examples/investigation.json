@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "evidence": [
+    {"id": "shipping-log", "text": "货运登记显示货车在午夜去了北仓。", "available": true, "audience": ["pc1"]},
+    {"id": "witness", "text": "目击者记得货车向北驶去。", "available": true, "audience": ["pc2"]},
+    {"id": "map", "text": "地图显示北路唯一的货运终点是北仓。", "available": true, "audience": ["all"]},
+    {"id": "seal", "text": "失踪货物的封签编号与北仓收据一致。", "available": true, "audience": []}
+  ],
+  "conclusions": [
+    {"id": "destination", "text": "货车去了北仓。", "essential": true, "audience": [], "routes": [["shipping-log"], ["witness", "map"]]},
+    {"id": "cargo", "text": "失踪货物曾被送入北仓。", "essential": true, "audience": [], "routes": [["destination", "seal"]]}
+  ]
+}

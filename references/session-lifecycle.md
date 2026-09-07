@@ -7,3 +7,7 @@ Adapted from [gm-apprentice session-prep](https://github.com/AntTheLimey/gm-appr
 3. Plan the session's focus, character opportunities and likely scenes. Make concrete proposals within the requested scope; ask only about decisions that materially change it. Persist accepted decisions as preparation proceeds.
 4. Verify scene connections, source references, resources and unresolved assumptions. Separate the GM plan from player material.
 5. Handoff a concise opening situation, the next decision, the saved revision and outstanding questions. After play, record actual outcomes and deferred threads for the next preparation cycle.
+
+## Review into next preparation
+
+Use [branch-aware review](session-review.md) after a session or correction. Generate the GM report and a separate audience-filtered player recap. Carry pending rulings, explicit character hooks and unrealized plans into preparation; never promote a hypothesis or plan into a recorded fact.

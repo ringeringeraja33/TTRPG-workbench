@@ -24,3 +24,5 @@
 ## 可运行演示
 
 [逆潮钟房](../assets/examples/harbor-investigation.md)提供地点网络、信息路径、倒计时、协商/修复/撤离方案、GM速查与失败后状态交接。它是原创纸面演示，未真人试跑。
+
+For executable evidence dependencies, alternatives and bottlenecks, read [investigation audit](investigation.md). Keep its GM analysis separate from player evidence exports.

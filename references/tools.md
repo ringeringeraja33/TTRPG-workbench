@@ -63,3 +63,7 @@ Read [SRD class/spell operation](systems/dnd-class-spell-package.md) for `srd_ca
 ## Local corpus, card and handout tools
 
 Read [corpus-use](corpus-use.md) for `corpus.py build/search/review`, optional scan/CHM/DOC readers and `sheet_audit.py`. Read [corpus-preparation](corpus-preparation.md) for `handout_manifest.py` recipient projections. `local_rules.py <operation> <input.json>` supports `jiangshan_parry`, `jiangshan_death`, `toc_safe_rest` and `toc_psychotherapy`; see [source boundaries](systems/corpus-adapters.md). These return previews and pending rulings, without silently changing the session ledger.
+
+## Evidence audit and session review
+
+Use [investigation](investigation.md) for AND/OR evidence routes, missing-clue and split-knowledge analysis. Use [session review](session-review.md) for read-only branch-aware recap and next preparation. Current capability claims live in `capabilities.json`; `scripts/capabilities.py` generates [coverage](coverage.md), and `--check` detects stale output.
