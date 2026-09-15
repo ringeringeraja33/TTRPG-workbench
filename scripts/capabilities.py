@@ -43,7 +43,7 @@ def main():
         if target.read_text(encoding='utf-8') != content:
             p.exit(1, 'Coverage is stale; run capabilities.py\n')
     else:
-        target.write_text(content, encoding='utf-8')
+        target.write_text(content, encoding='utf-8', newline='\n')
 
 
 if __name__ == '__main__':

@@ -117,3 +117,7 @@ John Harper. *Blades in the Dark SRD*: [Action Roll](https://bladesinthedark.com
 ## TOC-DEEP
 
 *TOC克苏鲁迷踪-玩家手册-数字版.pdf*，同TOC-LOCAL版本。新增读取PDF18–19、38–43；支持职业折扣、预算、核心线索、池支出、重试与团队互利。与通用GUMSHOE-SRD保持区分。
+
+## KEEPER-TIPS
+
+Chaosium. *Keeper Tips: Collected Wisdom on Running Games*. Multi-contributor collection; Mike Mason introduction, 2021. Chinese translation 古早茶, preface 2023-12-27, supplied 50-page PDF. [Publisher](https://www.chaosium.com/keeper-tips-black-pdf/). [Operational synthesis](keeper-practice.md). Opinions do not replace edition-specific rules; the source translation is not bundled.

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-09-07",
+  "updated": "2026-09-16",
   "capabilities": [
     {
       "id": "coc7",
@@ -174,6 +174,39 @@
       "limits": "Read-only current facts, active events, source revisions and explicit prep notes. No automatic inference of beliefs or triggering of GM plans.",
       "source": "not-applicable",
       "retrieval": "not-applicable",
+      "procedure": "supported",
+      "arithmetic": "not-applicable",
+      "interaction": "partial"
+    },
+    {
+      "id": "dicebot-cards",
+      "name": "Local dicebot and character registration",
+      "reference": "dicebot-cards.md",
+      "limits": "Table/player-scoped persistent cards, aliases, atomic numeric updates, nickname previews, export and actual CoC7 checks with retry-safe dice. Local dialect only; no external bot connection, private-channel transport or automatic character legality certification. CoC7 base attribute batches support raw-dice evidence, explicit selection and preserved originals; age changes, derived values and full creation legality remain guided steps.",
+      "source": "partial",
+      "retrieval": "supported",
+      "procedure": "supported",
+      "arithmetic": "partial",
+      "interaction": "partial"
+    },
+    {
+      "id": "dice-local",
+      "name": "Local Dice! adaptation and table tools",
+      "reference": "dice-local.md",
+      "limits": "Bounded Dice! RD adaptation with cards, teams, logs, opt-in exact replies, local join welcome, owner timers with foreground wait/ack, and attributed weighted/nested JSON decks. Native DLL, historical script languages, full datasets and external services remain incomplete.",
+      "source": "partial",
+      "retrieval": "partial",
+      "procedure": "partial",
+      "arithmetic": "partial",
+      "interaction": "partial"
+    },
+    {
+      "id": "keeper-practice",
+      "name": "Conditional Keeper practice and recovery",
+      "reference": "keeper-practice.md",
+      "limits": "493 source bullets mapped to conditional procedures; eight synthetic situation walkthroughs with ledger recovery. Opinions are not RAW; no automatic diagnosis, complete rule verification or live-player certification.",
+      "source": "supported",
+      "retrieval": "supported",
       "procedure": "supported",
       "arithmetic": "not-applicable",
       "interaction": "partial"

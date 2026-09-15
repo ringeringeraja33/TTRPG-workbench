@@ -21,3 +21,7 @@ Private research records retain URLs, download status, SHA-256 hashes and extrac
 ## Language decision
 
 Use English for the skill entry, new reusable workflows and code documentation. Preserve Chinese user interaction, translated source titles and existing Chinese rule-reference material. English simplifies alignment with the predominantly English upstream APIs and rule terms; no comparative model evaluation has demonstrated that translating the entire library improves GM quality. This release does not claim such evidence.
+
+## Dice! local adaptation
+
+Source pin and AGPL notice: [third-party notices](../THIRD_PARTY_NOTICES.md). The live local engine is `scripts/vendor/dice_rd.py`, called by `scripts/dice_local.py`. The upstream code and driver exports were inspected; no native DLL or QQ driver was executed. [Manual audit](dice-manual-coverage.md) distinguishes local equivalents, source-data dependencies, unavailable external services and missing implementations. This extension does not claim full Dice! or Tower compatibility.

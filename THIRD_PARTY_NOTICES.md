@@ -28,3 +28,15 @@ New English Fate and Blades summaries are paraphrases under the same source attr
 CoC、BRP、Trail of Cthulhu与GUMSHOE资料的权利归相应权利人。引用官方入口、书目信息或本地页码不授予这些产品统一的再分发许可。BRP-ORC与GUMSHOE-SRD在本项目中用于来源/版本定位，没有将其完整内容转许可为项目代码。
 
 本文件记录第三方归属与所作修改；各来源的许可分别适用，不自动构成本项目全部原创内容的统一许可证。
+
+## Dice! arithmetic adaptation
+
+`scripts/vendor/dice_rd.py` adapts selected normal/Fudge/keep-high arithmetic from Dice Developer Team, Dice!, revision `5e2a8324a631765f694b2e3a71f5d50f7ae6e94f`, `Dice/RD.cpp`. Copyright2018–2021 w4123溯洄;2019–2025 String.Empty. The new adaptation, `scripts/dice_local.py` and its new tests are provided under AGPL-3.0-or-later, without warranty. [Full license](scripts/vendor/dice_source/LICENSE). Unmodified snapshots of RD.cpp/RD.h and RandomGenerator.cpp/.h plus their hashes and source pin are included in [upstream manifest](scripts/vendor/dice_source/upstream.json). These selected snapshots are not a standalone compilable upstream source tree; complete pinned source is available from the upstream repository.
+
+Local changes: strict recursive parsing, rational arithmetic, keep-low, all-face evidence, OS-secrets randomness, bounded expansions, SQLite transactions, private-file responses, table tools and log exports. The original DLL and network/driver services are not incorporated into the running process. These notices do not relicense unrelated files or bundled rulebook material. The two supplied manuals are command/procedure references; full PDFs, illustrations and licensed rule datasets are not redistributed.
+
+## Keeper Tips research
+
+Keeper practice, its working sheet and synthetic cases are independently written operational synthesis informed by Chaosium's *Keeper Tips* (2021), Chinese translation 古早茶 (2023-12-27). The audit records topics and editorial decisions. No full source text, translated pages, illustrations or third-party downloads are redistributed, and no open license is asserted for the book. Existing licenses of linked files remain unchanged.
+
+The original local extensions in `scripts/dice_services.py` and `scripts/test_dice_services.py` are also provided under AGPL-3.0-or-later. They add bounded JSON deck graphs, timer queries and integration tests; no new third-party deck data is included.

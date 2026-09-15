@@ -126,11 +126,11 @@ Run `python -X utf8 -m unittest discover -s scripts -p "test_*.py"` (55 tests) a
 
 ## Class, spell, vehicle and ritual source packages
 
-The [SRD source package](references/systems/dnd-class-spell-package.md) reads all 12 classes and 339 spell entries from the verified official 5.2.1 PDF. It adds multiclass slot, fixed HP and Counterspell settlement helpers. The [CoC package](references/systems/coc-vehicles-rituals.md) adds collision, occupant injury, ritual learning, first casting and backlash procedures. Full automatic interaction resolution is distinct from full source retrieval. Current tests: 65. Live-player evaluation is outside this project task’s acceptance scope.
+The [SRD source package](references/systems/dnd-class-spell-package.md) reads all 12 classes and 339 spell entries from the verified official 5.2.1 PDF. It adds multiclass slot, fixed HP and Counterspell settlement helpers. The [CoC package](references/systems/coc-vehicles-rituals.md) adds collision, occupant injury, ritual learning, first casting and backlash procedures. Full automatic interaction resolution is distinct from full source retrieval. See [current validation](references/validation.md) for executed checks. Live-player evaluation is outside this project task’s acceptance scope.
 
 ## Background-aware character creation
 
-When given a module’s period, place and style, the skill now [researches an appropriate creation specification](references/background-chargen.md), using history and actual comparable character material. It separates source rules from original adjustments and produces distinct player and GM documents. [Three eras and six complete proposed cards](assets/examples/background-chargen/README.md) exercise budgets, skill changes, equipment and party coverage. The numerical adapter supports CoC7; other systems retain their own creation rules. Current automated suite:74 tests.
+When given a module’s period, place and style, the skill now [researches an appropriate creation specification](references/background-chargen.md), using history and actual comparable character material. It separates source rules from original adjustments and produces distinct player and GM documents. [Three eras and six complete proposed cards](assets/examples/background-chargen/README.md) exercise budgets, skill changes, equipment and party coverage. The numerical adapter supports CoC7; other systems retain their own creation rules. See [current validation](references/validation.md) for executed checks.
 
 ## Original rulebook authoring
 
@@ -138,7 +138,7 @@ Use `$ttrpg-workbench` to turn a concept or notes into playable rules, expand ch
 
 中文示例：“用 $ttrpg-workbench，把这些零散笔记整理成可玩的原创规则书，保留既定设定与术语，补齐操作程序、角色卡、算例和修订记录。”
 
-Rulebook authoring adds 14 test groups; the current complete automated suite contains 88 tests.
+Rulebook authoring includes dedicated dependency and workflow checks; see [current validation](references/validation.md).
 
 ## Skills, items and scenes from a historical brief
 
@@ -146,4 +146,20 @@ Use `$ttrpg-workbench` with a period, location and style to research and design 
 
 中文调用：“根据这个模组的时代背景与风格，研究并设计技能、物品和三个关联场景，说明点数、装备来源和替代路线，分别输出玩家版与主持版。”
 
-Background-design extension: 10 new test groups, 98 tests in the complete suite.
+Background design has dedicated creation and scene checks; see [current validation](references/validation.md).
+
+### Dice assistance and card registration / 骰娘与录卡
+
+Use the [dicebot/card workflow](references/dicebot-cards.md) to register numeric cards, query `.st show` or `.st show灵感`, switch characters, adjust values, export commands and roll against recorded CoC7 skills. The local adapter saves state and reuses previous results on retries. External dice-bot commands require the destination bot's dialect; this skill does not itself connect to QQ.
+
+支持录卡、查卡、改卡、切卡、录卡指令导出及读取已录技能进行检定。示例："把这张卡录入，检查灵感和SAN，再生成可复制的录卡指令。" 录卡与审卡分开，群名片仅生成预览，不自动修改。
+
+CoC7 rolled creation attributes: use `.coc` or `.coc5`, retrieve the returned batch with `.coc show b1`, then explicitly select with `.coc take b1 2 ada 阿达`. Raw dice and candidates persist; selection creates a new card with age processing pending. See [dicebot workflow](references/dicebot-cards.md) for the CLI envelope and completion procedure.
+
+## Local Dice! adaptation
+
+The skill can run a local Dice! RD Python adaptation plus table services for complex expressions, card registration, teams, NPCs, initiative, clues and private/audience-filtered log exports. See [local workflow](references/dice-local.md) and the [complete129-entry command audit](references/dice-manual-coverage.md) for syntax, differences and missing data/services. The original C++ DLL is not running and full Dice!/Tower compatibility is not claimed. No QQ account is needed for the local workflow.
+
+Example requests: “用本地骰娘给全队分别扣1d3点HP”; “记录NPC和先攻顺序”; “导出玩家可见的染色跑团日志”。
+
+Local table events now support opt-in exact keyword replies, join-triggered welcome text, persistent owner timers with foreground waiting and acknowledgement, and source-attributed weighted/nested JSON decks. Use ordinary requests such as “记录玩家加入”, “设置线索整理提醒” or “从这份原创场景表抽取开场”; the [local workflow](references/dice-local.md) selects explicit commands and preserves operation receipts.

@@ -1,0 +1,4481 @@
+{
+  "source": "Keeper Tips; Chaosium; Mike Mason introduction 2021; Chinese translation 古早茶, preface 2023-12-27",
+  "page_count": 50,
+  "enumeration": "Bullet ordinal within each PDF page, excluding chapter headings. Continuations retain the starting ID. Footnotes are attached to their paragraph, not separate advice.",
+  "non_advice_pages": {
+    "1": "cover",
+    "2": "contents",
+    "3": "translator preface",
+    "4": "introduction",
+    "50": "blank"
+  },
+  "continuations": [
+    {
+      "from": "KT-08-14",
+      "through_page": 9
+    },
+    {
+      "from": "KT-10-10",
+      "through_page": 11
+    },
+    {
+      "from": "KT-22-10",
+      "through_page": 23
+    },
+    {
+      "from": "KT-31-14",
+      "through_page": 32
+    },
+    {
+      "from": "KT-32-13",
+      "through_page": 33
+    },
+    {
+      "from": "KT-37-11",
+      "through_page": 38
+    },
+    {
+      "from": "KT-38-09",
+      "through_page": 39
+    }
+  ],
+  "records": [
+    {
+      "id": "KT-05-01",
+      "pdf_page": 5,
+      "bullet": 1,
+      "topic": "Rule flexibility",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-05-02",
+      "pdf_page": 5,
+      "bullet": 2,
+      "topic": "Session expectations",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-05-03",
+      "pdf_page": 5,
+      "bullet": 3,
+      "topic": "Session zero",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-05-04",
+      "pdf_page": 5,
+      "bullet": 4,
+      "topic": "Preferred play aids",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-05-05",
+      "pdf_page": 5,
+      "bullet": 5,
+      "topic": "Rules as tools",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-05-06",
+      "pdf_page": 5,
+      "bullet": 6,
+      "topic": "Pressure release",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-05-07",
+      "pdf_page": 5,
+      "bullet": 7,
+      "topic": "Laughter",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-05-08",
+      "pdf_page": 5,
+      "bullet": 8,
+      "topic": "Comfort and breaks",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-05-09",
+      "pdf_page": 5,
+      "bullet": 9,
+      "topic": "Horror genres",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-05-10",
+      "pdf_page": 5,
+      "bullet": 10,
+      "topic": "Dramatic exceptions",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-05-11",
+      "pdf_page": 5,
+      "bullet": 11,
+      "topic": "Phone needs",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-05-12",
+      "pdf_page": 5,
+      "bullet": 12,
+      "topic": "Collaborative stance",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-05-13",
+      "pdf_page": 5,
+      "bullet": 13,
+      "topic": "Personal longevity",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-05-14",
+      "pdf_page": 5,
+      "bullet": 14,
+      "topic": "Failure consequences",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-05-15",
+      "pdf_page": 5,
+      "bullet": 15,
+      "topic": "After-dark preference",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-05-16",
+      "pdf_page": 5,
+      "bullet": 16,
+      "topic": "Selective adoption",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-06-01",
+      "pdf_page": 6,
+      "bullet": 1,
+      "topic": "Spare supplies",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-06-02",
+      "pdf_page": 6,
+      "bullet": 2,
+      "topic": "Welcoming without pressure",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-06-03",
+      "pdf_page": 6,
+      "bullet": 3,
+      "topic": "Accessible clues",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-06-04",
+      "pdf_page": 6,
+      "bullet": 4,
+      "topic": "Shared enjoyment",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-06-05",
+      "pdf_page": 6,
+      "bullet": 5,
+      "topic": "Enjoyment priority",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-06-06",
+      "pdf_page": 6,
+      "bullet": 6,
+      "topic": "Keeper enjoyment",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-06-07",
+      "pdf_page": 6,
+      "bullet": 7,
+      "topic": "Courtesy",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-07-01",
+      "pdf_page": 7,
+      "bullet": 1,
+      "topic": "Historical prejudice",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-07-02",
+      "pdf_page": 7,
+      "bullet": 2,
+      "topic": "Diverse cast",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-07-03",
+      "pdf_page": 7,
+      "bullet": 3,
+      "topic": "Research against stereotypes",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-07-04",
+      "pdf_page": 7,
+      "bullet": 4,
+      "topic": "Newcomer welcome",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-07-05",
+      "pdf_page": 7,
+      "bullet": 5,
+      "topic": "Theme disclosure",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-07-06",
+      "pdf_page": 7,
+      "bullet": 6,
+      "topic": "Varied investigators",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-07-07",
+      "pdf_page": 7,
+      "bullet": 7,
+      "topic": "Character-first design",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-07-08",
+      "pdf_page": 7,
+      "bullet": 8,
+      "topic": "Villain stereotypes",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-07-09",
+      "pdf_page": 7,
+      "bullet": 9,
+      "topic": "Player autonomy",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-07-10",
+      "pdf_page": 7,
+      "bullet": 10,
+      "topic": "Ordinary-looking antagonists",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-07-11",
+      "pdf_page": 7,
+      "bullet": 11,
+      "topic": "Ordinary occupations",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-08-01",
+      "pdf_page": 8,
+      "bullet": 1,
+      "topic": "Flexible preparation",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-08-02",
+      "pdf_page": 8,
+      "bullet": 2,
+      "topic": "Joint skill coverage",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-08-03",
+      "pdf_page": 8,
+      "bullet": 3,
+      "topic": "Scenario reading",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-08-04",
+      "pdf_page": 8,
+      "bullet": 4,
+      "topic": "Sensitive surprises",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-08-05",
+      "pdf_page": 8,
+      "bullet": 5,
+      "topic": "Short first scenario",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-08-06",
+      "pdf_page": 8,
+      "bullet": 6,
+      "topic": "Group base and contacts",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-08-07",
+      "pdf_page": 8,
+      "bullet": 7,
+      "topic": "Unprepared detail",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-08-08",
+      "pdf_page": 8,
+      "bullet": 8,
+      "topic": "Tone agreement",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-08-09",
+      "pdf_page": 8,
+      "bullet": 9,
+      "topic": "Group-size preference",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-08-10",
+      "pdf_page": 8,
+      "bullet": 10,
+      "topic": "NPC visual roster",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-08-11",
+      "pdf_page": 8,
+      "bullet": 11,
+      "topic": "Investigator tracker",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-08-12",
+      "pdf_page": 8,
+      "bullet": 12,
+      "topic": "Personal connections",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-08-13",
+      "pdf_page": 8,
+      "bullet": 13,
+      "topic": "Setting research",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-08-14",
+      "pdf_page": 8,
+      "bullet": 14,
+      "topic": "Recorded improvisation",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-09-01",
+      "pdf_page": 9,
+      "bullet": 1,
+      "topic": "Scenario adaptation",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-09-02",
+      "pdf_page": 9,
+      "bullet": 2,
+      "topic": "Skill expectations",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-09-03",
+      "pdf_page": 9,
+      "bullet": 3,
+      "topic": "Period name list",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-09-04",
+      "pdf_page": 9,
+      "bullet": 4,
+      "topic": "Player-perspective review",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-09-05",
+      "pdf_page": 9,
+      "bullet": 5,
+      "topic": "Volunteer recap",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-09-06",
+      "pdf_page": 9,
+      "bullet": 6,
+      "topic": "Recap interpretations",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-09-07",
+      "pdf_page": 9,
+      "bullet": 7,
+      "topic": "Familiar entry tropes",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-09-08",
+      "pdf_page": 9,
+      "bullet": 8,
+      "topic": "Published scenario preparation",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-09-09",
+      "pdf_page": 9,
+      "bullet": 9,
+      "topic": "Reusable paper props",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-09-10",
+      "pdf_page": 9,
+      "bullet": 10,
+      "topic": "Independent setting research",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-09-11",
+      "pdf_page": 9,
+      "bullet": 11,
+      "topic": "Ally neutral rival",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-09-12",
+      "pdf_page": 9,
+      "bullet": 12,
+      "topic": "Original improvisation",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-10-01",
+      "pdf_page": 10,
+      "bullet": 1,
+      "topic": "Extra creation pool",
+      "status": "house-rule-candidate",
+      "reason": "Proposal only, disabled until exact scope and consent are recorded; no default card mutation.",
+      "destination": "references/keeper-practice.md#b---house-rule-candidates-disabled-by-default"
+    },
+    {
+      "id": "KT-10-02",
+      "pdf_page": 10,
+      "bullet": 2,
+      "topic": "Actual-play research",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-10-03",
+      "pdf_page": 10,
+      "bullet": 3,
+      "topic": "Background integration",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-10-04",
+      "pdf_page": 10,
+      "bullet": 4,
+      "topic": "Alternative organizations",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-10-05",
+      "pdf_page": 10,
+      "bullet": 5,
+      "topic": "Scene and relationship notes",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-10-06",
+      "pdf_page": 10,
+      "bullet": 6,
+      "topic": "Unexpected aid complications",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-10-07",
+      "pdf_page": 10,
+      "bullet": 7,
+      "topic": "Era conversion",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-10-08",
+      "pdf_page": 10,
+      "bullet": 8,
+      "topic": "Introductory scenario discovery",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-10-09",
+      "pdf_page": 10,
+      "bullet": 9,
+      "topic": "NPC portraits",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-10-10",
+      "pdf_page": 10,
+      "bullet": 10,
+      "topic": "Custom pregen and Luck floor",
+      "status": "house-rule-candidate",
+      "reason": "Proposal only, disabled until exact scope and consent are recorded; no default card mutation.",
+      "destination": "references/keeper-practice.md#b---house-rule-candidates-disabled-by-default"
+    },
+    {
+      "id": "KT-12-01",
+      "pdf_page": 12,
+      "bullet": 1,
+      "topic": "Appearance assumptions",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-12-02",
+      "pdf_page": 12,
+      "bullet": 2,
+      "topic": "Character-conflict consent",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-12-03",
+      "pdf_page": 12,
+      "bullet": 3,
+      "topic": "Space for player dialogue",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-12-04",
+      "pdf_page": 12,
+      "bullet": 4,
+      "topic": "Newcomer system preference",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-12-05",
+      "pdf_page": 12,
+      "bullet": 5,
+      "topic": "Player preferences",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-12-06",
+      "pdf_page": 12,
+      "bullet": 6,
+      "topic": "Actionable beginner choices",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-12-07",
+      "pdf_page": 12,
+      "bullet": 7,
+      "topic": "Fictional intent",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-12-08",
+      "pdf_page": 12,
+      "bullet": 8,
+      "topic": "Newcomer buddy",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-12-09",
+      "pdf_page": 12,
+      "bullet": 9,
+      "topic": "Player prompts",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-12-10",
+      "pdf_page": 12,
+      "bullet": 10,
+      "topic": "Co-authored detail",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-12-11",
+      "pdf_page": 12,
+      "bullet": 11,
+      "topic": "Background prompts",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-12-12",
+      "pdf_page": 12,
+      "bullet": 12,
+      "topic": "Quieter participant opening",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-12-13",
+      "pdf_page": 12,
+      "bullet": 13,
+      "topic": "Pushed method clarification",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-12-14",
+      "pdf_page": 12,
+      "bullet": 14,
+      "topic": "Shared investigation",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-13-01",
+      "pdf_page": 13,
+      "bullet": 1,
+      "topic": "Investigation challenge",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-13-02",
+      "pdf_page": 13,
+      "bullet": 2,
+      "topic": "Absence continuity",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-13-03",
+      "pdf_page": 13,
+      "bullet": 3,
+      "topic": "Perception versus emotion",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-13-04",
+      "pdf_page": 13,
+      "bullet": 4,
+      "topic": "Shared spotlight",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-13-05",
+      "pdf_page": 13,
+      "bullet": 5,
+      "topic": "Reserve personal points",
+      "status": "house-rule-candidate",
+      "reason": "Proposal only, disabled until exact scope and consent are recorded; no default card mutation.",
+      "destination": "references/keeper-practice.md#b---house-rule-candidates-disabled-by-default"
+    },
+    {
+      "id": "KT-13-06",
+      "pdf_page": 13,
+      "bullet": 6,
+      "topic": "Optional performance",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-13-07",
+      "pdf_page": 13,
+      "bullet": 7,
+      "topic": "Genre participation",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-13-08",
+      "pdf_page": 13,
+      "bullet": 8,
+      "topic": "Player control",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-13-09",
+      "pdf_page": 13,
+      "bullet": 9,
+      "topic": "Pronouns",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-13-10",
+      "pdf_page": 13,
+      "bullet": 10,
+      "topic": "Opportunity without pressure",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-13-11",
+      "pdf_page": 13,
+      "bullet": 11,
+      "topic": "Prior module knowledge",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-13-12",
+      "pdf_page": 13,
+      "bullet": 12,
+      "topic": "Preference awareness",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-13-13",
+      "pdf_page": 13,
+      "bullet": 13,
+      "topic": "Always allow a roll",
+      "status": "not-adopted",
+      "reason": "Impossible actions do not become possible through an Extreme roll. Offer feasible alternatives.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-14-01",
+      "pdf_page": 14,
+      "bullet": 1,
+      "topic": "Active motivations",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-14-02",
+      "pdf_page": 14,
+      "bullet": 2,
+      "topic": "Character wishes",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-14-03",
+      "pdf_page": 14,
+      "bullet": 3,
+      "topic": "Apparent agency",
+      "status": "conditional",
+      "reason": "Replace an illusion of agency with actual choices and consequences; no hidden predetermined outcome.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-14-04",
+      "pdf_page": 14,
+      "bullet": 4,
+      "topic": "Mutual participation",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-14-05",
+      "pdf_page": 14,
+      "bullet": 5,
+      "topic": "Constructive card review",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-14-06",
+      "pdf_page": 14,
+      "bullet": 6,
+      "topic": "Volunteer archivist",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-14-07",
+      "pdf_page": 14,
+      "bullet": 7,
+      "topic": "Enough evidence",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-14-08",
+      "pdf_page": 14,
+      "bullet": 8,
+      "topic": "Private perceptions",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-14-09",
+      "pdf_page": 14,
+      "bullet": 9,
+      "topic": "Flexible attendance",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-14-10",
+      "pdf_page": 14,
+      "bullet": 10,
+      "topic": "Ordinary investigators",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-14-11",
+      "pdf_page": 14,
+      "bullet": 11,
+      "topic": "Player journals",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-14-12",
+      "pdf_page": 14,
+      "bullet": 12,
+      "topic": "Respectful participation",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-14-13",
+      "pdf_page": 14,
+      "bullet": 13,
+      "topic": "Fictional failure",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-14-14",
+      "pdf_page": 14,
+      "bullet": 14,
+      "topic": "Table mismatch",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-15-01",
+      "pdf_page": 15,
+      "bullet": 1,
+      "topic": "Mutual enjoyment",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-15-02",
+      "pdf_page": 15,
+      "bullet": 2,
+      "topic": "Refreshment timing",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-15-03",
+      "pdf_page": 15,
+      "bullet": 3,
+      "topic": "Shared opportunities",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-15-04",
+      "pdf_page": 15,
+      "bullet": 4,
+      "topic": "Dominant speakers",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-15-05",
+      "pdf_page": 15,
+      "bullet": 5,
+      "topic": "Player investment",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-15-06",
+      "pdf_page": 15,
+      "bullet": 6,
+      "topic": "Beginner uncertainty",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-15-07",
+      "pdf_page": 15,
+      "bullet": 7,
+      "topic": "Unexpected interests",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-15-08",
+      "pdf_page": 15,
+      "bullet": 8,
+      "topic": "Puzzle preferences",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-16-01",
+      "pdf_page": 16,
+      "bullet": 1,
+      "topic": "Identity choices",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-16-02",
+      "pdf_page": 16,
+      "bullet": 2,
+      "topic": "Mutual expectations",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-16-03",
+      "pdf_page": 16,
+      "bullet": 3,
+      "topic": "Cultural context",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-16-04",
+      "pdf_page": 16,
+      "bullet": 4,
+      "topic": "Horror boundaries",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-16-05",
+      "pdf_page": 16,
+      "bullet": 5,
+      "topic": "Real vulnerabilities",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-16-06",
+      "pdf_page": 16,
+      "bullet": 6,
+      "topic": "Historical themes",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-16-07",
+      "pdf_page": 16,
+      "bullet": 7,
+      "topic": "Research marginalized history",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-16-08",
+      "pdf_page": 16,
+      "bullet": 8,
+      "topic": "Changing boundaries",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-16-09",
+      "pdf_page": 16,
+      "bullet": 9,
+      "topic": "Direct verbal intimidation",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-17-01",
+      "pdf_page": 17,
+      "bullet": 1,
+      "topic": "Noncombat solution",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-17-02",
+      "pdf_page": 17,
+      "bullet": 2,
+      "topic": "Idea notebook",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-17-03",
+      "pdf_page": 17,
+      "bullet": 3,
+      "topic": "Creative encouragement",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-17-04",
+      "pdf_page": 17,
+      "bullet": 4,
+      "topic": "Antagonist logic",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-17-05",
+      "pdf_page": 17,
+      "bullet": 5,
+      "topic": "Layered revelations",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-17-06",
+      "pdf_page": 17,
+      "bullet": 6,
+      "topic": "Complexity budget",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-17-07",
+      "pdf_page": 17,
+      "bullet": 7,
+      "topic": "Evidence flow",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-17-08",
+      "pdf_page": 17,
+      "bullet": 8,
+      "topic": "Subverting familiar lore",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-17-09",
+      "pdf_page": 17,
+      "bullet": 9,
+      "topic": "Period inspiration",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-17-10",
+      "pdf_page": 17,
+      "bullet": 10,
+      "topic": "Historical adaptation",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-17-11",
+      "pdf_page": 17,
+      "bullet": 11,
+      "topic": "Unexpected solutions",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-17-12",
+      "pdf_page": 17,
+      "bullet": 12,
+      "topic": "Causal consistency",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-17-13",
+      "pdf_page": 17,
+      "bullet": 13,
+      "topic": "Personal inspiration",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-17-14",
+      "pdf_page": 17,
+      "bullet": 14,
+      "topic": "Collecting ideas",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-18-01",
+      "pdf_page": 18,
+      "bullet": 1,
+      "topic": "Red-herring exit",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-18-02",
+      "pdf_page": 18,
+      "bullet": 2,
+      "topic": "Local horror",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-18-03",
+      "pdf_page": 18,
+      "bullet": 3,
+      "topic": "Setting detail",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-18-04",
+      "pdf_page": 18,
+      "bullet": 4,
+      "topic": "Accidental emphasis",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-18-05",
+      "pdf_page": 18,
+      "bullet": 5,
+      "topic": "Write usable scenes",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-18-06",
+      "pdf_page": 18,
+      "bullet": 6,
+      "topic": "Personal interests",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-18-07",
+      "pdf_page": 18,
+      "bullet": 7,
+      "topic": "Failed gate recovery",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-18-08",
+      "pdf_page": 18,
+      "bullet": 8,
+      "topic": "Short scenario scope",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-18-09",
+      "pdf_page": 18,
+      "bullet": 9,
+      "topic": "Modern technology",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-18-10",
+      "pdf_page": 18,
+      "bullet": 10,
+      "topic": "Service interruption",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-18-11",
+      "pdf_page": 18,
+      "bullet": 11,
+      "topic": "Lethal single-roll stakes",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-18-12",
+      "pdf_page": 18,
+      "bullet": 12,
+      "topic": "NPC and scripted outcomes",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-18-13",
+      "pdf_page": 18,
+      "bullet": 13,
+      "topic": "Linking episodes",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-18-14",
+      "pdf_page": 18,
+      "bullet": 14,
+      "topic": "Discoverable causes",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-19-01",
+      "pdf_page": 19,
+      "bullet": 1,
+      "topic": "Causal event links",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-19-02",
+      "pdf_page": 19,
+      "bullet": 2,
+      "topic": "Opposition timeline",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-19-03",
+      "pdf_page": 19,
+      "bullet": 3,
+      "topic": "Varied inspiration",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-19-04",
+      "pdf_page": 19,
+      "bullet": 4,
+      "topic": "Useful character abilities",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-19-05",
+      "pdf_page": 19,
+      "bullet": 5,
+      "topic": "Adapting to characters",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-19-06",
+      "pdf_page": 19,
+      "bullet": 6,
+      "topic": "Specialist and replacement",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-19-07",
+      "pdf_page": 19,
+      "bullet": 7,
+      "topic": "Essential clue redundancy",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-19-08",
+      "pdf_page": 19,
+      "bullet": 8,
+      "topic": "History and fiction",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-19-09",
+      "pdf_page": 19,
+      "bullet": 9,
+      "topic": "False-lead cost",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-19-10",
+      "pdf_page": 19,
+      "bullet": 10,
+      "topic": "Useful detours",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-19-11",
+      "pdf_page": 19,
+      "bullet": 11,
+      "topic": "External reader",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-19-12",
+      "pdf_page": 19,
+      "bullet": 12,
+      "topic": "Organic red herrings",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-20-01",
+      "pdf_page": 20,
+      "bullet": 1,
+      "topic": "Repeated playtesting",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-20-02",
+      "pdf_page": 20,
+      "bullet": 2,
+      "topic": "Testing written instructions",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-20-03",
+      "pdf_page": 20,
+      "bullet": 3,
+      "topic": "Independent GM testing",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-20-04",
+      "pdf_page": 20,
+      "bullet": 4,
+      "topic": "Useful varied pregens",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-20-05",
+      "pdf_page": 20,
+      "bullet": 5,
+      "topic": "Fictional inspiration",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-20-06",
+      "pdf_page": 20,
+      "bullet": 6,
+      "topic": "Visible deadline",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-20-07",
+      "pdf_page": 20,
+      "bullet": 7,
+      "topic": "Aftermath and inaction",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-20-08",
+      "pdf_page": 20,
+      "bullet": 8,
+      "topic": "Active antagonists",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-20-09",
+      "pdf_page": 20,
+      "bullet": 9,
+      "topic": "Constrained inspiration",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-20-10",
+      "pdf_page": 20,
+      "bullet": 10,
+      "topic": "Personal setting details",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-20-11",
+      "pdf_page": 20,
+      "bullet": 11,
+      "topic": "Precise historical date",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-20-12",
+      "pdf_page": 20,
+      "bullet": 12,
+      "topic": "Fact-based invention",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-20-13",
+      "pdf_page": 20,
+      "bullet": 13,
+      "topic": "Personal writing process",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-20-14",
+      "pdf_page": 20,
+      "bullet": 14,
+      "topic": "Horror craft analysis",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-20-15",
+      "pdf_page": 20,
+      "bullet": 15,
+      "topic": "Broad reading",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-21-01",
+      "pdf_page": 21,
+      "bullet": 1,
+      "topic": "Mystery reading",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-21-02",
+      "pdf_page": 21,
+      "bullet": 2,
+      "topic": "Audiovisual inspiration",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-21-03",
+      "pdf_page": 21,
+      "bullet": 3,
+      "topic": "Writing for another GM",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-21-04",
+      "pdf_page": 21,
+      "bullet": 4,
+      "topic": "Marginalized villains",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-21-05",
+      "pdf_page": 21,
+      "bullet": 5,
+      "topic": "Short premise",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-21-06",
+      "pdf_page": 21,
+      "bullet": 6,
+      "topic": "Multiple solutions",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-21-07",
+      "pdf_page": 21,
+      "bullet": 7,
+      "topic": "Research interests",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-21-08",
+      "pdf_page": 21,
+      "bullet": 8,
+      "topic": "Ethical ending choice",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-21-09",
+      "pdf_page": 21,
+      "bullet": 9,
+      "topic": "Alternative endings",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-21-10",
+      "pdf_page": 21,
+      "bullet": 10,
+      "topic": "External release testing",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-21-11",
+      "pdf_page": 21,
+      "bullet": 11,
+      "topic": "Discarding ideas",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-21-12",
+      "pdf_page": 21,
+      "bullet": 12,
+      "topic": "Considering feedback",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-22-01",
+      "pdf_page": 22,
+      "bullet": 1,
+      "topic": "Constructive feedback",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-22-02",
+      "pdf_page": 22,
+      "bullet": 2,
+      "topic": "Player-made red herrings",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-22-03",
+      "pdf_page": 22,
+      "bullet": 3,
+      "topic": "Fresh-eye review",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-22-04",
+      "pdf_page": 22,
+      "bullet": 4,
+      "topic": "Early hook",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-22-05",
+      "pdf_page": 22,
+      "bullet": 5,
+      "topic": "Shared motivation",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-22-06",
+      "pdf_page": 22,
+      "bullet": 6,
+      "topic": "Police consequences",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-22-07",
+      "pdf_page": 22,
+      "bullet": 7,
+      "topic": "Convention scope",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-22-08",
+      "pdf_page": 22,
+      "bullet": 8,
+      "topic": "Props and clue signals",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-22-09",
+      "pdf_page": 22,
+      "bullet": 9,
+      "topic": "Choices within limits",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-22-10",
+      "pdf_page": 22,
+      "bullet": 10,
+      "topic": "Diverse external playtests",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-23-01",
+      "pdf_page": 23,
+      "bullet": 1,
+      "topic": "Quick creation sources",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-23-02",
+      "pdf_page": 23,
+      "bullet": 2,
+      "topic": "Community support",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-23-03",
+      "pdf_page": 23,
+      "bullet": 3,
+      "topic": "Listening to players",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-24-01",
+      "pdf_page": 24,
+      "bullet": 1,
+      "topic": "Unnecessary checks",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-24-02",
+      "pdf_page": 24,
+      "bullet": 2,
+      "topic": "Random uncertainty",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-24-03",
+      "pdf_page": 24,
+      "bullet": 3,
+      "topic": "Enjoyed scene pacing",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-24-04",
+      "pdf_page": 24,
+      "bullet": 4,
+      "topic": "Transparent rewind",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-24-05",
+      "pdf_page": 24,
+      "bullet": 5,
+      "topic": "Specific search",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-24-06",
+      "pdf_page": 24,
+      "bullet": 6,
+      "topic": "Performance example",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-24-07",
+      "pdf_page": 24,
+      "bullet": 7,
+      "topic": "Historical flexibility",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-24-08",
+      "pdf_page": 24,
+      "bullet": 8,
+      "topic": "Closing reserve",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-24-09",
+      "pdf_page": 24,
+      "bullet": 9,
+      "topic": "Unrecorded equipment",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-24-10",
+      "pdf_page": 24,
+      "bullet": 10,
+      "topic": "Unexpected routes",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-24-11",
+      "pdf_page": 24,
+      "bullet": 11,
+      "topic": "World consequences",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-24-12",
+      "pdf_page": 24,
+      "bullet": 12,
+      "topic": "Spot Hidden scope",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-24-13",
+      "pdf_page": 24,
+      "bullet": 13,
+      "topic": "Description before SAN",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-24-14",
+      "pdf_page": 24,
+      "bullet": 14,
+      "topic": "SAN before description",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-25-01",
+      "pdf_page": 25,
+      "bullet": 1,
+      "topic": "Thoughtful silence",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-25-02",
+      "pdf_page": 25,
+      "bullet": 2,
+      "topic": "Threat anticipation",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-25-03",
+      "pdf_page": 25,
+      "bullet": 3,
+      "topic": "Relocating clues",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-25-04",
+      "pdf_page": 25,
+      "bullet": 4,
+      "topic": "Player-supplied setting",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-25-05",
+      "pdf_page": 25,
+      "bullet": 5,
+      "topic": "Lethal warnings",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-25-06",
+      "pdf_page": 25,
+      "bullet": 6,
+      "topic": "Split investigation",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-25-07",
+      "pdf_page": 25,
+      "bullet": 7,
+      "topic": "Period breakdowns",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-25-08",
+      "pdf_page": 25,
+      "bullet": 8,
+      "topic": "No kill target",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-25-09",
+      "pdf_page": 25,
+      "bullet": 9,
+      "topic": "Recurring world",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-25-10",
+      "pdf_page": 25,
+      "bullet": 10,
+      "topic": "Unexplained percentile checks",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-25-11",
+      "pdf_page": 25,
+      "bullet": 11,
+      "topic": "Adapting events",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-25-12",
+      "pdf_page": 25,
+      "bullet": 12,
+      "topic": "Witness evidence",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-25-13",
+      "pdf_page": 25,
+      "bullet": 13,
+      "topic": "Obstructive authorities",
+      "status": "conditional",
+      "reason": "Authorities follow established knowledge and capability; they are not automatically obstructive.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-25-14",
+      "pdf_page": 25,
+      "bullet": 14,
+      "topic": "Unexpected choices",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-25-15",
+      "pdf_page": 25,
+      "bullet": 15,
+      "topic": "Adopting solutions",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-26-01",
+      "pdf_page": 26,
+      "bullet": 1,
+      "topic": "Resource consequences",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-26-02",
+      "pdf_page": 26,
+      "bullet": 2,
+      "topic": "Physical performance",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-26-03",
+      "pdf_page": 26,
+      "bullet": 3,
+      "topic": "Modern technology",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-26-04",
+      "pdf_page": 26,
+      "bullet": 4,
+      "topic": "Chase exceptions",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-26-05",
+      "pdf_page": 26,
+      "bullet": 5,
+      "topic": "Lookup or temporary ruling",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-26-06",
+      "pdf_page": 26,
+      "bullet": 6,
+      "topic": "Possession personality",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-26-07",
+      "pdf_page": 26,
+      "bullet": 7,
+      "topic": "Additional Keepers",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-26-08",
+      "pdf_page": 26,
+      "bullet": 8,
+      "topic": "Reviewing rules",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-26-09",
+      "pdf_page": 26,
+      "bullet": 9,
+      "topic": "Epilogue invitation",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-26-10",
+      "pdf_page": 26,
+      "bullet": 10,
+      "topic": "Research and opening hours",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-26-11",
+      "pdf_page": 26,
+      "bullet": 11,
+      "topic": "Mundane respite",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-26-12",
+      "pdf_page": 26,
+      "bullet": 12,
+      "topic": "Always map combat",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-27-01",
+      "pdf_page": 27,
+      "bullet": 1,
+      "topic": "Never map combat",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-27-02",
+      "pdf_page": 27,
+      "bullet": 2,
+      "topic": "Preference-based pacing",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-27-03",
+      "pdf_page": 27,
+      "bullet": 3,
+      "topic": "Threatening connections",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-27-04",
+      "pdf_page": 27,
+      "bullet": 4,
+      "topic": "Dream resource reset",
+      "status": "house-rule-candidate",
+      "reason": "Proposal only, disabled until exact scope and consent are recorded; no default card mutation.",
+      "destination": "references/keeper-practice.md#b---house-rule-candidates-disabled-by-default"
+    },
+    {
+      "id": "KT-27-05",
+      "pdf_page": 27,
+      "bullet": 5,
+      "topic": "Ending suspense",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-28-01",
+      "pdf_page": 28,
+      "bullet": 1,
+      "topic": "Nonadversarial hosting",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-28-02",
+      "pdf_page": 28,
+      "bullet": 2,
+      "topic": "Performance confidence",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-28-03",
+      "pdf_page": 28,
+      "bullet": 3,
+      "topic": "Cinematic conflicts",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-28-04",
+      "pdf_page": 28,
+      "bullet": 4,
+      "topic": "Shared memories",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-28-05",
+      "pdf_page": 28,
+      "bullet": 5,
+      "topic": "Short rule introduction",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-28-06",
+      "pdf_page": 28,
+      "bullet": 6,
+      "topic": "Teach at point of use",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-28-07",
+      "pdf_page": 28,
+      "bullet": 7,
+      "topic": "Movement and performance",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-28-08",
+      "pdf_page": 28,
+      "bullet": 8,
+      "topic": "Pacing variation",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-28-09",
+      "pdf_page": 28,
+      "bullet": 9,
+      "topic": "Unrelenting suspense",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-28-10",
+      "pdf_page": 28,
+      "bullet": 10,
+      "topic": "Short first campaign",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-28-11",
+      "pdf_page": 28,
+      "bullet": 11,
+      "topic": "Visible dice",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-28-12",
+      "pdf_page": 28,
+      "bullet": 12,
+      "topic": "Unusual skill use",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-28-13",
+      "pdf_page": 28,
+      "bullet": 13,
+      "topic": "Deferred custom points",
+      "status": "house-rule-candidate",
+      "reason": "Proposal only, disabled until exact scope and consent are recorded; no default card mutation.",
+      "destination": "references/keeper-practice.md#b---house-rule-candidates-disabled-by-default"
+    },
+    {
+      "id": "KT-28-14",
+      "pdf_page": 28,
+      "bullet": 14,
+      "topic": "Newcomer welcome",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-28-15",
+      "pdf_page": 28,
+      "bullet": 15,
+      "topic": "Responsive listening",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-28-16",
+      "pdf_page": 28,
+      "bullet": 16,
+      "topic": "Sensory detail",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-29-01",
+      "pdf_page": 29,
+      "bullet": 1,
+      "topic": "Reveal order",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-29-02",
+      "pdf_page": 29,
+      "bullet": 2,
+      "topic": "Rule review",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-29-03",
+      "pdf_page": 29,
+      "bullet": 3,
+      "topic": "Cross-cut groups",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-29-04",
+      "pdf_page": 29,
+      "bullet": 4,
+      "topic": "Accelerated encounters",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-29-05",
+      "pdf_page": 29,
+      "bullet": 5,
+      "topic": "Deduction ownership",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-29-06",
+      "pdf_page": 29,
+      "bullet": 6,
+      "topic": "Invented historical facts",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-29-07",
+      "pdf_page": 29,
+      "bullet": 7,
+      "topic": "Moral rewards and penalties",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-29-08",
+      "pdf_page": 29,
+      "bullet": 8,
+      "topic": "Convention closing",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-29-09",
+      "pdf_page": 29,
+      "bullet": 9,
+      "topic": "Continuity notes",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-29-10",
+      "pdf_page": 29,
+      "bullet": 10,
+      "topic": "Motivational anecdote",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-29-11",
+      "pdf_page": 29,
+      "bullet": 11,
+      "topic": "Character detail prompts",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-30-01",
+      "pdf_page": 30,
+      "bullet": 1,
+      "topic": "Round-end narration",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-30-02",
+      "pdf_page": 30,
+      "bullet": 2,
+      "topic": "Closing false routes",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-30-03",
+      "pdf_page": 30,
+      "bullet": 3,
+      "topic": "Concrete smell",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-30-04",
+      "pdf_page": 30,
+      "bullet": 4,
+      "topic": "Personal hooks",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-30-05",
+      "pdf_page": 30,
+      "bullet": 5,
+      "topic": "Tone signals",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-30-06",
+      "pdf_page": 30,
+      "bullet": 6,
+      "topic": "Performance",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-30-07",
+      "pdf_page": 30,
+      "bullet": 7,
+      "topic": "Adopting theories",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-30-08",
+      "pdf_page": 30,
+      "bullet": 8,
+      "topic": "Keeper attention",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-30-09",
+      "pdf_page": 30,
+      "bullet": 9,
+      "topic": "Evidence before inference",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-30-10",
+      "pdf_page": 30,
+      "bullet": 10,
+      "topic": "Rule bookmarks",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-30-11",
+      "pdf_page": 30,
+      "bullet": 11,
+      "topic": "Next-session suspense",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-30-12",
+      "pdf_page": 30,
+      "bullet": 12,
+      "topic": "Mutual care",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-30-13",
+      "pdf_page": 30,
+      "bullet": 13,
+      "topic": "Remaining-time check",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-30-14",
+      "pdf_page": 30,
+      "bullet": 14,
+      "topic": "Pre-session nerves",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-31-01",
+      "pdf_page": 31,
+      "bullet": 1,
+      "topic": "Minimal-rule shortcut",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-31-02",
+      "pdf_page": 31,
+      "bullet": 2,
+      "topic": "Neutral reactions",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-31-03",
+      "pdf_page": 31,
+      "bullet": 3,
+      "topic": "Injury instead of death",
+      "status": "house-rule-candidate",
+      "reason": "Proposal only, disabled until exact scope and consent are recorded; no default card mutation.",
+      "destination": "references/keeper-practice.md#b---house-rule-candidates-disabled-by-default"
+    },
+    {
+      "id": "KT-31-04",
+      "pdf_page": 31,
+      "bullet": 4,
+      "topic": "Consequential choices",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-31-05",
+      "pdf_page": 31,
+      "bullet": 5,
+      "topic": "SAN pacing",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-31-06",
+      "pdf_page": 31,
+      "bullet": 6,
+      "topic": "Noncombat challenge",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-31-07",
+      "pdf_page": 31,
+      "bullet": 7,
+      "topic": "Recalling clues",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-31-08",
+      "pdf_page": 31,
+      "bullet": 8,
+      "topic": "Disruptive behavior",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-31-09",
+      "pdf_page": 31,
+      "bullet": 9,
+      "topic": "Character fit",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-31-10",
+      "pdf_page": 31,
+      "bullet": 10,
+      "topic": "Technology opposition",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-31-11",
+      "pdf_page": 31,
+      "bullet": 11,
+      "topic": "Technology access",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-31-12",
+      "pdf_page": 31,
+      "bullet": 12,
+      "topic": "Recovery and study time",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-31-13",
+      "pdf_page": 31,
+      "bullet": 13,
+      "topic": "Seeking assistance",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-31-14",
+      "pdf_page": 31,
+      "bullet": 14,
+      "topic": "Compressed sharing",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-32-01",
+      "pdf_page": 32,
+      "bullet": 1,
+      "topic": "Period travel and research",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-32-02",
+      "pdf_page": 32,
+      "bullet": 2,
+      "topic": "Pacing craft",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-32-03",
+      "pdf_page": 32,
+      "bullet": 3,
+      "topic": "Consistent conduct",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-32-04",
+      "pdf_page": 32,
+      "bullet": 4,
+      "topic": "Accelerated improvement",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-32-05",
+      "pdf_page": 32,
+      "bullet": 5,
+      "topic": "Recovery calendar",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-32-06",
+      "pdf_page": 32,
+      "bullet": 6,
+      "topic": "Cinematic viewpoint",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-32-07",
+      "pdf_page": 32,
+      "bullet": 7,
+      "topic": "Performance anxiety",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-32-08",
+      "pdf_page": 32,
+      "bullet": 8,
+      "topic": "Private scene delivery",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-32-09",
+      "pdf_page": 32,
+      "bullet": 9,
+      "topic": "Scene switching",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-32-10",
+      "pdf_page": 32,
+      "bullet": 10,
+      "topic": "Memorable play",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-32-11",
+      "pdf_page": 32,
+      "bullet": 11,
+      "topic": "Passing spotlight",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-32-12",
+      "pdf_page": 32,
+      "bullet": 12,
+      "topic": "Campaign rewards",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-32-13",
+      "pdf_page": 32,
+      "bullet": 13,
+      "topic": "In-world web research",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-34-01",
+      "pdf_page": 34,
+      "bullet": 1,
+      "topic": "Threat with exit",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-34-02",
+      "pdf_page": 34,
+      "bullet": 2,
+      "topic": "Horror consensus",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-34-03",
+      "pdf_page": 34,
+      "bullet": 3,
+      "topic": "Pushed failure",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-34-04",
+      "pdf_page": 34,
+      "bullet": 4,
+      "topic": "Pause tools",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-34-05",
+      "pdf_page": 34,
+      "bullet": 5,
+      "topic": "Quieter voice",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-34-06",
+      "pdf_page": 34,
+      "bullet": 6,
+      "topic": "Content comfort",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-34-07",
+      "pdf_page": 34,
+      "bullet": 7,
+      "topic": "Folklore creatures",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-34-08",
+      "pdf_page": 34,
+      "bullet": 8,
+      "topic": "Intense bodily horror",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-34-09",
+      "pdf_page": 34,
+      "bullet": 9,
+      "topic": "Voice modulation",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-34-10",
+      "pdf_page": 34,
+      "bullet": 10,
+      "topic": "Subverted expectations",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-34-11",
+      "pdf_page": 34,
+      "bullet": 11,
+      "topic": "Frightening choices",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-34-12",
+      "pdf_page": 34,
+      "bullet": 12,
+      "topic": "Gradual revelation",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-35-01",
+      "pdf_page": 35,
+      "bullet": 1,
+      "topic": "Denying earlier description",
+      "status": "not-adopted",
+      "reason": "Do not deny a recorded description. Preserve the earlier perception and describe what changes now.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-35-02",
+      "pdf_page": 35,
+      "bullet": 2,
+      "topic": "Film craft",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-35-03",
+      "pdf_page": 35,
+      "bullet": 3,
+      "topic": "Unknown details",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-35-04",
+      "pdf_page": 35,
+      "bullet": 4,
+      "topic": "Isolation",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-35-05",
+      "pdf_page": 35,
+      "bullet": 5,
+      "topic": "Specific film preference",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-36-01",
+      "pdf_page": 36,
+      "bullet": 1,
+      "topic": "Chosen reaction",
+      "status": "house-rule-candidate",
+      "reason": "Proposal only, disabled until exact scope and consent are recorded; no default card mutation.",
+      "destination": "references/keeper-practice.md#b---house-rule-candidates-disabled-by-default"
+    },
+    {
+      "id": "KT-36-02",
+      "pdf_page": 36,
+      "bullet": 2,
+      "topic": "Insanity portrayal",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-36-03",
+      "pdf_page": 36,
+      "bullet": 3,
+      "topic": "Sourced SAN loss",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-36-04",
+      "pdf_page": 36,
+      "bullet": 4,
+      "topic": "Violence SAN claims",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-36-05",
+      "pdf_page": 36,
+      "bullet": 5,
+      "topic": "Horror and SAN sequence",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-36-06",
+      "pdf_page": 36,
+      "bullet": 6,
+      "topic": "Bounded control",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-36-07",
+      "pdf_page": 36,
+      "bullet": 7,
+      "topic": "Minutes or seconds",
+      "status": "house-rule-candidate",
+      "reason": "Duration discrepancy checked against official SAN overview: real-time bouts use rounds. Seconds/minutes require explicit deviation.",
+      "destination": "references/keeper-practice.md#b---house-rule-candidates-disabled-by-default"
+    },
+    {
+      "id": "KT-36-08",
+      "pdf_page": 36,
+      "bullet": 8,
+      "topic": "Uncertain encounters",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-36-09",
+      "pdf_page": 36,
+      "bullet": 9,
+      "topic": "Travel recovery",
+      "status": "needs-verification",
+      "reason": "Travel does not establish indefinite-insanity recovery. Full-edition treatment and elapsed time remain required.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-36-10",
+      "pdf_page": 36,
+      "bullet": 10,
+      "topic": "Delusion portrayal",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-36-11",
+      "pdf_page": 36,
+      "bullet": 11,
+      "topic": "Shared portrayal",
+      "status": "conditional",
+      "reason": "Collaborate on portrayal within the resolved effect; changes to control or duration require a separate house rule.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-36-12",
+      "pdf_page": 36,
+      "bullet": 12,
+      "topic": "Insane insight",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-37-01",
+      "pdf_page": 37,
+      "bullet": 1,
+      "topic": "Mythos interpretation",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-37-02",
+      "pdf_page": 37,
+      "bullet": 2,
+      "topic": "Uncanny magic",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-37-03",
+      "pdf_page": 37,
+      "bullet": 3,
+      "topic": "Campaign mythos",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-37-04",
+      "pdf_page": 37,
+      "bullet": 4,
+      "topic": "Canon flexibility",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-37-05",
+      "pdf_page": 37,
+      "bullet": 5,
+      "topic": "Rarity",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-37-06",
+      "pdf_page": 37,
+      "bullet": 6,
+      "topic": "Alternative names",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-37-07",
+      "pdf_page": 37,
+      "bullet": 7,
+      "topic": "Unfamiliar presentation",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-37-08",
+      "pdf_page": 37,
+      "bullet": 8,
+      "topic": "Reality anomalies",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-37-09",
+      "pdf_page": 37,
+      "bullet": 9,
+      "topic": "Uncertain reality",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-37-10",
+      "pdf_page": 37,
+      "bullet": 10,
+      "topic": "Public aftermath",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-37-11",
+      "pdf_page": 37,
+      "bullet": 11,
+      "topic": "Tome study",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-38-01",
+      "pdf_page": 38,
+      "bullet": 1,
+      "topic": "Flexible tome reading",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-38-02",
+      "pdf_page": 38,
+      "bullet": 2,
+      "topic": "Environmental effects",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-38-03",
+      "pdf_page": 38,
+      "bullet": 3,
+      "topic": "Prior mythos encounter",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-38-04",
+      "pdf_page": 38,
+      "bullet": 4,
+      "topic": "Historical doomed prologue",
+      "status": "conditional",
+      "reason": "A predetermined doomed prologue requires prior player agreement, separate characters and bounded consequences.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-38-05",
+      "pdf_page": 38,
+      "bullet": 5,
+      "topic": "Lasting corruption",
+      "status": "house-rule-candidate",
+      "reason": "Proposal only, disabled until exact scope and consent are recorded; no default card mutation.",
+      "destination": "references/keeper-practice.md#b---house-rule-candidates-disabled-by-default"
+    },
+    {
+      "id": "KT-38-06",
+      "pdf_page": 38,
+      "bullet": 6,
+      "topic": "Authorities and stakes",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-38-07",
+      "pdf_page": 38,
+      "bullet": 7,
+      "topic": "Indifferent entities",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-38-08",
+      "pdf_page": 38,
+      "bullet": 8,
+      "topic": "Creature motives and rewards",
+      "status": "conditional",
+      "reason": "Use motives and negotiated outcomes; SAN rewards/losses require a sourced ruling, not automatic moral judgment.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-38-09",
+      "pdf_page": 38,
+      "bullet": 9,
+      "topic": "Tome custody",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-39-01",
+      "pdf_page": 39,
+      "bullet": 1,
+      "topic": "Hostile monster preference",
+      "status": "conditional",
+      "reason": "Malice is a style preference and conflicts with indifferent/allied entities; select motive per creature.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-40-01",
+      "pdf_page": 40,
+      "bullet": 1,
+      "topic": "NPC spotlight",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-40-02",
+      "pdf_page": 40,
+      "bullet": 2,
+      "topic": "Improvised roster",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-40-03",
+      "pdf_page": 40,
+      "bullet": 3,
+      "topic": "Early relationship",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-40-04",
+      "pdf_page": 40,
+      "bullet": 4,
+      "topic": "Foreshadowing",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-40-05",
+      "pdf_page": 40,
+      "bullet": 5,
+      "topic": "Returning people",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-40-06",
+      "pdf_page": 40,
+      "bullet": 6,
+      "topic": "Obvious villain",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-40-07",
+      "pdf_page": 40,
+      "bullet": 7,
+      "topic": "Quiet villain",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-40-08",
+      "pdf_page": 40,
+      "bullet": 8,
+      "topic": "Performance alternatives",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-40-09",
+      "pdf_page": 40,
+      "bullet": 9,
+      "topic": "NPC reference cards",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-40-10",
+      "pdf_page": 40,
+      "bullet": 10,
+      "topic": "Distinctive trait",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-40-11",
+      "pdf_page": 40,
+      "bullet": 11,
+      "topic": "Mundane alibis",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-40-12",
+      "pdf_page": 40,
+      "bullet": 12,
+      "topic": "Knowledge boundaries",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-40-13",
+      "pdf_page": 40,
+      "bullet": 13,
+      "topic": "Setting names",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-40-14",
+      "pdf_page": 40,
+      "bullet": 14,
+      "topic": "NPC replacement",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-40-15",
+      "pdf_page": 40,
+      "bullet": 15,
+      "topic": "Prepared ally card",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-41-01",
+      "pdf_page": 41,
+      "bullet": 1,
+      "topic": "Social approach",
+      "status": "conditional",
+      "reason": "Select by stakes, edition and table agreement; do not silently override dice or facts.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-41-02",
+      "pdf_page": 41,
+      "bullet": 2,
+      "topic": "Dependents under threat",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-41-03",
+      "pdf_page": 41,
+      "bullet": 3,
+      "topic": "Mythos contacts",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-41-04",
+      "pdf_page": 41,
+      "bullet": 4,
+      "topic": "Recurring cast",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-41-05",
+      "pdf_page": 41,
+      "bullet": 5,
+      "topic": "Friendly companion",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-41-06",
+      "pdf_page": 41,
+      "bullet": 6,
+      "topic": "Helpful contacts",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-41-07",
+      "pdf_page": 41,
+      "bullet": 7,
+      "topic": "Violence consequences",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-41-08",
+      "pdf_page": 41,
+      "bullet": 8,
+      "topic": "Listening NPC",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-41-09",
+      "pdf_page": 41,
+      "bullet": 9,
+      "topic": "Betrayal",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-42-01",
+      "pdf_page": 42,
+      "bullet": 1,
+      "topic": "Recognizable signs",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-42-02",
+      "pdf_page": 42,
+      "bullet": 2,
+      "topic": "Changed stat block",
+      "status": "house-rule-candidate",
+      "reason": "Proposal only, disabled until exact scope and consent are recorded; no default card mutation.",
+      "destination": "references/keeper-practice.md#b---house-rule-candidates-disabled-by-default"
+    },
+    {
+      "id": "KT-42-03",
+      "pdf_page": 42,
+      "bullet": 3,
+      "topic": "Offscreen threat",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-42-04",
+      "pdf_page": 42,
+      "bullet": 4,
+      "topic": "Unnamed creature",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-42-05",
+      "pdf_page": 42,
+      "bullet": 5,
+      "topic": "Long reveal monologue",
+      "status": "conditional",
+      "reason": "Keep reveal brief enough to preserve choices; a monologue cannot impose paralysis before a resolved effect.",
+      "destination": "references/keeper-practice.md#r---rulings-and-conflicting-techniques"
+    },
+    {
+      "id": "KT-42-06",
+      "pdf_page": 42,
+      "bullet": 6,
+      "topic": "Movement detail",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-42-07",
+      "pdf_page": 42,
+      "bullet": 7,
+      "topic": "Foreshadowing",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-42-08",
+      "pdf_page": 42,
+      "bullet": 8,
+      "topic": "Victim warning",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-42-09",
+      "pdf_page": 42,
+      "bullet": 9,
+      "topic": "Actionable danger",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-42-10",
+      "pdf_page": 42,
+      "bullet": 10,
+      "topic": "Identification",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-42-11",
+      "pdf_page": 42,
+      "bullet": 11,
+      "topic": "Monster retreat",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-42-12",
+      "pdf_page": 42,
+      "bullet": 12,
+      "topic": "Folklore alternative",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-43-01",
+      "pdf_page": 43,
+      "bullet": 1,
+      "topic": "Camera visibility",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-43-02",
+      "pdf_page": 43,
+      "bullet": 2,
+      "topic": "Virtual background",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-43-03",
+      "pdf_page": 43,
+      "bullet": 3,
+      "topic": "Sharing preflight",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-43-04",
+      "pdf_page": 43,
+      "bullet": 4,
+      "topic": "Online overhead",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-43-05",
+      "pdf_page": 43,
+      "bullet": 5,
+      "topic": "Player recap",
+      "status": "supplemented",
+      "reason": "Add a diagnosis, evidence-preserving response and explicit exit from a false lead.",
+      "destination": "references/keeper-practice.md#i---stalled-investigations-and-red-herrings"
+    },
+    {
+      "id": "KT-43-06",
+      "pdf_page": 43,
+      "bullet": 6,
+      "topic": "Preferred duration",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-43-07",
+      "pdf_page": 43,
+      "bullet": 7,
+      "topic": "Private group tools",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-43-08",
+      "pdf_page": 43,
+      "bullet": 8,
+      "topic": "Shared notes",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-43-09",
+      "pdf_page": 43,
+      "bullet": 9,
+      "topic": "Online group size",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-43-10",
+      "pdf_page": 43,
+      "bullet": 10,
+      "topic": "Screen breaks",
+      "status": "supplemented",
+      "reason": "Add adjustable time budgets and stopping points; wall time does not change fictional clocks.",
+      "destination": "references/keeper-practice.md#p---time-budget-breaks-and-ending"
+    },
+    {
+      "id": "KT-44-01",
+      "pdf_page": 44,
+      "bullet": 1,
+      "topic": "HPLHS resources",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-44-02",
+      "pdf_page": 44,
+      "bullet": 2,
+      "topic": "Persistent clue handouts",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-44-03",
+      "pdf_page": 44,
+      "bullet": 3,
+      "topic": "Reading and discovery",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-44-04",
+      "pdf_page": 44,
+      "bullet": 4,
+      "topic": "Physical scale",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-44-05",
+      "pdf_page": 44,
+      "bullet": 5,
+      "topic": "First-clue handout",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-44-06",
+      "pdf_page": 44,
+      "bullet": 6,
+      "topic": "Credible appearance",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-44-07",
+      "pdf_page": 44,
+      "bullet": 7,
+      "topic": "Tactile props",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-44-08",
+      "pdf_page": 44,
+      "bullet": 8,
+      "topic": "Artifact versus aid",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-44-09",
+      "pdf_page": 44,
+      "bullet": 9,
+      "topic": "Excess disclosure",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-44-10",
+      "pdf_page": 44,
+      "bullet": 10,
+      "topic": "Craft techniques",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-44-11",
+      "pdf_page": 44,
+      "bullet": 11,
+      "topic": "Simple presentation",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-45-01",
+      "pdf_page": 45,
+      "bullet": 1,
+      "topic": "Optional reading aloud",
+      "status": "supplemented",
+      "reason": "Add offered opportunities, pass option, separate group clocks and next intent.",
+      "destination": "references/keeper-practice.md#s---spotlight-and-split-scenes"
+    },
+    {
+      "id": "KT-45-02",
+      "pdf_page": 45,
+      "bullet": 2,
+      "topic": "Readable equivalent",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-45-03",
+      "pdf_page": 45,
+      "bullet": 3,
+      "topic": "Newspaper typography",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-45-04",
+      "pdf_page": 45,
+      "bullet": 4,
+      "topic": "Surrounding articles",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-45-05",
+      "pdf_page": 45,
+      "bullet": 5,
+      "topic": "Double-sided newspaper",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-45-06",
+      "pdf_page": 45,
+      "bullet": 6,
+      "topic": "Historic scan rights",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-45-07",
+      "pdf_page": 45,
+      "bullet": 7,
+      "topic": "Candle preference",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-45-08",
+      "pdf_page": 45,
+      "bullet": 8,
+      "topic": "Quiet music",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-45-09",
+      "pdf_page": 45,
+      "bullet": 9,
+      "topic": "NPC costume cue",
+      "status": "existing",
+      "reason": "Existing cast workflow; specify knowledge, goals, identification and withdrawal.",
+      "destination": "references/keeper-practice.md#n---npcs-and-monsters"
+    },
+    {
+      "id": "KT-45-10",
+      "pdf_page": 45,
+      "bullet": 10,
+      "topic": "Shared visual reference",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-45-11",
+      "pdf_page": 45,
+      "bullet": 11,
+      "topic": "Image rights",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-45-12",
+      "pdf_page": 45,
+      "bullet": 12,
+      "topic": "Physical ownership",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-45-13",
+      "pdf_page": 45,
+      "bullet": 13,
+      "topic": "Aging materials",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-45-14",
+      "pdf_page": 45,
+      "bullet": 14,
+      "topic": "Parchment appearance",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-45-15",
+      "pdf_page": 45,
+      "bullet": 15,
+      "topic": "Smart lighting",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-46-01",
+      "pdf_page": 46,
+      "bullet": 1,
+      "topic": "Contemporary condition",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-46-02",
+      "pdf_page": 46,
+      "bullet": 2,
+      "topic": "Between-session delivery",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-46-03",
+      "pdf_page": 46,
+      "bullet": 3,
+      "topic": "Composer preference",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-46-04",
+      "pdf_page": 46,
+      "bullet": 4,
+      "topic": "Instrumental audio",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-46-05",
+      "pdf_page": 46,
+      "bullet": 5,
+      "topic": "Effects agreement",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-46-06",
+      "pdf_page": 46,
+      "bullet": 6,
+      "topic": "Wear history",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-46-07",
+      "pdf_page": 46,
+      "bullet": 7,
+      "topic": "Handwriting substitute",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-46-08",
+      "pdf_page": 46,
+      "bullet": 8,
+      "topic": "Recorded NPC audio",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-46-09",
+      "pdf_page": 46,
+      "bullet": 9,
+      "topic": "Penmanship craft",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-46-10",
+      "pdf_page": 46,
+      "bullet": 10,
+      "topic": "Period telegram",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-46-11",
+      "pdf_page": 46,
+      "bullet": 11,
+      "topic": "Era-appropriate recording",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-46-12",
+      "pdf_page": 46,
+      "bullet": 12,
+      "topic": "Prop investment",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-46-13",
+      "pdf_page": 46,
+      "bullet": 13,
+      "topic": "Large map rights",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-46-14",
+      "pdf_page": 46,
+      "bullet": 14,
+      "topic": "Simple paper props",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-46-15",
+      "pdf_page": 46,
+      "bullet": 15,
+      "topic": "Sensory room effects",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-47-01",
+      "pdf_page": 47,
+      "bullet": 1,
+      "topic": "Additional caller",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-47-02",
+      "pdf_page": 47,
+      "bullet": 2,
+      "topic": "Everyday objects",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-47-03",
+      "pdf_page": 47,
+      "bullet": 3,
+      "topic": "Found props",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-47-04",
+      "pdf_page": 47,
+      "bullet": 4,
+      "topic": "Monster representation",
+      "status": "supplemented",
+      "reason": "Add actionable warning and relief beats; mechanical SAN remains source-bound.",
+      "destination": "references/keeper-practice.md#h---horror-sanity-and-mythos"
+    },
+    {
+      "id": "KT-47-05",
+      "pdf_page": 47,
+      "bullet": 5,
+      "topic": "Table surface purchase",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-47-06",
+      "pdf_page": 47,
+      "bullet": 6,
+      "topic": "Soundtrack preference",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-47-07",
+      "pdf_page": 47,
+      "bullet": 7,
+      "topic": "Photo inspiration",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-47-08",
+      "pdf_page": 47,
+      "bullet": 8,
+      "topic": "Atmospheric effects",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-47-09",
+      "pdf_page": 47,
+      "bullet": 9,
+      "topic": "Playable backstory",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-47-10",
+      "pdf_page": 47,
+      "bullet": 10,
+      "topic": "Portrait search budget",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-47-11",
+      "pdf_page": 47,
+      "bullet": 11,
+      "topic": "Props serve choices",
+      "status": "supplemented",
+      "reason": "Add readable fallback and release preflight to existing manifest controls.",
+      "destination": "references/keeper-practice.md#m---handouts-and-online-delivery"
+    },
+    {
+      "id": "KT-48-01",
+      "pdf_page": 48,
+      "bullet": 1,
+      "topic": "Ready short game",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-48-02",
+      "pdf_page": 48,
+      "bullet": 2,
+      "topic": "Attendance threshold",
+      "status": "supplemented",
+      "reason": "Add task coverage, consent, attendance and replacement checks to existing creation.",
+      "destination": "references/keeper-practice.md#c---character-coverage-and-continuity"
+    },
+    {
+      "id": "KT-48-03",
+      "pdf_page": 48,
+      "bullet": 3,
+      "topic": "Starter resource",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-48-04",
+      "pdf_page": 48,
+      "bullet": 4,
+      "topic": "Seasonal theme",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-48-05",
+      "pdf_page": 48,
+      "bullet": 5,
+      "topic": "Historical immersion",
+      "status": "existing",
+      "reason": "Existing scenario workflow; add causal triggers and review the actual written route.",
+      "destination": "references/keeper-practice.md#d---scenario-frame-and-revision"
+    },
+    {
+      "id": "KT-48-06",
+      "pdf_page": 48,
+      "bullet": 6,
+      "topic": "Themed food",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-48-07",
+      "pdf_page": 48,
+      "bullet": 7,
+      "topic": "Travel cuisine",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-48-08",
+      "pdf_page": 48,
+      "bullet": 8,
+      "topic": "Unusual venue",
+      "status": "conditional",
+      "reason": "Apply the agreed preference and access boundary; no universal table prescription.",
+      "destination": "references/keeper-practice.md#z---table-agreement"
+    },
+    {
+      "id": "KT-48-09",
+      "pdf_page": 48,
+      "bullet": 9,
+      "topic": "Convention learning",
+      "status": "not-adopted",
+      "reason": "Personal preference, anecdote or external activity; not a skill requirement or completion gate.",
+      "destination": "references/keeper-practice.md#x---suggestions-not-adopted-as-requirements"
+    },
+    {
+      "id": "KT-48-10",
+      "pdf_page": 48,
+      "bullet": 10,
+      "topic": "Shared mythos",
+      "status": "conditional",
+      "reason": "Only uncommitted additions may change; preserve prior facts, perceptions and disclosures.",
+      "destination": "references/keeper-practice.md#t---truth-perception-and-improvisation"
+    },
+    {
+      "id": "KT-49-01",
+      "pdf_page": 49,
+      "bullet": 1,
+      "topic": "Table tools",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-49-02",
+      "pdf_page": 49,
+      "bullet": 2,
+      "topic": "Historical copyright cutoff",
+      "status": "needs-verification",
+      "reason": "Historical date is not a current blanket license; inspect rights for each selected work and intended use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-49-03",
+      "pdf_page": 49,
+      "bullet": 3,
+      "topic": "Generated portrait rights",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-49-04",
+      "pdf_page": 49,
+      "bullet": 4,
+      "topic": "Stock image sites",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-49-05",
+      "pdf_page": 49,
+      "bullet": 5,
+      "topic": "Art commissions",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-49-06",
+      "pdf_page": 49,
+      "bullet": 6,
+      "topic": "Creator group",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-49-07",
+      "pdf_page": 49,
+      "bullet": 7,
+      "topic": "Maps access",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-49-08",
+      "pdf_page": 49,
+      "bullet": 8,
+      "topic": "Virtual museum",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-49-09",
+      "pdf_page": 49,
+      "bullet": 9,
+      "topic": "Music rights",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-49-10",
+      "pdf_page": 49,
+      "bullet": 10,
+      "topic": "Portrait rights",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-49-11",
+      "pdf_page": 49,
+      "bullet": 11,
+      "topic": "Aerial images",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-49-12",
+      "pdf_page": 49,
+      "bullet": 12,
+      "topic": "Newspaper archive",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    },
+    {
+      "id": "KT-49-13",
+      "pdf_page": 49,
+      "bullet": 13,
+      "topic": "Date lookup",
+      "status": "needs-verification",
+      "reason": "The specific full-edition mechanic or selected resource license must be checked before use.",
+      "destination": "references/keeper-practice.md#v---rule-and-resource-verification-queue"
+    }
+  ]
+}

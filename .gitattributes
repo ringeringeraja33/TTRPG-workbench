@@ -1,0 +1,2 @@
+# Preserve byte-identical third-party snapshots, including upstream whitespace.
+scripts/vendor/dice_source/* -text -whitespace

@@ -29,3 +29,5 @@ Exit codes: 0 means all declared essential conclusions are derivable, 1 means so
 3. For split parties, run each player's knowledge separately. Share evidence only after actual in-fiction communication; do not union their knowledge implicitly.
 4. Repair bottlenecks with plausible independent acquisition methods or allow an explicit unresolved outcome. Never promise that all player choices must succeed.
 5. Keep the location graph consistent with the acquisition plan. This schema does not model locks, travel time, skill checks or evidence automatically created by reaching a conclusion; review those separately.
+
+Use [Keeper practice](keeper-practice.md) to diagnose missing access, overlooked information, mistaken inference or fatigue. Give false leads disconfirming evidence and an exit. Check established causes and disclosures before relocating clues or adopting theories.

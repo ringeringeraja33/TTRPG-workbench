@@ -67,3 +67,15 @@ Read [corpus-use](corpus-use.md) for `corpus.py build/search/review`, optional s
 ## Evidence audit and session review
 
 Use [investigation](investigation.md) for AND/OR evidence routes, missing-clue and split-knowledge analysis. Use [session review](session-review.md) for read-only branch-aware recap and next preparation. Current capability claims live in `capabilities.json`; `scripts/capabilities.py` generates [coverage](coverage.md), and `--check` detects stale output.
+
+## Dicebot and card registration
+
+`dicebot.py` supports a private card database, named cards, alias-aware `.st` import/show/update/export, nickname previews and actual dice/checks. Read [the dialect and persistence contract](dicebot-cards.md) before use. No external messages or group updates are sent.
+
+CoC7 rolled creation attributes: use `.coc` or `.coc5`, retrieve the returned batch with `.coc show b1`, then explicitly select with `.coc take b1 2 ada 阿达`. Raw dice and candidates persist; selection creates a new card with age processing pending. See [dicebot workflow](dicebot-cards.md) for the CLI envelope and completion procedure.
+
+Local Dice! arithmetic adaptation and Tower-inspired table workflow: `scripts/dice_local.py`. See [local runtime](dice-local.md) and [129-entry manual audit](dice-manual-coverage.md). Includes transactional cards/team resources, NPCs, initiative, clues, private responses and txt/HTML/DOCX/JSON logs. This is a Python adaptation of selected AGPL Dice! code, not the upstream DLL or full Tower service.
+
+## Keeper situation acceptance
+
+`replay_keeper_acceptance.py --output <new-private-directory>` runs eight original worked hosting situations through the existing session ledger, investigation audit and handout projector. It writes only private synthetic acceptance artifacts; it does not host a game, roll dice or read the source book. See [Keeper practice](keeper-practice.md) and [validation](validation.md).

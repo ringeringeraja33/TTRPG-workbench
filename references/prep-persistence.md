@@ -13,3 +13,5 @@ For every active scene record: who is present, what each participant can perceiv
 Use `campaign_check.py` for declared graph references, unreachable locations, duplicate clues and a reachable exit. Its graph edges represent possible paths, not proven player knowledge. Manually check that essential clues have alternate acquisition routes, failures change the situation, and a player-facing export reveals neither GM notes nor undiscovered destination IDs. The optional clue projection is suitable only when every field of each visible clue is itself public.
 
 For conclusion dependencies and missing evidence, also use [investigation audit](investigation.md). Location reachability alone does not establish evidence sufficiency. At session end use [session review](session-review.md) to carry actual discoveries and pending decisions into next preparation.
+
+Use the [Keeper sheet](../assets/templates/keeper-session.md) for attendance, preferences, scene cuts and release readiness. Its optional private.keeper notes merge into the complete latest private state, retaining all unrelated timers and pending tasks.

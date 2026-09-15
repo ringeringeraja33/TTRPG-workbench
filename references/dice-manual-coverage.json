@@ -1,0 +1,1039 @@
+{
+  "schema": 1,
+  "source": "斯塔尼亚, 塔骰用户手册, 7.16.13.15.12Stable, 2020-09-02",
+  "scope": "Local adaptation; no full compatibility claim",
+  "commands": [
+    {
+      "id": 1,
+      "command": "r",
+      "pdf_page": 7,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Strict bounded arithmetic, rational division, k/q and repeats; malformed input rejected."
+    },
+    {
+      "id": 2,
+      "command": "rd",
+      "pdf_page": 7,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Default die shorthand via .rd; see r limits."
+    },
+    {
+      "id": 3,
+      "command": "rh",
+      "pdf_page": 7,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Expression-only hidden roll to private file; no QQ private message or hidden skill shorthand."
+    },
+    {
+      "id": 4,
+      "command": "ra",
+      "pdf_page": 7,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Explicit tower-house profile; explicit supplied thresholds take priority, unlike the historical forced-card behavior."
+    },
+    {
+      "id": 5,
+      "command": "rc",
+      "pdf_page": 7,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Explicit CoC7 core profile; targets1..100; does not inherit the last ra/rc setting."
+    },
+    {
+      "id": 6,
+      "command": "set",
+      "pdf_page": 7,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper changes table default die; no cloud synchronization."
+    },
+    {
+      "id": 7,
+      "command": "rb",
+      "pdf_page": 8,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Core maximum2 extra dice; explicit core profile."
+    },
+    {
+      "id": 8,
+      "command": "rp",
+      "pdf_page": 8,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Core maximum2 extra dice; no repeat# variant."
+    },
+    {
+      "id": 9,
+      "command": "sc",
+      "pdf_page": 8,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Current-card core SAN, nonnegative loss, fumble maximum, daily thresholds and bout suppression; no negative-loss recovery or named-card shorthand."
+    },
+    {
+      "id": 10,
+      "command": "ti",
+      "pdf_page": 8,
+      "status": "requires-data",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Requires user-supplied source-checked ti deck; does not apply duration/control."
+    },
+    {
+      "id": 11,
+      "command": "li",
+      "pdf_page": 8,
+      "status": "requires-data",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Requires user-supplied source-checked li deck; does not apply duration/control."
+    },
+    {
+      "id": 12,
+      "command": "en",
+      "pdf_page": 8,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Recorded skill only; Keeper-approved mark via .mark; no attribute development or automatic90% milestone award."
+    },
+    {
+      "id": 13,
+      "command": "rav",
+      "pdf_page": 9,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "General opposition, rank then skill; no combat tie rules and no Tower actual-die tie-break."
+    },
+    {
+      "id": 14,
+      "command": "rcv",
+      "pdf_page": 9,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "General opposition, rank then skill; no combat tie rules and no Tower actual-die tie-break."
+    },
+    {
+      "id": 15,
+      "command": "hiy",
+      "pdf_page": 9,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Actor/table history of ra/rc/rb/rp only; no shared cloud history."
+    },
+    {
+      "id": 16,
+      "command": "ral",
+      "pdf_page": 9,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Numeric target and count1..100."
+    },
+    {
+      "id": 17,
+      "command": "rcl",
+      "pdf_page": 9,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Numeric target and count1..100."
+    },
+    {
+      "id": 18,
+      "command": "crule get",
+      "pdf_page": 9,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Explicit local house range."
+    },
+    {
+      "id": 19,
+      "command": "crule set",
+      "pdf_page": 9,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper-only range1..5."
+    },
+    {
+      "id": 20,
+      "command": "algo get",
+      "pdf_page": 9,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Reports OS-secrets RNG."
+    },
+    {
+      "id": 21,
+      "command": "algo set",
+      "pdf_page": 10,
+      "status": "not-implemented",
+      "implementation": null,
+      "limits": "Historical Tower algorithm switching not implemented; OS RNG fixed."
+    },
+    {
+      "id": 22,
+      "command": "bg",
+      "pdf_page": 10,
+      "status": "requires-data",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Requires supplied bg deck; no core-book table included."
+    },
+    {
+      "id": 23,
+      "command": "gas",
+      "pdf_page": 10,
+      "status": "requires-data",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Requires supplied gas deck with sixth-edition attribution."
+    },
+    {
+      "id": 24,
+      "command": "coc",
+      "pdf_page": 10,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "CoC7 base batches .coc/.coc5; not Tower .coc6/.coc7 syntax or full age processing."
+    },
+    {
+      "id": 25,
+      "command": "tz",
+      "pdf_page": 10,
+      "status": "requires-data",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Requires supplied tz deck identified as nonofficial."
+    },
+    {
+      "id": 26,
+      "command": "name",
+      "pdf_page": 10,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Small original en/ch/jp name banks; no large historical dataset."
+    },
+    {
+      "id": 27,
+      "command": "nn",
+      "pdf_page": 10,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Explicit name creates/selects a persistent local card; no unnamed auto-name or shared temporary slot."
+    },
+    {
+      "id": 28,
+      "command": "st",
+      "pdf_page": 10,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Local names, aliases and bounded numeric expressions; no cloud or all template variables."
+    },
+    {
+      "id": 29,
+      "command": "st list",
+      "pdf_page": 10,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Actor/table cards."
+    },
+    {
+      "id": 30,
+      "command": "st rm",
+      "pdf_page": 10,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Cannot delete active or team-bound card."
+    },
+    {
+      "id": 31,
+      "command": "st clr",
+      "pdf_page": 11,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Resets local temporary slot, preserving other cards."
+    },
+    {
+      "id": 32,
+      "command": "st get",
+      "pdf_page": 11,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Returns stored values; no omission by official template defaults."
+    },
+    {
+      "id": 33,
+      "command": "st show",
+      "pdf_page": 11,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Whole card or one canonical stat; absent defaults stay absent."
+    },
+    {
+      "id": 34,
+      "command": "st lock",
+      "pdf_page": 11,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Table isolation is permanent; no cross-table global-card lock."
+    },
+    {
+      "id": 35,
+      "command": "st rename",
+      "pdf_page": 11,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Renames ID and updates bound team references."
+    },
+    {
+      "id": 36,
+      "command": "st cp",
+      "pdf_page": 11,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Local actor copy; target collisions refused; no live user message."
+    },
+    {
+      "id": 37,
+      "command": "kp",
+      "pdf_page": 11,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "First explicit local Keeper; no QQ registration."
+    },
+    {
+      "id": 38,
+      "command": "team",
+      "pdf_page": 11,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper view of recorded member stats ordered by DEX; derived values are not inferred."
+    },
+    {
+      "id": 39,
+      "command": "team set",
+      "pdf_page": 11,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Explicit local actor IDs, bound to current cards."
+    },
+    {
+      "id": 40,
+      "command": "team lock",
+      "pdf_page": 11,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Stable team binding; cross-table global sharing not implemented."
+    },
+    {
+      "id": 41,
+      "command": "team desc",
+      "pdf_page": 12,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper-private JSON/file; no QQ delivery."
+    },
+    {
+      "id": 42,
+      "command": "team en",
+      "pdf_page": 12,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Development candidates for bound team cards; not automatic rule eligibility."
+    },
+    {
+      "id": 43,
+      "command": "team hp",
+      "pdf_page": 12,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Atomic member HP updates, separate actual dice per member; negative resulting HP fails instead of clamping."
+    },
+    {
+      "id": 44,
+      "command": "team san",
+      "pdf_page": 12,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Atomic member core SAN checks or numeric recovery; no implicit house/profile switching."
+    },
+    {
+      "id": 45,
+      "command": "team rm",
+      "pdf_page": 12,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Explicit team-member removal."
+    },
+    {
+      "id": 46,
+      "command": "team rename",
+      "pdf_page": 12,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Local binding preview only; no QQ nickname changes."
+    },
+    {
+      "id": 47,
+      "command": "team clr",
+      "pdf_page": 12,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper clears team bindings only."
+    },
+    {
+      "id": 48,
+      "command": "team call",
+      "pdf_page": 12,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Local member preview only; no outgoing mentions."
+    },
+    {
+      "id": 49,
+      "command": "npc",
+      "pdf_page": 12,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper-private local names."
+    },
+    {
+      "id": 50,
+      "command": "npc st",
+      "pdf_page": 12,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper local numeric NPC registration."
+    },
+    {
+      "id": 51,
+      "command": "npc rm",
+      "pdf_page": 12,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper deletes named local NPC."
+    },
+    {
+      "id": 52,
+      "command": "npc clr",
+      "pdf_page": 12,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper clears NPC store."
+    },
+    {
+      "id": 53,
+      "command": "npc make",
+      "pdf_page": 12,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Original name/goal seed only; no complete generated statblock."
+    },
+    {
+      "id": 54,
+      "command": "monster",
+      "pdf_page": 13,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper-private local names."
+    },
+    {
+      "id": 55,
+      "command": "monster st",
+      "pdf_page": 13,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper local numeric monster registration."
+    },
+    {
+      "id": 56,
+      "command": "monster rm",
+      "pdf_page": 13,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper deletes named local monster."
+    },
+    {
+      "id": 57,
+      "command": "monster clr",
+      "pdf_page": 13,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper clears monster store."
+    },
+    {
+      "id": 58,
+      "command": "log",
+      "pdf_page": 13,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Explicit local submitted messages; no background chat capture."
+    },
+    {
+      "id": 59,
+      "command": "log on",
+      "pdf_page": 13,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Append/reopen named log, one active per table."
+    },
+    {
+      "id": 60,
+      "command": "log off",
+      "pdf_page": 13,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Close active log with optional matching name."
+    },
+    {
+      "id": 61,
+      "command": "log list",
+      "pdf_page": 13,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Names within current table."
+    },
+    {
+      "id": 62,
+      "command": "log get",
+      "pdf_page": 13,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Audience-filtered entries; CLI exports txt/clean-txt/html/json/docx, no email."
+    },
+    {
+      "id": 63,
+      "command": "log rm",
+      "pdf_page": 14,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper deletes closed log from active state; audit requests/backups retained."
+    },
+    {
+      "id": 64,
+      "command": "log group get",
+      "pdf_page": 14,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Explicit local scopes, membership and audience checks; returns JSON entries, no email."
+    },
+    {
+      "id": 65,
+      "command": "log group list",
+      "pdf_page": 14,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Lists only local scopes with actor membership and that log."
+    },
+    {
+      "id": 66,
+      "command": "ob",
+      "pdf_page": 14,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper explicitly assigns local observers; not unrestricted self-join."
+    },
+    {
+      "id": 67,
+      "command": "clue",
+      "pdf_page": 14,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Stores public clue text with stable ID."
+    },
+    {
+      "id": 68,
+      "command": "clue show",
+      "pdf_page": 14,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Public clue store only; GM evidence uses separate skill workflow."
+    },
+    {
+      "id": 69,
+      "command": "clue rm",
+      "pdf_page": 14,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Owner or Keeper removes by stable ID, not historical timestamp."
+    },
+    {
+      "id": 70,
+      "command": "clue clr",
+      "pdf_page": 14,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper clears public clues."
+    },
+    {
+      "id": 71,
+      "command": "dnd",
+      "pdf_page": 14,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Six unassigned4d6k3 scores per candidate; edition and allocation still required."
+    },
+    {
+      "id": 72,
+      "command": "ri",
+      "pdf_page": 14,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Explicit d20 base, no table-default-die bug; duplicate initiative refused."
+    },
+    {
+      "id": 73,
+      "command": "init",
+      "pdf_page": 14,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Sorted local initiative."
+    },
+    {
+      "id": 74,
+      "command": "init clr",
+      "pdf_page": 14,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper clears initiative."
+    },
+    {
+      "id": 75,
+      "command": "init rm",
+      "pdf_page": 14,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper removes exact name."
+    },
+    {
+      "id": 76,
+      "command": "init set",
+      "pdf_page": 14,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper sets explicit manual value; marks it manual."
+    },
+    {
+      "id": 77,
+      "command": "magic",
+      "pdf_page": 15,
+      "status": "requires-data",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Requires imported dnd5e-2014/dnd3r source dataset; .magic5e/.magic3r; no bundled full spell database."
+    },
+    {
+      "id": 78,
+      "command": "con",
+      "pdf_page": 15,
+      "status": "requires-data",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Requires imported edition-specific dataset."
+    },
+    {
+      "id": 79,
+      "command": "3ry",
+      "pdf_page": 15,
+      "status": "requires-data",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Requires imported dnd3r dataset."
+    },
+    {
+      "id": 80,
+      "command": "5ey",
+      "pdf_page": 15,
+      "status": "requires-data",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Requires imported dnd5e-2014 dataset; not2024."
+    },
+    {
+      "id": 81,
+      "command": "dr",
+      "pdf_page": 15,
+      "status": "requires-data",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Requires supplied dnd5e-dr-a..i decks."
+    },
+    {
+      "id": 82,
+      "command": "rule",
+      "pdf_page": 15,
+      "status": "requires-data",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Requires supplied coc7 lookup dataset or skill rule lookup workflow."
+    },
+    {
+      "id": 83,
+      "command": "getbook card",
+      "pdf_page": 15,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Public character-sheet source pointer only; no historical Tower spreadsheet."
+    },
+    {
+      "id": 84,
+      "command": "getbook make",
+      "pdf_page": 15,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Bundled creation procedure pointer."
+    },
+    {
+      "id": 85,
+      "command": "getbook kp",
+      "pdf_page": 15,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Publisher pointer only; no full licensed book redistribution."
+    },
+    {
+      "id": 86,
+      "command": "getbook rp",
+      "pdf_page": 15,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Bundled character workflow pointer; no RP360 text supplied."
+    },
+    {
+      "id": 87,
+      "command": "w",
+      "pdf_page": 15,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Bounded local exploding pool; explicit defaults and full evidence differ from Tower terse output."
+    },
+    {
+      "id": 88,
+      "command": "ww",
+      "pdf_page": 16,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Bounded local exploding pool; no private split at51 dice."
+    },
+    {
+      "id": 89,
+      "command": "ws",
+      "pdf_page": 16,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Same local detailed pool response; not historical summary-only output."
+    },
+    {
+      "id": 90,
+      "command": "rf",
+      "pdf_page": 16,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Four Fudge dice with actual raw results."
+    },
+    {
+      "id": 91,
+      "command": "dw",
+      "pdf_page": 16,
+      "status": "requires-data",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Requires imported deathwatch lookup dataset."
+    },
+    {
+      "id": 92,
+      "command": "dw card",
+      "pdf_page": 16,
+      "status": "not-implemented",
+      "implementation": null,
+      "limits": "No supplied Deathwatch character-generation package."
+    },
+    {
+      "id": 93,
+      "command": "pfy",
+      "pdf_page": 16,
+      "status": "requires-data",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Requires imported pf1 dataset; not PF2."
+    },
+    {
+      "id": 94,
+      "command": "ban",
+      "pdf_page": 16,
+      "status": "external-service",
+      "implementation": null,
+      "limits": "Tower cloud blacklist/API not connected."
+    },
+    {
+      "id": 95,
+      "command": "ban list",
+      "pdf_page": 16,
+      "status": "external-service",
+      "implementation": null,
+      "limits": "Tower cloud blacklist/API not connected."
+    },
+    {
+      "id": 96,
+      "command": "white",
+      "pdf_page": 16,
+      "status": "external-service",
+      "implementation": null,
+      "limits": "Tower per-owner cloud whitelist not connected."
+    },
+    {
+      "id": 97,
+      "command": "white list",
+      "pdf_page": 17,
+      "status": "external-service",
+      "implementation": null,
+      "limits": "Tower per-owner cloud whitelist not connected."
+    },
+    {
+      "id": 98,
+      "command": "admin",
+      "pdf_page": 17,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Only local configuration .admin setting=value; no QQ on/off/exit/ban."
+    },
+    {
+      "id": 99,
+      "command": "group list",
+      "pdf_page": 17,
+      "status": "external-service",
+      "implementation": null,
+      "limits": "No QQ group inventory."
+    },
+    {
+      "id": 100,
+      "command": "group search",
+      "pdf_page": 17,
+      "status": "external-service",
+      "implementation": null,
+      "limits": "No QQ group lookup."
+    },
+    {
+      "id": 101,
+      "command": "group clean",
+      "pdf_page": 17,
+      "status": "external-service",
+      "implementation": null,
+      "limits": "No QQ group cleanup."
+    },
+    {
+      "id": 102,
+      "command": "dice list",
+      "pdf_page": 17,
+      "status": "external-service",
+      "implementation": null,
+      "limits": "No Tower heartbeat service."
+    },
+    {
+      "id": 103,
+      "command": "system update",
+      "pdf_page": 17,
+      "status": "external-service",
+      "implementation": null,
+      "limits": "No automatic binary download/restart."
+    },
+    {
+      "id": 104,
+      "command": "system restart",
+      "pdf_page": 17,
+      "status": "external-service",
+      "implementation": null,
+      "limits": "No host process management."
+    },
+    {
+      "id": 105,
+      "command": "deck list",
+      "pdf_page": 17,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Installed local decks only; no Tower market."
+    },
+    {
+      "id": 106,
+      "command": "group",
+      "pdf_page": 17,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Local simple/secret/jrrp/deck/ob switches only."
+    },
+    {
+      "id": 107,
+      "command": "rank",
+      "pdf_page": 18,
+      "status": "external-service",
+      "implementation": null,
+      "limits": "No cross-bot leader election; one SQLite transactional local store."
+    },
+    {
+      "id": 108,
+      "command": "group secret",
+      "pdf_page": 18,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Local dice responses have private recipients/files; no QQ delivery."
+    },
+    {
+      "id": 109,
+      "command": "welcome",
+      "pdf_page": 18,
+      "status": "local-with-differences",
+      "implementation": "Local .join events return and log welcome text; duplicate joins suppressed until .leave.",
+      "limits": "No QQ join-event connection or external delivery."
+    },
+    {
+      "id": 110,
+      "command": "fire",
+      "pdf_page": 18,
+      "status": "not-implemented",
+      "implementation": null,
+      "limits": "No licensed solo scenario data or original Tower fire engine supplied."
+    },
+    {
+      "id": 111,
+      "command": "cnmods",
+      "pdf_page": 18,
+      "status": "external-service",
+      "implementation": null,
+      "limits": "No authenticated/verified current CNMods service adapter."
+    },
+    {
+      "id": 112,
+      "command": "custom",
+      "pdf_page": 18,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Actor/table private custom data; no global Tower approval."
+    },
+    {
+      "id": 113,
+      "command": "custom input",
+      "pdf_page": 18,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Local .custom input key|text, no shared moderation queue."
+    },
+    {
+      "id": 114,
+      "command": "send",
+      "pdf_page": 19,
+      "status": "external-service",
+      "implementation": null,
+      "limits": "No outgoing messages or Tower feedback channel."
+    },
+    {
+      "id": 115,
+      "command": "answer",
+      "pdf_page": 19,
+      "status": "external-service",
+      "implementation": null,
+      "limits": "No outgoing messages or Tower feedback channel."
+    },
+    {
+      "id": 116,
+      "command": "jrrp",
+      "pdf_page": 19,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Local actor/table daily UTC value; no cloud synchronization."
+    },
+    {
+      "id": 117,
+      "command": "deck",
+      "pdf_page": 19,
+      "status": "local-with-differences",
+      "implementation": "Flat arrays and attributed weighted/nested JSON decks; full draw-path receipts and transactional retries.",
+      "limits": "No native Tower/Dice deck language, Dxml or executable scripts; bounded with-replacement draws."
+    },
+    {
+      "id": 118,
+      "command": "deck help",
+      "pdf_page": 19,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Installed local deck names."
+    },
+    {
+      "id": 119,
+      "command": "clock",
+      "pdf_page": 19,
+      "status": "local-with-differences",
+      "implementation": "Owner-private durable timers; list/poll, acknowledgement/cancel and bounded --wait-timers foreground delivery.",
+      "limits": "Stopped processes do not notify; pending timers survive restart. External delivery is not exactly-once."
+    },
+    {
+      "id": 120,
+      "command": "notice input",
+      "pdf_page": 19,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Local title|body draft only; no QQ announcement."
+    },
+    {
+      "id": 121,
+      "command": "notice show",
+      "pdf_page": 19,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper-private local notice states."
+    },
+    {
+      "id": 122,
+      "command": "notice agree",
+      "pdf_page": 19,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Local Keeper approval status only; no independent second admin or publication."
+    },
+    {
+      "id": 123,
+      "command": "notice refuse",
+      "pdf_page": 19,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Local rejection status only; no external mutation."
+    },
+    {
+      "id": 124,
+      "command": "des",
+      "pdf_page": 19,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Actor/table private scene lookup."
+    },
+    {
+      "id": 125,
+      "command": "des list",
+      "pdf_page": 19,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Actor/table scene names."
+    },
+    {
+      "id": 126,
+      "command": "des set",
+      "pdf_page": 19,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Local .des set name|text."
+    },
+    {
+      "id": 127,
+      "command": "reply",
+      "pdf_page": 20,
+      "status": "local-with-differences",
+      "implementation": "Opt-in actor-private exact-match replies; Keeper may publish an explicit shared snapshot.",
+      "limits": "Submitted local plain messages only; no regex, scripts, background chat capture or marketplace."
+    },
+    {
+      "id": 128,
+      "command": "reply list",
+      "pdf_page": 20,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Local actor/table reply keys."
+    },
+    {
+      "id": 129,
+      "command": "monster get",
+      "pdf_page": 20,
+      "status": "local-with-differences",
+      "implementation": "scripts/dice_local.py",
+      "limits": "Keeper-private recorded monster JSON/file; no QQ message."
+    }
+  ]
+}

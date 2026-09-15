@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/Dice-Developer-Team/Dice",
+  "commit": "5e2a8324a631765f694b2e3a71f5d50f7ae6e94f",
+  "license": "AGPL-3.0-or-later",
+  "files": {
+    "Dice/RD.cpp": "290430c7cff62c6a2d8fa053138b3d51afbb5600a314ab2dad95d3ea3e63528c",
+    "Dice/RD.h": "458255f3f5b2ed3679800aba43e4fc9de06b20dda86b782451519d44358b9a60",
+    "Dice/RandomGenerator.cpp": "3c9f556a1e4293d4b507cd36b3b33084e1763ca297d68a6caf51c00cc5ed1681",
+    "Dice/RandomGenerator.h": "9592582be2500bd3bb67b50551577588bee003514b8f6f1c9ae44f25ba61ae56",
+    "LICENSE": "6da1054eef20b8949622f2acc5a89c3243ff3b3d7aa8c2bb8fa5c04d15113c00"
+  }
+}

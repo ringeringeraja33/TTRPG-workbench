@@ -1,6 +1,6 @@
 ---
 name: ttrpg-workbench
-description: Research edition-specific TTRPG rules, prepare adventures, research historical settings to design character creation specifications, skills, items and connected scenes, create and audit characters, design and write original rulebooks, design homebrew, and run persistent GM/KP/DM sessions. Use for TTRPG, 跑团, 车卡规范, 时代背景适配, 备团, 主持, campaigns, character advancement, and rulebook design.
+description: Research edition-specific TTRPG rules, prepare adventures, research historical settings to design character creation specifications, skills, items and connected scenes, create and audit characters, design and write original rulebooks, design homebrew, and run persistent GM/KP/DM sessions. Use for TTRPG, 跑团, Dice!, 塔骰, 骰娘, 录卡, 查卡, roll属性, 属性生成, 车卡规范, 时代背景适配, 备团, 主持, campaigns, character advancement, and rulebook design.
 ---
 
 # TTRPG Workbench
@@ -27,6 +27,8 @@ Start with the bundled procedures, examples and bibliography. They can be used w
 | Adventure preparation/review | [Adventures](references/adventures.md), [persistent preparation](references/prep-persistence.md), [session lifecycle](references/session-lifecycle.md) |
 | Evidence routes, missing clues, split-party knowledge | [Investigation audit](references/investigation.md), `scripts/investigation.py` |
 | Session recap and next preparation | [Branch-aware review](references/session-review.md), `scripts/session_review.py` |
+| Local Dice!/Tower-style complex dice, teams, NPCs, initiative and logs | [Local runtime](references/dice-local.md), [manual coverage](references/dice-manual-coverage.md), `scripts/dice_local.py`; select its dialect explicitly and keep old dicebot databases separate |
+| Dice assistance, rolled creation attributes, character registration/import, stat lookup and bot commands | [Dicebot and card registration](references/dicebot-cards.md), `scripts/dicebot.py`; distinguish local execution from external command generation |
 | Characters and advancement | [Characters](references/characters.md), selected system procedures and worked build |
 | Historical background/style needs skills, items, scene frameworks or design ideas | [Background design](references/background-design.md), [pack template](assets/templates/background-design.md); actively research actual history and comparable module material |
 | A module's historical background or style needs creation rules | [Background-aware creation](references/background-chargen.md); actively research history and comparable creation material, then separate source rules from house changes |
@@ -37,6 +39,14 @@ Start with the bundled procedures, examples and bibliography. They can be used w
 | Original rulebook / notes / chapter revision / quickstart | [Rulebook authoring](references/rulebook-authoring.md), [project template](assets/templates/rulebook-project.md), [three authoring cases](assets/examples/rulebook/index.md) |
 | Homebrew / probabilities | [Rules design](references/rules-design.md), [design lab](references/rules-design-lab.md) |
 | Tools / output / acceptance | [Tools](references/tools.md), [templates](assets/templates/index.md), [validation](references/validation.md), [upstream adoption](references/upstream-adoption.md) |
+
+For investigation stalls, participation, horror pacing, absence and unreadable handouts, use [Keeper practice](references/keeper-practice.md) and its working sheet. Keep source opinions separate from edition rules; no automatic creation bonuses or retrospective fact changes.
+
+## Local play integration
+
+For a new local table, use the [Dice local workflow](references/dice-local.md) for cards, actual rolls, team resources, replies, participant events, timers and logs. Translate natural-language intents using the saved table/actor/profile; do not require users to spell out commands. In CoC7 core play choose `.rc`; `.ra` is an explicit house dialect. Use the [Keeper procedures](references/keeper-practice.md) to decide when a check, reveal or pause is appropriate, then apply and save only the agreed consequence.
+
+On joining use a local `.join` event when requested; it is not a network membership operation. Enable exact-match replies only for requested entries and publish table-visible drafts explicitly. Keep timer results private to their owner; acknowledge only after presenting the reminder. A bounded running-process wait or a later overdue poll is available, but no offline notification is implied. Keep one authority for each resource domain, preserve private output and replay existing operation IDs without rerolling.
 
 ## Operating contract
 

@@ -1,0 +1,270 @@
+{
+  "kind": "original synthetic acceptance cases; no live players or actual dice",
+  "cases": [
+    {
+      "id": "missed-clue",
+      "procedure": "I/T",
+      "source_pages": [
+        19,
+        25
+      ],
+      "situation": "The shipping register is destroyed. The party has no route to the dock schedule.",
+      "diagnosis": "A required acquisition is unavailable; its destruction is already established.",
+      "response": "The customs receipt you already found mentions a duplicate ledger at the port office. You can request access there or pursue the night porter.",
+      "next_choice": "Choose whether and how to approach customs or the porter.",
+      "keeper": {
+        "diagnosis": "inaccessible original",
+        "offered_routes": [
+          "customs duplicate",
+          "night porter"
+        ],
+        "unchanged_fact": "register destroyed"
+      },
+      "facts": [
+        {
+          "id": "duplicate-location",
+          "text": "The receipt identifies a customs duplicate at the port office.",
+          "audience": [
+            "pc1"
+          ]
+        }
+      ],
+      "pending": [
+        "Await the party choice; no replacement document has yet been acquired."
+      ],
+      "must_preserve": "Destroyed original remains destroyed; alternatives are not automatic discoveries."
+    },
+    {
+      "id": "wrong-theory",
+      "procedure": "I/T",
+      "source_pages": [
+        18,
+        30
+      ],
+      "situation": "The party insists a red coat proves the porter is the culprit after exhausting the coat lead.",
+      "diagnosis": "A theory is being mistaken for evidence.",
+      "response": "The dated repair slip establishes that the coat was in the shop that night. No further connection emerged from checking it. You still have the shipping receipt and the witness appointment.",
+      "next_choice": "Choose another known lead or explain new evidence for revisiting the coat.",
+      "keeper": {
+        "diagnosis": "false lead exhausted",
+        "red_herring_exit": "dated repair slip",
+        "unchanged_culprit": "station owner"
+      },
+      "hypotheses": [
+        "The players suspected the porter; disproved coat premise does not reveal the actual culprit."
+      ],
+      "facts": [
+        {
+          "id": "coat-alibi",
+          "text": "The coat was in the repair shop that night.",
+          "audience": [
+            "all"
+          ]
+        }
+      ],
+      "pending": [
+        "Await next lead."
+      ],
+      "must_preserve": "Fixed culprit remains GM-only; no conversion of a guess into truth."
+    },
+    {
+      "id": "split-party",
+      "procedure": "S/T",
+      "source_pages": [
+        25,
+        29,
+        32
+      ],
+      "situation": "pc1 opens a letter in the archive while pc2 questions the porter outside without a communication channel.",
+      "diagnosis": "Separate knowledge and unequal scene attention.",
+      "response": "To pc1 privately: the letter mentions a key beneath the bench. We pause before your choice. To pc2: the porter finishes checking the departures board and turns to your question.",
+      "next_choice": "pc2 chooses a question; pc1 still decides what to do with the letter.",
+      "keeper": {
+        "groups": {
+          "archive": {
+            "members": [
+              "pc1"
+            ],
+            "time": "21:10",
+            "pending": "choose response to letter"
+          },
+          "platform": {
+            "members": [
+              "pc2"
+            ],
+            "time": "21:10",
+            "pending": "question porter"
+          }
+        },
+        "next_cut": "after pc2 response"
+      },
+      "facts": [
+        {
+          "id": "key-letter",
+          "text": "The letter mentions a key beneath the bench.",
+          "audience": [
+            "pc1"
+          ]
+        }
+      ],
+      "pending": [
+        "pc1 response to letter",
+        "pc2 question to porter"
+      ],
+      "must_preserve": "pc2 receives neither letter contents nor GM interpretation."
+    },
+    {
+      "id": "quiet-player",
+      "procedure": "Z/S",
+      "source_pages": [
+        13,
+        15,
+        32
+      ],
+      "situation": "pc2 prefers text, has been quiet, and declines an invitation to act.",
+      "diagnosis": "A participation preference, not permission to take over the character.",
+      "response": "You can answer in text or pass. I will return to you after the porter answers pc1.",
+      "next_choice": "pc1 asks a question; pc2 may opt in later.",
+      "keeper": {
+        "spotlight": {
+          "pc2": {
+            "preference": "text or observe",
+            "offer": "inspect timetable",
+            "passed": true
+          }
+        },
+        "next_actor": "pc1"
+      },
+      "facts": [],
+      "pending": [
+        "pc1 next question"
+      ],
+      "must_preserve": "No pc2 speech, action, resource spending or invented feelings."
+    },
+    {
+      "id": "absent-player",
+      "procedure": "C",
+      "source_pages": [
+        13,
+        14,
+        48
+      ],
+      "situation": "pc2, the only linguist, is absent; the table agreed to safe fade and two attendees suffice.",
+      "diagnosis": "Missing specialist and control authorization.",
+      "response": "Under the agreed absence policy, pc2 stays at the guesthouse. The museum translator already listed on your contact sheet can be approached; they will need access to the inscription.",
+      "next_choice": "Ask the translator, use another method or defer the inscription.",
+      "keeper": {
+        "attendance": {
+          "pc2": {
+            "status": "absent",
+            "policy": "safe fade",
+            "location": "guesthouse",
+            "return_point": "before inscription review"
+          }
+        },
+        "coverage": {
+          "translation": "museum contact; access not yet obtained"
+        }
+      },
+      "facts": [],
+      "pending": [
+        "Choose translation approach."
+      ],
+      "must_preserve": "pc2 inventory, HP and SAN remain unchanged; no automatic information sharing on return."
+    },
+    {
+      "id": "closing-time",
+      "procedure": "P",
+      "source_pages": [
+        24,
+        29,
+        30
+      ],
+      "situation": "Fifteen real minutes remain, before a consequential choice that cannot be resolved responsibly.",
+      "diagnosis": "Insufficient closing reserve.",
+      "response": "We can omit the optional market montage. The warning bell is audible, and the decision to evacuate or investigate remains yours. We will save here if that choice needs more time.",
+      "next_choice": "Players may decide now or resume at this exact choice.",
+      "keeper": {
+        "budget": {
+          "remaining_wall_minutes": 15,
+          "cut": [
+            "optional market montage"
+          ],
+          "stop": "warning bell decision"
+        },
+        "next_actor": "pc1"
+      },
+      "facts": [],
+      "pending": [
+        "Evacuate or investigate; not decided."
+      ],
+      "must_preserve": "No forced ending or fictional time advancement caused by the real-world pause."
+    },
+    {
+      "id": "rule-dispute",
+      "procedure": "R/V/B",
+      "source_pages": [
+        26,
+        36
+      ],
+      "situation": "A player cites the tips claim that travel cures indefinite insanity; only an abbreviated rule source is available.",
+      "diagnosis": "Missing full-edition recovery conditions; temporary and indefinite states are being conflated.",
+      "response": "Travel alone does not resolve the treatment question. The recovery decision remains pending while we check the selected edition. We can continue the already agreed safe travel description without restoring SAN or clearing the condition.",
+      "next_choice": "Continue independent travel narration or pause for source lookup.",
+      "keeper": {
+        "rulings": [
+          {
+            "question": "indefinite recovery conditions",
+            "status": "pending source",
+            "source_needed": "selected core Sanity chapter",
+            "review": "before clearing condition"
+          }
+        ]
+      },
+      "facts": [],
+      "pending": [
+        "Verify indefinite recovery treatment and elapsed time; no SAN restoration."
+      ],
+      "must_preserve": "Changed edition is refused; no speculative healing or condition removal."
+    },
+    {
+      "id": "unreadable-handout",
+      "procedure": "M",
+      "source_pages": [
+        43,
+        45
+      ],
+      "situation": "A released letter has decorative script pc1 cannot read; the GM annotation contains the culprit name.",
+      "diagnosis": "Presentation failure, not failed investigation.",
+      "response": "Here is the readable version of the same letter: 夜班钥匙在长椅下。",
+      "next_choice": "pc1 decides what to do with the readable clue.",
+      "keeper": {
+        "handouts": [
+          {
+            "id": "letter",
+            "variant": "plain",
+            "recipients": [
+              "pc1"
+            ],
+            "trigger": "letter opened",
+            "released": true,
+            "fallback": "same evidence as styled letter"
+          }
+        ]
+      },
+      "facts": [
+        {
+          "id": "readable-letter",
+          "text": "夜班钥匙在长椅下。",
+          "audience": [
+            "pc1"
+          ]
+        }
+      ],
+      "pending": [
+        "pc1 response to the letter"
+      ],
+      "must_preserve": "Identical clue content, explicit recipient and no GM annotation in the player copy."
+    }
+  ]
+}

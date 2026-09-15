@@ -34,3 +34,5 @@ These fields are lists of strings. Missing fields produce empty lists, never inf
 For the next session, read this GM review, the current authoritative state and relevant scene preparation. Select the next actionable situation and the materials it requires. Use the investigation audit to check outstanding evidence routes; reconcile IDs manually where the documents use different identifiers. This release does not introduce a unified campaign schema or an automatic cross-file merge.
 
 Save generated JSON as explicit UTF-8 in the appropriate private/player directory and read it back before release. Do not give players the database or GM report.
+
+At close, [Keeper practice](keeper-practice.md) records stopping point, next choice, participation offers and deferred rulings. Keep epilogue wishes and unused beats as plans; reconcile with the current branch before further preparation.

@@ -27,3 +27,5 @@ NPC 根据目标、信息和资源行动；不要让全体 NPC 共享 GM 全知�
 恢复时读取最新 GM 状态及玩家摘要，核对规则版本、revision、最后已结算事件、待掷骰、未付款资源和未决选择。从未完成节点继续，不能重复扣资源或掷骰。跨设备只读取用户指定同步副本；摘要缺项时询问，不能补写为既成事实。
 
 使用 [交接模板](../assets/templates/handoff.md)。玩家可暂停、调整内容边界或纠正状态，必要时修订最近事件并标注原因。
+
+Use [Keeper practice](keeper-practice.md) for conditional spotlight, split-scene, ruling, horror and ending procedures. Save pending intent and the next actor at every cut.

@@ -16,3 +16,5 @@
 - [Rulebook project](rulebook-project.md): original rules, chapter dependencies, terminology, revision and playable validation.
 
 - [Background design pack](background-design.md): sourced skill/item treatments, connected GM scenes and separate public materials.
+
+- [Keeper session sheet](keeper-session.md): conditional hosting, investigation recovery, participation, horror, handouts and persistent notes.
