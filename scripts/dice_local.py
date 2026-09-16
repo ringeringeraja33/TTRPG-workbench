@@ -1,7 +1,7 @@
-"""Local Dice! adaptation and Tower-inspired table services (AGPL-3.0-or-later).
+"""Local tabletop dice, character cards and session tools (AGPL-3.0-or-later).
 
 Trusted local operator interface; actor IDs are not authentication credentials.
-No network, QQ connection, cloud federation, outgoing messages or auto-update.
+All state and results are stored locally.
 """
 import argparse
 import copy
@@ -20,6 +20,7 @@ from vendor.dice_rd import Expression, roll, pool
 from dicebot import key, NAME, dispatch as legacy_dispatch
 from rules_math import coc_result, coc_development, coc_sanity
 from dice_services import validate_decks, draw_deck, actor_timers
+from dice_commands import parse_command, audience_for, includes, can_share
 
 
 def fresh():
@@ -102,7 +103,7 @@ def check(state, actor, text, house=False, extra=None):
         target = number(str(target) + (match[3] or ''))[0]
     else:
         stat, target = None, number(text)[0]
-    if not 1 <= target <= 100: raise ValueError('Check target must be1..100')
+    if not 0 <= target <= 999: raise ValueError('Check target must be0..999')
     event = roll(extra or 'd100')
     total = event['results'][0]['total']
     outcome = coc_result(target, total)
@@ -153,31 +154,18 @@ def visible_log(state, actor, name):
     return [x for x in state['logs'][name] if x['audience'] == 'table' or actor in x['audience']]
 
 
-def dispatch(state, actor, command):
+def dispatch(state, actor, command, audience=None):
+    parsed = parse_command(command)
+    command = parsed.text
+    if audience is None: audience = audience_for(parsed, state, actor)
     p = player(state, actor)
-    command = command.strip()
-    if command and command[0] in '。!！': command = '.' + command[1:]
     if command == '.kp':
         if state['gm'] not in (None, actor): raise ValueError('Keeper already assigned')
         state['gm'] = actor; return {'keeper': actor}
-    if command == '.help':
-        return {'reference': 'references/dice-local.md', 'engine': 'Dice! RD Python adaptation', 'network': False}
-    if command == '.join' or command.startswith('.join '):
-        name = command[5:].strip() or actor
-        if len(name) > 100: raise ValueError('Display name exceeds100 characters')
-        already = p.get('present', False)
-        p.update(present=True, display_name=name)
-        result = {'joined': actor, 'display_name': name, 'already_present': already, 'external_delivery': False}
-        if not already and state['config'].get('welcome_enabled'):
-            result['welcome'] = state['config'].get('welcome', '').replace('{name}', name).replace('{actor}', actor)
-        return result
-    if command == '.leave':
-        p['present'] = False
-        return {'left': actor, 'cards_preserved': True, 'external_delivery': False}
+    if command == '.help' or command.startswith('.help '):
+        from dice_help import command_help
+        return command_help(command[5:].strip())
     if command=='.hiy': return {'history':copy.deepcopy(p.get('check_history',[]))}
-    if command in ('.algo get', '.admin state'):
-        return {'algorithm': 'OS secrets; independent draws', 'revision': state['revision'], 'default_die': state['default_die'], 'cloud': False}
-    if command.startswith('.algo set'): raise ValueError('Historical Tower algorithms unavailable; OS RNG cannot be changed')
     if command.startswith('.set') and not command.startswith('.setcoc'):
         require_gm(state, actor); value = int(command[4:].strip())
         if not 2 <= value <= 1000: raise ValueError('Default faces2..1000')
@@ -198,7 +186,7 @@ def dispatch(state, actor, command):
         if pending and pending['kind']!=kind: raise ValueError('Pending opposition uses a different profile')
         current=check(state,actor,text,house=kind=='rav')
         if not pending:
-            state['opposed_pending']={'actor':actor,'kind':kind,'check':current}
+            state['opposed_pending']={'actor':actor,'kind':kind,'check':current,'audience':copy.deepcopy(audience)}
             return {'pending':True,'first':current}
         if pending['actor']==actor: raise ValueError('Second side requires another actor; use ordinary checks for Keeper NPCs')
         ranks={'fumble':0,'failure':1,'regular':2,'hard':3,'extreme':4,'critical':5}
@@ -207,7 +195,7 @@ def dispatch(state, actor, command):
         a=(ranks[left['outcome']],left['target']); b=(ranks[right['outcome']],right['target'])
         winner=None if max(a[0],b[0])<2 or a==b else pending['actor'] if a>b else actor
         state['opposed_pending']=None
-        return {'first':left,'second':right,'winner':winner,'tie_or_both_failed':winner is None,
+        return {'first':left if can_share(pending.get('audience',[pending['actor']]),audience) else {'hidden':True},'second':right,'winner':winner,'tie_or_both_failed':winner is None,
                 'rule':'General opposition only; equal rank compares skill. Combat dodge/fight-back excluded; Tower roll-value tie-break not adopted.'}
     if command=='.opposed cancel':
         require_gm(state,actor); state['opposed_pending']=None; return {'cancelled':True}
@@ -316,8 +304,6 @@ def dispatch(state, actor, command):
             if name not in p['cards']: p['cards'][name]={'name':name,'profile':'coc7-core','stats':{}}
             p['active']=name; text=m[2]
         return update_stats(card(state,actor),text)
-    if command.startswith('.sn'):
-        return {'nickname_preview': command[3:].strip() or card(state,actor)['name'], 'external_change':False}
     m=re.fullmatch(r'\.(ra|rc|rb|rp)\s*(.*)',command)
     if m:
         kind,text=m.groups(); extra=None
@@ -369,7 +355,6 @@ def dispatch(state, actor, command):
                 if who.lstrip('@') not in state['team']: raise ValueError('Unknown team member')
                 del state['team'][who.lstrip('@')]
         elif action=='clr': state['team']={}
-        elif action in ('lock','rename','call'): return {'bindings':state['team'],'external_change':False,'note':'Stable card bindings; names/mentions are previews only'}
         elif action in ('en','desc'):
             return {who:copy.deepcopy(card(state,who,binding[1]) if action=='desc' else card(state,who,binding[1]).get('development_candidates',[])) for who,binding in state['team'].items()}
         elif action in ('hp','san'):
@@ -409,9 +394,9 @@ def dispatch(state, actor, command):
         if not re.search(r'\d',expr): name=text; expr='0'
         if 'd' not in expr.lower(): expr='d20'+('' if expr.startswith(('+','-')) else '+')+expr
         if name in state['initiative']: raise ValueError('Initiative exists; use init set or rm explicitly')
-        value,event=number(expr); state['initiative'][name]={'value':value,'roll':event,'owner':actor}
+        value,event=number(expr); state['initiative'][name]={'value':value,'roll':event,'owner':actor,'audience':copy.deepcopy(audience)}
         return {'name':name,**state['initiative'][name]}
-    if command=='.init': return sorted([{'name':k,**v} for k,v in state['initiative'].items()],key=lambda x:-x['value'])
+    if command=='.init': return sorted([{'name':k,**v} for k,v in state['initiative'].items() if includes(v.get('audience',[v.get('owner')]),actor)],key=lambda x:-x['value'])
     if command.startswith('.init '):
         require_gm(state,actor); text=command[6:]
         if text=='clr': state['initiative']={}
@@ -420,9 +405,10 @@ def dispatch(state, actor, command):
             del state['initiative'][text[3:]]
         elif text.startswith('set '):
             name,value=text[4:].rsplit(' ',1)
-            state['initiative'][name]={'value':int(value),'owner':actor,'manual':True}
+            visibility=state['initiative'].get(name,{}).get('audience',[actor])
+            state['initiative'][name]={'value':int(value),'owner':actor,'manual':True,'audience':visibility}
         else: raise ValueError('Invalid initiative command')
-        return {'initiative':state['initiative']}
+        return {'initiative':{k:v for k,v in state['initiative'].items() if includes(v.get('audience',[v.get('owner')]),actor)}}
     if command.startswith('.clue'):
         text=command[5:].strip()
         if text=='show': return copy.deepcopy(state['clues'])
@@ -496,10 +482,6 @@ def dispatch(state, actor, command):
             del state['decks'][text[7:]]; return {'removed':text[7:]}
         name,_,n=text.partition(' '); n=int(n or 1)
         return draw_deck(state['decks'], name, n)
-    if command=='.jrrp':
-        date=datetime.now(timezone.utc).date().isoformat(); values=p.setdefault('jrrp',{})
-        if date not in values: values[date]=secrets.randbelow(100)+1
-        return {'utc_date':date,'value':values[date],'mechanical_effect':False}
     if command.startswith('.clock'):
         text=command[6:].strip()
         now = time.time()
@@ -527,42 +509,22 @@ def dispatch(state, actor, command):
         elif text.startswith('set '): state['observers']=list(dict.fromkeys(text[4:].split()))
         else: raise ValueError('Keeper explicitly sets local observer IDs with .ob set id1 id2')
         return {'observers':state['observers'],'warning':'Future hidden rolls include these authorized local recipients'}
-    if command.startswith('.group '):
-        require_gm(state,actor); text=command[7:].strip()
-        if text=='info': return {'config':state['config'],'keeper':state['gm'],'members':list(state['players'])}
-        name,value=text.split(' ',1)
-        if name not in ('simple','secret','jrrp','deck','ob') or value not in ('0','1'): raise ValueError('Local group switches: simple/secret/jrrp/deck/ob0|1')
-        setting={'jrrp':'DisabledJrrp','deck':'DisabledDraw'}.get(name,name)
-        state['config'][setting]=1-int(value) if name in ('jrrp','deck') else int(value)
+    if command == '.table' or command.startswith('.table '):
+        require_gm(state,actor)
+        text=command[6:].strip()
+        settings={name:state['config'].get(name, default) for name,default in
+                  (('simple',0),('secret',0),('deck',1),('ob',1))}
+        # Read the older stored draw toggle without reviving removed commands.
+        if 'deck' not in state['config']:
+            settings['deck']=1-int(bool(state['config'].get('DisabledDraw',0)))
+        if text in ('', 'info'):
+            return {'config':settings,'keeper':state['gm'],'members':list(state['players']),
+                    'default_die':state['default_die'],'algorithm':'OS secrets; independent draws'}
+        parts=text.split()
+        if len(parts)!=2 or parts[0] not in settings or parts[1] not in ('0','1'):
+            raise ValueError('Use .table info or .table simple/secret/deck/ob 0|1')
+        name,value=parts; state['config'][name]=int(value)
         return {'name':name,'value':int(value),'scope':'local table'}
-    if command.startswith('.welcome'):
-        require_gm(state,actor); text=command[8:].strip()
-        if text in ('open','close'): state['config']['welcome_enabled']=text=='open'
-        elif text:
-            if len(text)>5000: raise ValueError('Welcome template exceeds5000 characters')
-            if any(x not in ('name','actor') for x in re.findall(r'\{([^{}]+)\}',text)):
-                raise ValueError('Welcome variables: {name}, {actor}')
-            state['config']['welcome']=text
-        return {'template':state['config'].get('welcome',''),'enabled':state['config'].get('welcome_enabled',False),'trigger':'local .join event','automatic_delivery':False}
-    if command.startswith('.notice '):
-        require_gm(state,actor); text=command[8:]; store=state.setdefault('notices',{})
-        if text=='show': return copy.deepcopy(store)
-        if text.startswith('input '):
-            title,body=text[6:].split('|',1)
-            if title in store: raise ValueError('Notice title already exists')
-            store[title]={'body':body,'status':'pending','author':actor}
-            return {'title':title,**store[title],'published':False}
-        action,title=text.split(' ',1)
-        if action not in ('agree','refuse') or title not in store: raise ValueError('Unknown notice/action')
-        store[title]['status']='approved' if action=='agree' else 'rejected'
-        return {'title':title,**store[title],'published':False,'note':'Local Keeper review only; no multi-admin approval or QQ publication'}
-    if command.startswith('.admin '):
-        require_gm(state,actor); text=command[7:].strip()
-        if '=' not in text: return {'name':text,'value':state['config'].get(text),'scope':'local table'}
-        name,value=text.split('=',1)
-        if name not in ('DisabledDraw','DisabledJrrp','DisabledSend','simple'): raise ValueError('Only documented local switches are supported')
-        if value not in ('0','1'): raise ValueError('Use0 or1')
-        state['config'][name]=int(value); return {'name':name,'value':int(value)}
     if command.startswith('.str'):
         require_gm(state,actor); name,_,value=command[1:].partition(' ')
         strings=state.setdefault('strings',{})
@@ -581,7 +543,7 @@ def dispatch(state, actor, command):
     if command.startswith('.r') and not command.startswith(('.rh','.rav','.rcv','.ral','.rcl')):
         return roll(command[2:].strip(),state['default_die'])
     if command.startswith('.'):
-        raise ValueError('Unsupported local command; consult manual coverage. No implicit network or historical-service fallback.')
+        raise ValueError('Unsupported local command; use .help for local tabletop commands.')
     result = {'recorded_message':command}
     if state.get('reply_rules', {}).get(actor, {}).get(command) and command in state['replies'].get(actor, {}):
         result.update(reply=state['replies'][actor][command], reply_visibility='actor', reply_match='exact')
@@ -605,19 +567,14 @@ def execute(path, scope, actor, command, operation, expected):
             return json.loads(prior[1])
         row=db.execute('SELECT state FROM tables WHERE scope=?',(scope,)).fetchone(); state=json.loads(row[0]) if row else fresh()
         if expected!=state['revision']: raise ValueError('Stale revision')
-        audience='table'; actual=command.strip()
-        if actual and actual[0] in '。!！': actual='.'+actual[1:]
-        disabled={'DisabledDraw':('.draw','.deck '),'DisabledJrrp':('.jrrp',),'DisabledSend':('.send',)}
-        for setting,prefixes in disabled.items():
-            if state['config'].get(setting) and actual.startswith(prefixes): raise ValueError('Local command disabled by '+setting)
-        if actual.startswith('.rh') or (state['config'].get('secret') and re.match(r'\.(r|sc |en |w|coc|dnd)',actual)):
-            observers=state['observers'] if state['config'].get('ob',1) else []
-            audience=list(dict.fromkeys([actor,*([state['gm']] if state['gm'] else []),*observers]))
-            if actual.startswith('.rh'): actual='.r'+actual[3:]
-        elif actual.startswith(('.team desc','.npc','.monster','.des','.custom','.reply','.clock','.log get','.log group','.notice ','.st','.card ','.nn','.hiy','.lookup import ','.mark ')):
-            audience=[actor]
-        if actual.startswith('.log group '):
-            text=actual[len('.log group '):]
+        parsed=parse_command(command); actual=parsed.text
+        draws_enabled=state['config'].get('deck',not state['config'].get('DisabledDraw',False))
+        if not draws_enabled and parsed.is_deck:
+            raise ValueError('Local deck commands disabled; use .table deck 1 to enable')
+        audience=audience_for(parsed,state,actor)
+        if parsed.head == 'rh': actual='.r'+actual[3:]
+        if actual.startswith('.log tables '):
+            text=actual[len('.log tables '):]
             if text.startswith('list '):
                 name=text[5:]; scopes=[]
                 for other_scope,raw in db.execute('SELECT scope,state FROM tables'):
@@ -635,15 +592,15 @@ def execute(path, scope, actor, command, operation, expected):
                     if actor not in other['players']: raise ValueError('Actor has no membership in requested local table')
                     entries.extend(dict(scope=other_scope,**x) for x in visible_log(other,actor,name))
                 result={'name':name,'entries':sorted(entries,key=lambda x:x['utc'])}
-            else: raise ValueError('Use .log group list name or .log group get scope1,scope2 name')
-        else: result=dispatch(state,actor,actual)
+            else: raise ValueError('Use .log tables list name or .log tables get scope1,scope2 name')
+        else: result=dispatch(state,actor,actual,audience=audience)
         if isinstance(result, dict) and result.get('reply_visibility') == 'actor': audience = [actor]
         if isinstance(result,dict) and actual.startswith('.r') and not state['config'].get('simple') and 'strRoll' in state.get('strings',{}):
             result['rendered']=state['strings']['strRoll'].format(nick=actor,pc=player(state,actor)['active'] or actor,res=json.dumps(result,ensure_ascii=False))
         state['revision']+=1
         response=dict(revision=state['revision'],operation=operation,audience=audience,result=result)
         if state['active_log'] and not actual.startswith('.log'):
-            state['logs'][state['active_log']].append(dict(actor=actor,command=command,utc=datetime.now(timezone.utc).isoformat(),**response))
+            state['logs'][state['active_log']].append(dict(actor=actor,command=command,normalized_command=parsed.text,event_type='command' if parsed.head else 'message',utc=datetime.now(timezone.utc).isoformat(),**response))
         db.execute('INSERT OR REPLACE INTO tables VALUES(?,?)',(scope,json.dumps(state,ensure_ascii=False)))
         db.execute('INSERT INTO requests VALUES(?,?,?,?)',(scope,operation,request,json.dumps(response,ensure_ascii=False)))
         db.commit(); return response
@@ -662,6 +619,21 @@ def strip_ooc(text):
     return ''.join(result)
 
 
+def log_is_command(entry):
+    if 'event_type' in entry: return entry['event_type'] == 'command'
+    # Older logs stored the original prefix only; preserve all supported aliases.
+    return entry['command'].lstrip().startswith(('.', '!', '。', '！'))
+
+
+def save_private_output(path, value):
+    text=json.dumps(value,ensure_ascii=False,indent=2)+'\n'
+    if path.exists():
+        if path.read_text(encoding='utf-8') != text:
+            raise ValueError('Private output exists with different contents')
+    else:
+        with path.open('x',encoding='utf-8',newline='\n') as out: out.write(text)
+
+
 def export_log(path,scope,actor,name,destination,kind='txt'):
     entries=visible_log(read(path,scope),actor,name)
     lines=[x['utc']+' '+x['actor']+': '+x['command']+'\n'+json.dumps(x['result'],ensure_ascii=False) for x in entries]
@@ -670,13 +642,16 @@ def export_log(path,scope,actor,name,destination,kind='txt'):
     elif kind=='txt': body='\n\n'.join(lines)
     elif kind=='clean-txt':
         # Human message echoes would reintroduce removed OOC text; export cleaned messages only, dice records verbatim.
-        body='\n\n'.join(x['utc']+' '+x['actor']+': '+(x['command']+'\n'+json.dumps(x['result'],ensure_ascii=False) if x['command'].startswith('.') else strip_ooc(x['command'])) for x in entries if x['command'].startswith('.') or strip_ooc(x['command']).strip())
+        body='\n\n'.join(x['utc']+' '+x['actor']+': '+(x['command']+'\n'+json.dumps(x['result'],ensure_ascii=False) if log_is_command(x) else strip_ooc(x['command'])) for x in entries if log_is_command(x) or strip_ooc(x['command']).strip())
     elif kind=='json': body=json.dumps(entries,ensure_ascii=False,indent=2)
     elif kind=='docx':
         from xml.sax.saxutils import escape
         colors=['005A9C','7A3E00','4F6B20','713D7C']; actors=list(dict.fromkeys(x['actor'] for x in entries))
         paragraphs=''.join('<w:p><w:r><w:rPr><w:color w:val="'+colors[actors.index(x['actor'])%len(colors)]+'"/></w:rPr><w:t xml:space="preserve">'+escape(line)+'</w:t></w:r></w:p>' for x in entries for line in (x['utc']+' '+x['actor']+': '+x['command']+'\n'+json.dumps(x['result'],ensure_ascii=False)).splitlines())
         document='<?xml version="1.0" encoding="UTF-8"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>'+paragraphs+'<w:sectPr/></w:body></w:document>'
+        from xml.etree import ElementTree as ET
+        try: ET.fromstring(document)
+        except ET.ParseError as exc: raise ValueError('Log contains characters invalid in XML; use JSON export or correct the source text') from exc
         with zipfile.ZipFile(destination,'x',zipfile.ZIP_DEFLATED) as archive:
             archive.writestr('[Content_Types].xml','<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>')
             archive.writestr('_rels/.rels','<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>')
@@ -702,13 +677,19 @@ def wait_for_timers(path, scope, actor, timeout):
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--db',type=Path,required=True); ap.add_argument('--scope',required=True); ap.add_argument('--actor',required=True)
+    ap.add_argument('--commands',nargs='?',const='',metavar='TOPIC',help='Show local command help without opening a database')
+    ap.add_argument('--db',type=Path); ap.add_argument('--scope'); ap.add_argument('--actor')
     ap.add_argument('--command'); ap.add_argument('--operation'); ap.add_argument('--expected',type=int)
     ap.add_argument('--wait-timers',type=int,metavar='SECONDS',help='Wait1..60 seconds for own timers, then run .clock poll; explicit operation/revision/private-output required')
     ap.add_argument('--private-output',type=Path,help='Local private response file; never displayed in public CLI output')
     ap.add_argument('--export-log'); ap.add_argument('--output',type=Path); ap.add_argument('--format',choices=['txt','clean-txt','html','json','docx'],default='txt')
     a=ap.parse_args()
     try:
+        if a.commands is not None:
+            from dice_help import command_help
+            print(json.dumps(command_help(a.commands),ensure_ascii=False,indent=2)); return
+        if a.db is None or not a.scope or not a.actor:
+            raise ValueError('--db, --scope and --actor are required for table operations')
         if a.wait_timers is not None:
             if a.command or a.export_log or not a.operation or a.expected is None or not a.private_output:
                 raise ValueError('Timer wait requires operation, expected and private-output; no command/export')
@@ -723,17 +704,16 @@ def main():
             result=execute(a.db,a.scope,a.actor,a.command,a.operation,a.expected)
             if isinstance(result.get('audience'),list):
                 if a.private_output:
-                    text=json.dumps(result,ensure_ascii=False,indent=2)+'\n'
-                    if a.private_output.exists():
-                        if a.private_output.read_text(encoding='utf-8')!=text: raise ValueError('Private output exists with different contents')
-                    else:
-                        with a.private_output.open('x',encoding='utf-8',newline='\n') as out: out.write(text)
+                    save_private_output(a.private_output,result)
                 result={k:result[k] for k in ('revision','operation')}
                 result['private_result_saved']=bool(a.private_output)
                 result['note']='Retry identical operation with --private-output to retrieve privately; file access control belongs to the local operator'
         else:
             state=read(a.db,a.scope)
-            result={'revision':state['revision'],'keeper':state['gm'],'player':state['players'].get(a.actor,{}),'active_log':state['active_log']}
+            result={'revision':state['revision'],'keeper':state['gm']}
+            if a.private_output:
+                save_private_output(a.private_output,{'revision':state['revision'],'player':state['players'].get(a.actor,{}),'active_log':state['active_log']})
+                result['private_result_saved']=True
     except (ValueError,KeyError,sqlite3.Error,OSError) as exc: ap.error(str(exc))
     print(json.dumps(result,ensure_ascii=False,indent=2))
 

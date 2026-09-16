@@ -16,3 +16,7 @@
 ## 核验样例
 
 [CoC记者](../assets/examples/coc7-journalist.md)列基础值与280/150点支出；[D&D一级战士](../assets/examples/dnd2024-fighter.md)列背景、物种、训练、装备和短休恢复。每页分别标出装备或后勤尚未核验的部分。
+
+## Executable campaign import
+
+Use [structured character imports](character-import.md) to create/update ledger actors with private previews, multilingual stat IDs and resource-preserving updates. This interface checks storage and compatibility, not complete character legality. Existing creation audits remain separate.

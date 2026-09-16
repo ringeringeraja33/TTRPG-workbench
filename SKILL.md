@@ -1,6 +1,6 @@
 ---
 name: ttrpg-workbench
-description: Research edition-specific TTRPG rules, prepare adventures, research historical settings to design character creation specifications, skills, items and connected scenes, create and audit characters, design and write original rulebooks, design homebrew, and run persistent GM/KP/DM sessions. Use for TTRPG, 跑团, Dice!, 塔骰, 骰娘, 录卡, 查卡, roll属性, 属性生成, 车卡规范, 时代背景适配, 备团, 主持, campaigns, character advancement, and rulebook design.
+description: Research edition-specific TTRPG rules, prepare adventures, research historical settings to design character creation specifications, skills, items and connected scenes, create and audit characters, design and write original rulebooks, design homebrew, and run persistent GM/KP/DM sessions. Use for TTRPG, 跑团, local dice, 掷骰, 录卡, 查卡, roll属性, 属性生成, 车卡规范, 时代背景适配, 备团, 主持, campaigns, character advancement, and rulebook design.
 ---
 
 # TTRPG Workbench
@@ -26,9 +26,11 @@ Start with the bundled procedures, examples and bibliography. They can be used w
 | Mixed module documents, image variants, handouts, GM guides and design influences | [Corpus-informed preparation](references/corpus-preparation.md); inspect every selected asset before player release |
 | Adventure preparation/review | [Adventures](references/adventures.md), [persistent preparation](references/prep-persistence.md), [session lifecycle](references/session-lifecycle.md) |
 | Evidence routes, missing clues, split-party knowledge | [Investigation audit](references/investigation.md), `scripts/investigation.py` |
+| Exploration time, supply expenses and game-time deadlines | [Exploration runtime](references/exploration.md), `scripts/exploration.py`; use explicit edition-specific durations and costs |
+| Campaign backup, corruption checks and recovery to a new file | [Campaign archive](references/campaign-archive.md), `scripts/campaign_archive.py` |
 | Session recap and next preparation | [Branch-aware review](references/session-review.md), `scripts/session_review.py` |
-| Local Dice!/Tower-style complex dice, teams, NPCs, initiative and logs | [Local runtime](references/dice-local.md), [manual coverage](references/dice-manual-coverage.md), `scripts/dice_local.py`; select its dialect explicitly and keep old dicebot databases separate |
-| Dice assistance, rolled creation attributes, character registration/import, stat lookup and bot commands | [Dicebot and card registration](references/dicebot-cards.md), `scripts/dicebot.py`; distinguish local execution from external command generation |
+| Local complex dice, teams, NPCs, initiative and logs | [Local runtime](references/dice-local.md), [command guide](references/dice-manual-coverage.md), `scripts/dice_local.py`; select its dialect explicitly and keep old dicebot databases separate |
+| Legacy local cards, rolled creation attributes and stat lookup | [Local card registration](references/dicebot-cards.md), `scripts/dicebot.py`; use the local workflow for new tables |
 | Characters and advancement | [Characters](references/characters.md), selected system procedures and worked build |
 | Historical background/style needs skills, items, scene frameworks or design ideas | [Background design](references/background-design.md), [pack template](assets/templates/background-design.md); actively research actual history and comparable module material |
 | A module's historical background or style needs creation rules | [Background-aware creation](references/background-chargen.md); actively research history and comparable creation material, then separate source rules from house changes |
@@ -44,9 +46,17 @@ For investigation stalls, participation, horror pacing, absence and unreadable h
 
 ## Local play integration
 
-For a new local table, use the [Dice local workflow](references/dice-local.md) for cards, actual rolls, team resources, replies, participant events, timers and logs. Translate natural-language intents using the saved table/actor/profile; do not require users to spell out commands. In CoC7 core play choose `.rc`; `.ra` is an explicit house dialect. Use the [Keeper procedures](references/keeper-practice.md) to decide when a check, reveal or pause is appropriate, then apply and save only the agreed consequence.
+For a new local table, use the [Dice local workflow](references/dice-local.md) for cards, actual rolls, team resources, notes, timers and logs. Translate natural-language intents using the saved table/actor/profile; do not require users to spell out commands. In CoC7 core play choose `.rc`; `.ra` is an explicit house dialect. Use the [Keeper procedures](references/keeper-practice.md) to decide when a check, reveal or pause is appropriate, then apply and save only the agreed consequence.
 
-On joining use a local `.join` event when requested; it is not a network membership operation. Enable exact-match replies only for requested entries and publish table-visible drafts explicitly. Keep timer results private to their owner; acknowledge only after presenting the reminder. A bounded running-process wait or a later overdue poll is available, but no offline notification is implied. Keep one authority for each resource domain, preserve private output and replay existing operation IDs without rerolling.
+Use `.help` for commands and `.table` for local Keeper settings. Enable exact-match note reminders only for requested entries and publish table-visible drafts explicitly. Keep timer results private to their owner; acknowledge only after presenting the reminder. A bounded running-process wait or a later overdue poll is available. Keep one authority for each resource domain, preserve private output and replay existing operation IDs without rerolling.
+
+For a recoverable intent → dice → choice → settlement workflow, use [actions](references/action-workflow.md). Campaign resources remain authoritative in the ledger; import raw Dice evidence without applying resource changes twice.
+
+For turn boundaries and effect expiry, use [combat timing](references/combat-timing.md). Supply sourced order, refresh rules and expiry targets explicitly; do not treat the timing ledger as an action-legality engine.
+
+For structured actor creation/update, use [character imports](references/character-import.md). Preview changes privately, preserve resource expenditure, and distinguish imported stats from a fully validated character build.
+
+For live clue delivery and split-party knowledge, use [investigation runtime](references/investigation-runtime.md). Keep available evidence, actual observations, hypotheses and world facts distinct; never publish dependency conclusions automatically.
 
 ## Operating contract
 

@@ -31,3 +31,7 @@ Exit codes: 0 means all declared essential conclusions are derivable, 1 means so
 5. Keep the location graph consistent with the acquisition plan. This schema does not model locks, travel time, skill checks or evidence automatically created by reaching a conclusion; review those separately.
 
 Use [Keeper practice](keeper-practice.md) to diagnose missing access, overlooked information, mistaken inference or fatigue. Give false leads disconfirming evidence and an exit. Check established causes and disclosures before relocating clues or adopting theories.
+
+## Live campaign records
+
+Use [the investigation runtime](investigation-runtime.md) to track actual delivery/sharing separately from preparation availability, retain actor hypotheses and bind acquisition to action settlements. The existing audit remains a GM-only structural analysis.

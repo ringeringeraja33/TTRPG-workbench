@@ -24,4 +24,4 @@ Use English for the skill entry, new reusable workflows and code documentation. 
 
 ## Dice! local adaptation
 
-Source pin and AGPL notice: [third-party notices](../THIRD_PARTY_NOTICES.md). The live local engine is `scripts/vendor/dice_rd.py`, called by `scripts/dice_local.py`. The upstream code and driver exports were inspected; no native DLL or QQ driver was executed. [Manual audit](dice-manual-coverage.md) distinguishes local equivalents, source-data dependencies, unavailable external services and missing implementations. This extension does not claim full Dice! or Tower compatibility.
+Source pin and AGPL notice: [third-party notices](../THIRD_PARTY_NOTICES.md). The live local engine is `scripts/vendor/dice_rd.py`, called by `scripts/dice_local.py`. The upstream code and driver exports were inspected; the runtime uses Python. [Local command guide](dice-manual-coverage.md) describes the current tabletop interface and its bounds.

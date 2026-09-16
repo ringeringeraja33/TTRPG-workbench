@@ -59,3 +59,11 @@
 每次响应先给可观察的后果和新信息，停在一个可行动的位置。内部记录本次消耗、未决判定和下一行动者。失败允许原路径被堵住，同时呈现世界中的其他机会；不得在未成功时赠送刚刚失败的同一个结果，也不让 NPC 直接报出谜底。
 
 模拟验收使用明确写有 `test fixture` 的骰输入；真实开团沿用玩家骰或约定的 `dice.py` 输出。禁止把回放数据当成随机骰、真人记录或未发生的玩家选择。
+
+## Action workflow
+
+Use [recoverable actions](action-workflow.md) to bind intent, dice evidence, pending choices and settlement in this ledger. The ledger owns resources; the Dice bridge imports committed raw roll receipts read-only. Existing direct adjudicated events remain supported.
+
+Use [encounter boundaries](combat-timing.md) for explicit start/end timing, configured refresh and effect expiry. Pending timed actions block advancement; reservations protect committed costs.
+
+For consistent private SQLite backups and historical ledger checks, see [campaign archives](campaign-archive.md). File recovery copies the archive into a new working database; ledger restore remains a separate revisioned operation within a campaign.

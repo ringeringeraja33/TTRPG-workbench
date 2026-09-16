@@ -48,19 +48,14 @@ class LocalServiceTests(unittest.TestCase):
         self.send('.reply unpublish rules', 'gm')
         self.assertNotIn('reply', self.send('rules')['result'])
 
-    def test_welcome_join_replay_leave_and_template_boundaries(self):
-        self.send('.welcome 欢迎 {name} ({actor})', 'gm')
-        self.send('.welcome open', 'gm')
-        revision = read(self.db, 's')['revision']
-        welcome = execute(self.db, 's', 'p', '.join 林蔚', 'join-p', revision)
-        self.assertEqual(welcome['result']['welcome'], '欢迎 林蔚 (p)')
-        self.assertEqual(welcome, execute(self.db, 's', 'p', '.join 林蔚', 'join-p', revision))
-        self.assertNotIn('welcome', self.send('.join 林蔚')['result'])
-        self.send('.nn 调查员'); before = copy.deepcopy(read(self.db,'s')['players']['p']['cards'])
-        self.send('.leave'); self.assertEqual(read(self.db,'s')['players']['p']['cards'],before)
-        self.assertIn('welcome', self.send('.join 林蔚')['result'])
-        self.send('.welcome close','gm'); self.assertNotIn('welcome',self.send('.join 沈青','q')['result'])
-        with self.assertRaises(ValueError): self.send('.welcome {secret}','gm')
+    def test_removed_commands_leave_state_unchanged(self):
+        before=read(self.db,'s')
+        for command in ('.welcome hello','.join Ada','.leave','.notice input a|b',
+                        '.group info','.admin state','.sn Ada','.jrrp',
+                        '.team call','.team rename','.algo get'):
+            with self.subTest(command=command):
+                with self.assertRaises(ValueError): self.send(command,'gm')
+                self.assertEqual(read(self.db,'s'),before)
 
     def test_timers_recover_require_ack_and_isolate_owners(self):
         with patch('dice_local.time.time', return_value=100):

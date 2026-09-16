@@ -23,7 +23,7 @@ class DicebotTests(unittest.TestCase):
         self.send('.st 侦查+5 SAN-2')
         self.assertEqual(self.send('.st show侦查')['value'], 55)
         self.assertEqual(self.send('.st show')['stats']['SAN'], 68)
-        self.assertEqual(self.send('.sn新名片')['external_change'], False)
+        with self.assertRaises(ValueError): self.send('.sn新名片')
 
     def test_malformed_batch_rolls_back_all_fields(self):
         self.send('.card new a A'); self.send('.st HP12 INT60')

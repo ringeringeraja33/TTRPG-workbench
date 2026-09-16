@@ -122,7 +122,7 @@ python -X utf8 scripts/dice.py probability 1d20 11 --mode advantage
 
 The [adoption map](references/upstream-adoption.md) records five pinned source reviews, licensing choices and implementation boundaries. This release adds an English skill entry, persistent preparation workflows, source-checked advanced mechanics, scenario graph checks, and an Apache-licensed bounded-resource module integrated with transactional advancement. Chinese interaction and existing Chinese rule references remain supported.
 
-Run `python -X utf8 -m unittest discover -s scripts -p "test_*.py"` (55 tests) and the two twenty-turn replays described above. Tests cover implemented cases; they do not establish complete system or live-GM competence. Workspace installation uses `.agents/skills/ttrpg-workbench/`, preserving the complete directory structure.
+Run `python -X utf8 -m unittest discover -s scripts -p "test_*.py"` (343 tests) and the two twenty-turn replays described above. Tests cover implemented cases; they do not establish complete system or live-GM competence. Workspace installation uses `.agents/skills/ttrpg-workbench/`, preserving the complete directory structure.
 
 ## Class, spell, vehicle and ritual source packages
 
@@ -148,18 +148,38 @@ Use `$ttrpg-workbench` with a period, location and style to research and design 
 
 Background design has dedicated creation and scene checks; see [current validation](references/validation.md).
 
-### Dice assistance and card registration / 骰娘与录卡
+### Local dice and character cards / 本地掷骰与角色卡
 
-Use the [dicebot/card workflow](references/dicebot-cards.md) to register numeric cards, query `.st show` or `.st show灵感`, switch characters, adjust values, export commands and roll against recorded CoC7 skills. The local adapter saves state and reuses previous results on retries. External dice-bot commands require the destination bot's dialect; this skill does not itself connect to QQ.
+Use the [local Dice workflow](references/dice-local.md) for actual dice, character cards, CoC7 checks, teams, NPCs, initiative and private session logs. The local SQLite store preserves original dice and returns identical results when an operation is retried.
 
-支持录卡、查卡、改卡、切卡、录卡指令导出及读取已录技能进行检定。示例："把这张卡录入，检查灵感和SAN，再生成可复制的录卡指令。" 录卡与审卡分开，群名片仅生成预览，不自动修改。
+支持本地掷骰、录卡、查卡、改卡、角色切换、属性生成、队伍资源和日志导出。用自然语言提出需求即可，例如“用第二组属性建卡”“检定侦查”“导出玩家可见的日志”。角色卡记录与规则合法性审核分开。
 
-CoC7 rolled creation attributes: use `.coc` or `.coc5`, retrieve the returned batch with `.coc show b1`, then explicitly select with `.coc take b1 2 ada 阿达`. Raw dice and candidates persist; selection creates a new card with age processing pending. See [dicebot workflow](references/dicebot-cards.md) for the CLI envelope and completion procedure.
+Run `python -X utf8 scripts/dice_local.py --commands` for a database-free command guide, or use `.help cards` during a session. Keeper settings use `.table info` and `.table secret/deck/simple/ob 0|1`. Cross-table log queries use `.log tables list/get`.
 
-## Local Dice! adaptation
+CoC7 attribute batches retain their raw dice: `.coc5`, `.coc show b1`, then `.coc take b1 2 ada 阿达`. Age processing and derived values remain explicit creation steps. Local notes, owner timers, and attributed weighted/nested JSON decks support session preparation and play. See the [command guide](references/dice-manual-coverage.md).
 
-The skill can run a local Dice! RD Python adaptation plus table services for complex expressions, card registration, teams, NPCs, initiative, clues and private/audience-filtered log exports. See [local workflow](references/dice-local.md) and the [complete129-entry command audit](references/dice-manual-coverage.md) for syntax, differences and missing data/services. The original C++ DLL is not running and full Dice!/Tower compatibility is not claimed. No QQ account is needed for the local workflow.
+本轮代码审查确认的 12 项缺陷已修复，验证结果与旧数据兼容说明见[修复记录](references/review-fixes-2026-09-16.md)。
 
-Example requests: “用本地骰娘给全队分别扣1d3点HP”; “记录NPC和先攻顺序”; “导出玩家可见的染色跑团日志”。
+已加入[可恢复行动流程](references/action-workflow.md)：声明意图、绑定骰子凭据、等待选择、一次性结算，并支持私密结果和重启恢复。
 
-Local table events now support opt-in exact keyword replies, join-triggered welcome text, persistent owner timers with foreground waiting and acknowledgement, and source-attributed weighted/nested JSON decks. Use ordinary requests such as “记录玩家加入”, “设置线索整理提醒” or “从这份原创场景表抽取开场”; the [local workflow](references/dice-local.md) selects explicit commands and preserves operation receipts.
+行动现支持资源预留；[战斗时点](references/combat-timing.md)支持回合开始／结束、按角色到期的效果、可配置资源恢复，以及费用和效果的原子结算。
+
+战斗现支持中途加入、离场、顺序调整和效果期限修订；已行动记录防止同一轮重复获得回合，旧版战斗存档可继续读取。
+
+已加入[结构化角色导入](references/character-import.md)：私密差异预览、创建／更新、中英文技能别名、保留资源消耗及行动技能快照。
+
+[调查现场管理](references/investigation-runtime.md)现支持线索发现与分享、分队知识、玩家假说与明确裁定，并可将线索获得与行动费用一起结算。
+
+[探索时间与补给](references/exploration.md)支持活动耗时、明确补给扣除、游戏内到期提醒与行动联合结算；跨越阻断提醒前须明确处理。
+
+探索操作现可先预演，查看耗时、补给和到期提醒变化；未到期提醒支持记录原因后改期。
+
+调查计划支持开团后追加线索、结论和替代路线；仅未被任何角色获得的线索原文可修订，已交付的观察记录保持不变。
+
+角色成长支持局部更新预览：只提交指定技能、资源上限或名称等变更，未指定字段保留，提交仍检查战役版本与行动占用。
+
+[战役备份与完整性检查](references/campaign-archive.md)支持一致性 SQLite 备份、历史记录检查、独立文件校验值及恢复到新数据库。
+
+[本地 Dice 备份](references/dice-archive.md)保留角色卡、日志与操作回执；恢复后重试原操作不会重新掷骰。
+
+[统一验收入口](references/verification-runner.md)可一次执行测试、全部回放和生成存档的备份恢复验证，并保存分阶段报告。

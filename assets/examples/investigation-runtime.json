@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "evidence": [
+    {
+      "id": "letter",
+      "text": "信封上写着旧仓库的地址。",
+      "audience": [
+        "all"
+      ],
+      "available": true
+    },
+    {
+      "id": "key",
+      "text": "钥匙上的编号与仓库门牌一致。",
+      "audience": [
+        "all"
+      ],
+      "available": false
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "warehouse_link",
+      "text": "GM 备团：两件物品共同指向旧仓库。",
+      "audience": [],
+      "essential": true,
+      "routes": [
+        [
+          "letter",
+          "key"
+        ]
+      ]
+    }
+  ]
+}

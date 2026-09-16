@@ -70,11 +70,11 @@ Use [investigation](investigation.md) for AND/OR evidence routes, missing-clue a
 
 ## Dicebot and card registration
 
-`dicebot.py` supports a private card database, named cards, alias-aware `.st` import/show/update/export, nickname previews and actual dice/checks. Read [the dialect and persistence contract](dicebot-cards.md) before use. No external messages or group updates are sent.
+`dicebot.py` supports a private card database, named cards, alias-aware `.st` import/show/update/export and actual dice/checks. Read [the dialect and persistence contract](dicebot-cards.md) before use.
 
 CoC7 rolled creation attributes: use `.coc` or `.coc5`, retrieve the returned batch with `.coc show b1`, then explicitly select with `.coc take b1 2 ada 阿达`. Raw dice and candidates persist; selection creates a new card with age processing pending. See [dicebot workflow](dicebot-cards.md) for the CLI envelope and completion procedure.
 
-Local Dice! arithmetic adaptation and Tower-inspired table workflow: `scripts/dice_local.py`. See [local runtime](dice-local.md) and [129-entry manual audit](dice-manual-coverage.md). Includes transactional cards/team resources, NPCs, initiative, clues, private responses and txt/HTML/DOCX/JSON logs. This is a Python adaptation of selected AGPL Dice! code, not the upstream DLL or full Tower service.
+Local dice and persistent tabletop workflow: `scripts/dice_local.py`. See [local runtime](dice-local.md) and [local command guide](dice-manual-coverage.md). Includes transactional cards/team resources, NPCs, initiative, clues, private responses and txt/HTML/DOCX/JSON logs. The arithmetic engine adapts selected AGPL Dice! code. Use `--commands` for topic help and `.table` for local settings.
 
 ## Keeper situation acceptance
 

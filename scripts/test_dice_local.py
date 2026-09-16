@@ -54,6 +54,45 @@ class LocalTableTests(unittest.TestCase):
     def register(self,who,name='调查员',stats='STR60 CON60 SIZ60 DEX60 INT60 POW60 EDU60 LUCK50 SAN60 HP12 侦查60'):
         self.send('.nn '+name,who); self.send('.st '+stats,who)
 
+    def test_help_cli_needs_no_database_and_catalog_matches(self):
+        from dice_help import command_help
+        root=Path(__file__).resolve().parents[1]
+        catalog=json.loads((root/'references/dice-manual-coverage.json').read_text(encoding='utf-8'))
+        self.assertEqual(command_help()['topics'],catalog['commands'])
+        result=subprocess.run([sys.executable,'-X','utf8',str(root/'scripts/dice_local.py'),
+                               '--commands','cards'],cwd=self.root,capture_output=True,text=True,encoding='utf-8')
+        self.assertEqual(result.returncode,0,result.stderr)
+        self.assertEqual(json.loads(result.stdout),command_help('cards'))
+        self.assertEqual(self.send('.help roll'),command_help('roll'))
+        before=read(self.db,'s')
+        with self.assertRaises(ValueError): self.send('.help missing')
+        self.assertEqual(read(self.db,'s'),before)
+
+    def test_local_settings_permissions_validation_and_legacy_storage(self):
+        import sqlite3
+        state=read(self.db,'s')
+        state['config'].update(DisabledDraw=1,welcome_enabled=True,DisabledSend=1)
+        with sqlite3.connect(self.db) as db:
+            db.execute('UPDATE tables SET state=? WHERE scope=?',(json.dumps(state),'s'))
+        db.close()
+        settings=self.send('.table info')['config']
+        self.assertEqual(settings,dict(simple=0,secret=0,deck=0,ob=1))
+        before=read(self.db,'s')
+        for command,actor in (('.table secret 1','p'),('.table secret 2','gm'),
+                              ('.table welcome 1','gm'),('.table deck','gm')):
+            with self.assertRaises(ValueError): self.send(command,actor)
+            self.assertEqual(read(self.db,'s'),before)
+        self.send('.table deck 1')
+        self.send('.deck install ti ["test"]')
+        self.assertEqual(self.send('.ti')['draws'],['test'])
+        self.send('.table deck 0')
+        before=read(self.db,'s')
+        with patch('dice_services.secrets.randbelow') as rng:
+            for cmd in ('.draw ti','.deck ti','.ti','.li','.bg','.gas','.tz','.dr a 1'):
+                with self.assertRaises(ValueError): self.send(cmd)
+            rng.assert_not_called()
+        self.assertEqual(read(self.db,'s'),before)
+
     def test_cards_named_import_copy_rename_scope(self):
         self.register('p')
         self.send('.st莉娜-STR50 CON70','p')
@@ -175,26 +214,26 @@ class LocalTableTests(unittest.TestCase):
         self.send('.lookup import dnd5e-2014 {"source":"Original test fixture; no official rules","entries":{"示例术":"测试条目"}}')
         self.assertEqual(self.send('.5ey 示例术')['text'],'测试条目')
         with self.assertRaises(ValueError): self.send('.3ry 示例术')
-        self.send('.admin DisabledDraw=1')
+        self.send('.table deck 0')
         with self.assertRaises(ValueError): self.send('.draw test')
-        self.send('.admin DisabledDraw=0')
+        self.send('.table deck 1')
         self.send('.deck install ti ["Original test symptom"]')
         self.assertEqual(self.send('.ti')['draws'],['Original test symptom'])
         self.send('.strRoll {nick}: {res}')
         self.assertTrue(self.send('.r1d6')['rendered'].startswith('gm:'))
-        self.send('.group simple 1'); self.assertNotIn('rendered',self.send('.r1d6'))
+        self.send('.table simple 1'); self.assertNotIn('rendered',self.send('.r1d6'))
 
     def test_private_history_and_cross_scope_logs(self):
-        self.send('.log on Same'); self.send('public','p'); self.send('.group secret 1')
+        self.send('.log on Same'); self.send('public','p'); self.send('.table secret 1')
         revision=read(self.db,'s')['revision']
         response=execute(self.db,'s','p','.rc 60','hidden-check',revision)
         self.assertIsInstance(response['audience'],list)
         self.assertFalse(any(x['operation']=='hidden-check' for x in visible_log(read(self.db,'s'),'q','Same')))
         self.send('.kp','gm','second'); self.send('.log on Same','gm','second'); self.send('second public','p','second')
-        result=self.send('.log group get s,second Same','p')
+        result=self.send('.log tables get s,second Same','p')
         self.assertEqual({x['scope'] for x in result['entries']},{'s','second'})
         self.send('hello','q')
-        with self.assertRaises(ValueError): self.send('.log group get s,second Same','q')
+        with self.assertRaises(ValueError): self.send('.log tables get s,second Same','q')
 
     def test_new_characters_survive_restart(self):
         batch=self.send('.coc5','p'); bid=batch['batch']

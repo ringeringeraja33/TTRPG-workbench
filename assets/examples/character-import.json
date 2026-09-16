@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "profile": {
+    "system": "CoC",
+    "edition": "7e",
+    "options": {
+      "luck_spend": false
+    }
+  },
+  "sources": [
+    "GM original demonstration only; values are illustrative, not a complete legal CoC build"
+  ],
+  "characters": [
+    {
+      "mode": "create",
+      "id": "pc3",
+      "name": "新调查者",
+      "audience": [
+        "pc3"
+      ],
+      "sheet_audience": [
+        "pc3"
+      ],
+      "stats": {
+        "spot_hidden": {
+          "label": "侦查",
+          "aliases": [
+            "Spot Hidden"
+          ],
+          "value": 60
+        },
+        "fighting_brawl": {
+          "label": "格斗（斗殴）",
+          "aliases": [
+            "Fighting Brawl",
+            "斗殴"
+          ],
+          "value": 40
+        }
+      },
+      "resources": {
+        "hp": {
+          "value": 10,
+          "max": 12
+        },
+        "mp": {
+          "value": 12,
+          "max": 12
+        },
+        "san": {
+          "value": 60,
+          "max": 99
+        }
+      },
+      "gm_notes": "Original demonstration: private preparation notes stay out of player sheets."
+    }
+  ]
+}

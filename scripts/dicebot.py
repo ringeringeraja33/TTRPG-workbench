@@ -1,4 +1,4 @@
-"""Workbench local dice/card dialect. No QQ connection or external bot compatibility claim."""
+"""Legacy local character-card storage and numeric checks."""
 import argparse
 import copy
 import json
@@ -137,7 +137,7 @@ def dispatch(state, command):
     if command == '.st export':
         if not stats: raise ValueError('No recorded stats to export')
         return {'dialect': 'workbench-local-v1', 'command': '.st ' + ' '.join(k + '=' + str(v) for k, v in sorted(stats.items())),
-                'note': 'Verify the destination bot dialect before sending; no message sent.'}
+                'note': 'Import recorded numeric fields into another local card.'}
     if command.startswith('.st'):
         card['stats'] = assignments(command[3:].strip(), stats)
         return {'card_id': active, 'stats': card['stats'], 'legality': 'not audited'}
@@ -146,21 +146,18 @@ def dispatch(state, command):
         if not name: raise ValueError('Empty name')
         card['name'] = name
         return {'card_id': active, 'name': name}
-    if command.startswith('.sn'):
-        nickname = command[3:].strip() or card['name'] + ' ' + ' '.join(k + str(stats[k]) for k in ('HP', 'SAN') if k in stats)
-        return {'nickname_preview': nickname, 'external_change': False}
     m = re.fullmatch(r'\.ra([bp]?)([12]?)\s*(' + NAME + r')(?:\s+(\d+))?', command)
     if m:
         mode, count, name, explicit = m.groups(); name = key(name)
         if count and not mode: raise ValueError('Extra dice require rab or rap')
         if explicit is None and name not in stats: raise ValueError('Stat not recorded')
         target = int(explicit) if explicit is not None else stats[name]
-        if not 1 <= target <= 100: raise ValueError('This check adapter supports target 1..100 only')
+        if not 0 <= target <= 999: raise ValueError('This check adapter supports target 0..999 only')
         result = percentile({'b': 'bonus', 'p': 'penalty'}.get(mode), int(count or 1))
         result.update(card_id=active, stat=name, target=target, profile=card['profile'],
                       outcome=coc_result(target, result['total']), effects_applied=False)
         return result
-    raise ValueError('Unsupported local command; consult dicebot reference. No state changed.')
+    raise ValueError('Unsupported local command; consult local card reference. No state changed.')
 
 
 def execute(path, scope, owner, command, operation, expected):

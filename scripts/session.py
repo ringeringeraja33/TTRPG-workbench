@@ -53,6 +53,22 @@ def validate(state):
         audience(fact['audience'])
     if len({f['id'] for f in state['facts']}) != len(state['facts']):
         raise ValueError('Duplicate fact ID')
+    if 'action_workflow' in state['private']:
+        from actions import validate_store, validate_reservations
+        validate_store(state['private']['action_workflow'])
+        validate_reservations(state)
+    if 'combat' in state['private']:
+        from combat import validate_store as validate_combat
+        validate_combat(state['private']['combat'],state)
+    if 'characters' in state['private']:
+        from characters import validate_store as validate_characters
+        validate_characters(state['private']['characters'],state)
+    if 'investigation' in state['private']:
+        from investigation_runtime import validate_store as validate_investigation
+        validate_investigation(state['private']['investigation'],state)
+    if 'exploration' in state['private']:
+        from exploration import validate_store as validate_exploration
+        validate_exploration(state['private']['exploration'],state)
     encode(state)
 
 
@@ -92,6 +108,89 @@ def latest(db):
     return row[0], json.loads(row[1])
 
 
+def apply_changes(state, changes, db, event):
+    for change in changes:
+        kind = change['kind']
+        if kind == 'resource':
+            if set(change) != {'kind', 'actor', 'resource', 'delta'} or type(change['delta']) is not int:
+                raise ValueError('Invalid resource change')
+            resource = state['actors'][change['actor']]['resources'][change['resource']]
+            resource['value'] += change['delta']
+            # No silent clamping: the adjudicator must state actual healing/spend.
+        elif kind == 'resize':
+            if set(change) != {'kind', 'actor', 'resource', 'maximum'}:
+                raise ValueError('Invalid resource resize')
+            maximum = integer(change['maximum'])
+            resource = state['actors'][change['actor']]['resources'][change['resource']]
+            resize_bounded_resource(resource, maximum=maximum)
+            resource.pop('unlimited')  # Ledger uses finite counters only.
+        elif kind == 'conditions':
+            if set(change) != {'kind', 'actor', 'value'}:
+                raise ValueError('Invalid condition change')
+            state['actors'][change['actor']]['conditions'] = change['value']
+        elif kind == 'fact':
+            if set(change) != {'kind', 'value'}:
+                raise ValueError('Invalid fact change')
+            state['facts'].append(change['value'])
+        elif kind == 'clock':
+            if set(change) != {'kind', 'minutes'}:
+                raise ValueError('Invalid clock change')
+            from exploration import move_clock
+            move_clock(state,integer(change['minutes']))
+        elif kind in {'exploration','exploration_effect'}:
+            if kind=='exploration' and len(changes)!=1:raise ValueError('Exploration transition must be the only change')
+            if kind=='exploration_effect' and change.get('step') not in {'advance','ack'}:raise ValueError('Inline exploration only permits advance or acknowledgement')
+            from exploration import transition
+            state=apply_changes(state,transition(state,change,event),db,event)
+        elif kind in {'investigation','investigation_effect'}:
+            if kind=='investigation' and len(changes)!=1:raise ValueError('Investigation transition must be the only change')
+            if kind=='investigation_effect' and change.get('step')!='discover':raise ValueError('Inline investigation effect only permits discovery')
+            from investigation_runtime import transition
+            transition(state,change,event)
+        elif kind == 'characters':
+            if len(changes)!=1:raise ValueError('Character import must be the only change')
+            from characters import transition
+            transition(state,change,event)
+        elif kind == 'action':
+            if len(changes) != 1:
+                raise ValueError('Action transition must be the only top-level change')
+            from actions import transition
+            effects = transition(state, change, event)
+            state = apply_changes(state, effects, db, event)
+        elif kind in {'combat','combat_effect'}:
+            if kind == 'combat_effect' and change.get('step') not in {'add_effect','remove_effect'}:
+                raise ValueError('Inline combat effects cannot advance the turn')
+            if kind == 'combat' and len(changes) != 1:
+                raise ValueError('Combat transition must be the only top-level change')
+            from combat import transition
+            state = apply_changes(state, transition(state,change,event), db,event)
+        elif kind in {'pending', 'private'}:
+            if set(change) != {'kind', 'value'}:
+                raise ValueError('Invalid private state change')
+            if kind == 'private' and (not isinstance(change['value'],dict) or state['private'].get('action_workflow') != change['value'].get('action_workflow')):
+                raise ValueError('Action workflow can only change through action transitions or restore')
+            if kind == 'private' and state['private'].get('combat') != change['value'].get('combat'):
+                raise ValueError('Combat state must change through combat transitions or restore')
+            if kind=='private' and state['private'].get('characters')!=change['value'].get('characters'):
+                raise ValueError('Character metadata requires an import event or restore')
+            if kind=='private' and state['private'].get('investigation')!=change['value'].get('investigation'):
+                raise ValueError('Investigation records require a transition or restore')
+            if kind=='private' and state['private'].get('exploration')!=change['value'].get('exploration'):
+                raise ValueError('Exploration records require a transition or restore')
+            state[kind] = change['value']
+        elif kind == 'restore':
+            if set(change) != {'kind', 'revision'} or len(changes) != 1:
+                raise ValueError('Restore must be the only change')
+            integer(change['revision'])
+            row = db.execute('SELECT state FROM events WHERE revision=?', (change['revision'],)).fetchone()
+            if not row:
+                raise ValueError('Restore target missing')
+            state = json.loads(row[0])
+        else:
+            raise ValueError('Unsupported change; no implicit rule resolution')
+    return state
+
+
 def apply(path, event):
     required = {'id', 'revision', 'profile', 'input', 'resolution', 'sources', 'changes'}
     if not isinstance(event, dict) or set(event) != required or not isinstance(event['id'], str) or not event['id'] or event['id'].startswith('__'):
@@ -118,47 +217,7 @@ def apply(path, event):
             raise ValueError('Stale revision; reload and adjudicate again')
         if state['profile'] != event['profile']:
             raise ValueError('Rules profile conflict; no implicit edition migration')
-        for change in event['changes']:
-            kind = change['kind']
-            if kind == 'resource':
-                if set(change) != {'kind', 'actor', 'resource', 'delta'} or type(change['delta']) is not int:
-                    raise ValueError('Invalid resource change')
-                resource = state['actors'][change['actor']]['resources'][change['resource']]
-                resource['value'] += change['delta']
-                # No silent clamping: the adjudicator must state actual healing/spend.
-            elif kind == 'resize':
-                if set(change) != {'kind', 'actor', 'resource', 'maximum'}:
-                    raise ValueError('Invalid resource resize')
-                maximum = integer(change['maximum'])
-                resource = state['actors'][change['actor']]['resources'][change['resource']]
-                resize_bounded_resource(resource, maximum=maximum)
-                resource.pop('unlimited')  # Ledger uses finite counters only.
-            elif kind == 'conditions':
-                if set(change) != {'kind', 'actor', 'value'}:
-                    raise ValueError('Invalid condition change')
-                state['actors'][change['actor']]['conditions'] = change['value']
-            elif kind == 'fact':
-                if set(change) != {'kind', 'value'}:
-                    raise ValueError('Invalid fact change')
-                state['facts'].append(change['value'])
-            elif kind == 'clock':
-                if set(change) != {'kind', 'minutes'}:
-                    raise ValueError('Invalid clock change')
-                state['clock'] += integer(change['minutes'])
-            elif kind in {'pending', 'private'}:
-                if set(change) != {'kind', 'value'}:
-                    raise ValueError('Invalid private state change')
-                state[kind] = change['value']
-            elif kind == 'restore':
-                if set(change) != {'kind', 'revision'} or len(event['changes']) != 1:
-                    raise ValueError('Restore must be the only change')
-                integer(change['revision'])
-                row = db.execute('SELECT state FROM events WHERE revision=?', (change['revision'],)).fetchone()
-                if not row:
-                    raise ValueError('Restore target missing')
-                state = json.loads(row[0])
-            else:
-                raise ValueError('Unsupported change; no implicit rule resolution')
+        state = apply_changes(state, event['changes'], db, event)
         validate(state)
         db.execute('INSERT INTO events VALUES (?, ?, ?, ?, ?)', (revision + 1, event['id'], request_hash, encode(event), encode(state)))
         db.commit()
@@ -181,8 +240,25 @@ def view(path, player=None, gm=False):
         return {'revision': revision, 'state': state}
     def visible(item):
         return 'all' in item['audience'] or (player is not None and player in item['audience'])
-    return {'revision': revision, 'actors': {k: copy.deepcopy(v) for k, v in state['actors'].items() if visible(v)},
+    result = {'revision': revision, 'actors': {k: copy.deepcopy(v) for k, v in state['actors'].items() if visible(v)},
             'facts': [copy.deepcopy(f) for f in state['facts'] if visible(f)]}
+    if 'action_workflow' in state['private']:
+        from actions import project, availability
+        result['actions'] = project(state['private']['action_workflow'], player=player)
+        result['resource_availability'] = availability(state,player)
+    if 'combat' in state['private']:
+        from combat import project as project_combat
+        result['combat'] = project_combat(state['private']['combat'],state,player)
+    if 'characters' in state['private']:
+        from characters import project as project_characters
+        result['characters']=project_characters(state,player)
+    if 'investigation' in state['private']:
+        from investigation_runtime import project as project_investigation
+        result['investigation']=project_investigation(state['private']['investigation'],player)
+    if 'exploration' in state['private']:
+        from exploration import project as project_exploration
+        result['exploration']=project_exploration(state['private']['exploration'],state,player)
+    return result
 
 
 def main():

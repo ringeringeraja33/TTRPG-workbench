@@ -103,8 +103,9 @@ def audit(spec):
 
 
 def player_view(result):
-    # Build from known fields; never include spec, GM notes, sources or hidden routes.
-    return {'status':result['status'],'cards':result['cards']}
+    from player_fields import project, CARD
+    if result['status']=='invalid': return {'status':'invalid','cards':[]}
+    return {'status':result['status'],'cards':[project(card,CARD) for card in result['cards']]}
 
 
 def main():

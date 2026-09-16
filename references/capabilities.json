@@ -180,9 +180,9 @@
     },
     {
       "id": "dicebot-cards",
-      "name": "Local dicebot and character registration",
+      "name": "Local character registration",
       "reference": "dicebot-cards.md",
-      "limits": "Table/player-scoped persistent cards, aliases, atomic numeric updates, nickname previews, export and actual CoC7 checks with retry-safe dice. Local dialect only; no external bot connection, private-channel transport or automatic character legality certification. CoC7 base attribute batches support raw-dice evidence, explicit selection and preserved originals; age changes, derived values and full creation legality remain guided steps.",
+      "limits": "Persistent local numeric cards, aliases, atomic edits, export, actual CoC7 checks and retry-safe attribute batches. Age changes, derived values and full creation legality remain guided steps. Existing card-only databases stay separate from table databases.",
       "source": "partial",
       "retrieval": "supported",
       "procedure": "supported",
@@ -191,9 +191,9 @@
     },
     {
       "id": "dice-local",
-      "name": "Local Dice! adaptation and table tools",
+      "name": "Local Dice and table services",
       "reference": "dice-local.md",
-      "limits": "Bounded Dice! RD adaptation with cards, teams, logs, opt-in exact replies, local join welcome, owner timers with foreground wait/ack, and attributed weighted/nested JSON decks. Native DLL, historical script languages, full datasets and external services remain incomplete.",
+      "limits": "Bounded expressions with raw dice, cards, teams, NPCs, initiative, private logs, exact note reminders, owner timers and attributed JSON decks. Topic help and Keeper table settings are local. Scripts, complete rule datasets and automatic character legality are outside this runtime.",
       "source": "partial",
       "retrieval": "partial",
       "procedure": "partial",
@@ -210,6 +210,83 @@
       "procedure": "supported",
       "arithmetic": "not-applicable",
       "interaction": "partial"
+    },
+    {
+      "id": "actions",
+      "name": "Recoverable action and Dice evidence workflow",
+      "reference": "action-workflow.md",
+      "source": "not-applicable",
+      "retrieval": "supported",
+      "procedure": "supported",
+      "arithmetic": "partial",
+      "interaction": "partial",
+      "limits": "Transactional intent, one-expression evidence, choices, reserved costs and atomic settlement; read-only .r/.rh bridge. Explicit adjudication; no complete legality engine or cross-database resource sync."
+    },
+    {
+      "id": "combat-timing",
+      "name": "Encounter boundaries and timed effects",
+      "reference": "combat-timing.md",
+      "source": "not-applicable",
+      "retrieval": "supported",
+      "procedure": "supported",
+      "arithmetic": "partial",
+      "interaction": "partial",
+      "limits": "Start/end boundaries, dynamic join/leave/order with per-round eligibility, configured refresh, explicit effect expiry/retiming and action holds. One encounter; no automatic legality, stacking, concentration or simultaneous turns."
+    },
+    {
+      "id": "character-import",
+      "name": "Structured campaign characters and stat snapshots",
+      "reference": "character-import.md",
+      "source": "not-applicable",
+      "retrieval": "supported",
+      "procedure": "supported",
+      "arithmetic": "partial",
+      "interaction": "partial",
+      "limits": "Private full and partial JSON update previews, atomic create/update, multilingual stat IDs, spent-capacity preservation, pending/combat guards and immutable action snapshots. Partial merges use one revision. No full creation/advancement legality, derived-stat automation or Dice card migration."
+    },
+    {
+      "id": "investigation-runtime",
+      "name": "Ledger-backed investigation knowledge and hypotheses",
+      "reference": "investigation-runtime.md",
+      "source": "not-applicable",
+      "retrieval": "supported",
+      "procedure": "supported",
+      "arithmetic": "not-applicable",
+      "interaction": "partial",
+      "limits": "Explicit clue delivery/sharing, actor hypotheses/verdicts, dependency analysis, atomic acquisition and live append-only plan/route expansion. Only unseen observation text is editable. No automatic truth, deduction, communication legality or contradiction resolution."
+    },
+    {
+      "id": "exploration-runtime",
+      "name": "Exploration time, supplies and game-time reminders",
+      "reference": "exploration.md",
+      "source": "not-applicable",
+      "retrieval": "supported",
+      "procedure": "supported",
+      "arithmetic": "partial",
+      "interaction": "partial",
+      "limits": "Atomic explicit activity costs and minute advances, isolated previews, deadline barriers, pending rescheduling, anchored recurring reminders, validated receipts and private recovery. No automatic travel/rest rules, separate party clocks or wall-clock notifications."
+    },
+    {
+      "id": "campaign-archive",
+      "name": "Consistent campaign backup and ledger checks",
+      "reference": "campaign-archive.md",
+      "source": "not-applicable",
+      "retrieval": "supported",
+      "procedure": "supported",
+      "arithmetic": "not-applicable",
+      "interaction": "partial",
+      "limits": "Exclusive SQLite backup including committed WAL, historical schema/event-hash/revision/profile checks and restore equality. No full event replay, authenticity proof, encryption, retention scheduler or cloud upload."
+    },
+    {
+      "id": "dice-archive",
+      "name": "Current local Dice database archives",
+      "reference": "dice-archive.md",
+      "source": "not-applicable",
+      "retrieval": "supported",
+      "procedure": "supported",
+      "arithmetic": "not-applicable",
+      "interaction": "partial",
+      "limits": "Consistent exclusive Dice SQLite backup, basic state and per-scope receipt continuity checks, preserved cards/logs and no-reroll retry. No legacy dialect conversion, atomic campaign pairing, path rebinding or authenticity proof."
     }
   ]
 }

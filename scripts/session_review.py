@@ -81,8 +81,29 @@ def recap(path, since=0, player=None, gm=False):
             'revisit_character_hooks': result['character_hooks'],
             'evaluate_unrealized_plans': result['gm_plans'],
             'verify_player_hypotheses': result['player_hypotheses']}
+        workflow = current['private'].get('action_workflow', {'actions':{}})
+        result['next_prep']['pending_actions'] = [
+            {'id':aid, 'actor':a['actor'], 'status':a['status'], 'summary':a['summary'],
+             'decision':a['decision'] if a['status']=='waiting' else None}
+            for aid,a in workflow['actions'].items() if a['status'] not in {'settled','cancelled'}]
+        if 'combat' in current['private']:
+            combat = current['private']['combat']
+            from combat import current_actor
+            result['next_prep']['combat'] = {
+                'id':combat['id'], 'round':combat['round'], 'turn':combat['turn'], 'phase':combat['phase'],
+                'current_actor':current_actor(combat) if combat['phase']=='active' else None,
+                'active_effects':{k:v for k,v in combat['effects'].items() if v['status']=='active'}}
+        if 'investigation' in current['private']:
+            from investigation_runtime import analysis
+            result['next_prep']['investigation']=analysis(current['private']['investigation'],current)
+        if 'exploration' in current['private']:
+            from exploration import summary
+            result['next_prep']['exploration']=summary(current['private']['exploration'],current)
         result['state_source_revision'] = history[-1]['revision']
         result['superseded_revisions'] = sorted(set(r['revision'] for r in history) - set(r['revision'] for r in active))
+    if not gm and 'investigation' in current['private']:
+        from investigation_runtime import project
+        result['investigation']=project(current['private']['investigation'],player)
     return result
 
 

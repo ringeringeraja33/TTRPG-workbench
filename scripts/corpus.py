@@ -32,7 +32,31 @@ def connect(path):
         PRIMARY KEY(source_id, anchor));
       CREATE TABLE IF NOT EXISTS config(key TEXT PRIMARY KEY, value TEXT);
     ''')
+    columns = {r['name'] for r in db.execute('PRAGMA table_info(reviews)')}
+    with db:
+        for name in ('source_sha256', 'unit_sha256'):
+            if name not in columns:
+                db.execute(f'ALTER TABLE reviews ADD COLUMN {name} TEXT')
+        db.execute("""CREATE TABLE IF NOT EXISTS review_history(
+            source_id TEXT, anchor TEXT, state TEXT, note TEXT,
+            source_sha256 TEXT, unit_sha256 TEXT, reason TEXT,
+            archived_at TEXT DEFAULT CURRENT_TIMESTAMP)""")
+        for row in db.execute('SELECT * FROM reviews WHERE source_sha256 IS NULL OR unit_sha256 IS NULL').fetchall():
+            archive_review(db, row, 'legacy review without extraction binding')
     return db
+
+
+def unit_digest(text, metadata):
+    if isinstance(metadata, str):
+        metadata = json.loads(metadata)
+    payload = json.dumps([text, metadata], ensure_ascii=False, sort_keys=True, default=str)
+    return hashlib.sha256(payload.encode('utf-8')).hexdigest()
+
+
+def archive_review(db, row, reason):
+    db.execute('INSERT INTO review_history(source_id,anchor,state,note,source_sha256,unit_sha256,reason) VALUES(?,?,?,?,?,?,?)',
+               tuple(row[k] for k in ('source_id','anchor','state','note','source_sha256','unit_sha256')) + (reason,))
+    db.execute('DELETE FROM reviews WHERE source_id=? AND anchor=?', (row['source_id'], row['anchor']))
 
 
 def build(root, output, *, cache_dir=None, chm_root=None, ocr=False):
@@ -54,7 +78,6 @@ def build(root, output, *, cache_dir=None, chm_root=None, ocr=False):
             # Path identity preserves separate copies; content hash preserves review validity.
             sid = hashlib.sha256(rel.encode('utf-8')).hexdigest()[:16]
             seen.add(sid)
-            previous = db.execute('SELECT * FROM sources WHERE id=?', (sid,)).fetchone()
             cached = Path(cache_dir) / (sha[:16] + '.jsonl') if cache_dir else None
             # Always re-extract/re-import; a previous sparse extraction is not final.
             try:
@@ -74,8 +97,10 @@ def build(root, output, *, cache_dir=None, chm_root=None, ocr=False):
             except Exception as exc:
                 units, state, error = [], 'error', f'{type(exc).__name__}: {exc}'
             with db:
-                if previous and previous['sha256'] != sha:
-                    db.execute('DELETE FROM reviews WHERE source_id=?', (sid,))
+                fingerprints = {u['anchor']: unit_digest(u['text'], {k:v for k,v in u.items() if k not in {'anchor','text'}}) for u in units}
+                for reviewed in db.execute('SELECT * FROM reviews WHERE source_id=?', (sid,)).fetchall():
+                    if reviewed['source_sha256'] != sha or reviewed['unit_sha256'] != fingerprints.get(reviewed['anchor']):
+                        archive_review(db, reviewed, 'source or extraction changed or removed')
                 db.execute('DELETE FROM units WHERE source_id=?', (sid,))
                 db.execute('INSERT OR REPLACE INTO sources VALUES(?,?,?,?,?,?,?)',
                            (sid, rel, sha, classify(file.name), state, error, len(units)))
@@ -84,7 +109,9 @@ def build(root, output, *, cache_dir=None, chm_root=None, ocr=False):
         with db:
             for row in db.execute('SELECT id FROM sources').fetchall():
                 if row['id'] not in seen:
-                    for table in ('units', 'reviews'):
+                    for reviewed in db.execute('SELECT * FROM reviews WHERE source_id=?', (row['id'],)).fetchall():
+                        archive_review(db, reviewed, 'source removed')
+                    for table in ('units',):
                         db.execute(f'DELETE FROM {table} WHERE source_id=?', (row['id'],))
                     db.execute('DELETE FROM sources WHERE id=?', (row['id'],))
             db.execute('INSERT OR REPLACE INTO config VALUES(?,?)', ('root', str(root)))
@@ -109,7 +136,7 @@ def search(db, query, *, source=None, limit=8, chars=1600, anchor=None):
         args.append(anchor)
     args.append(limit)
     sql = '''SELECT s.id,s.path,s.sha256,u.anchor,u.text,u.metadata,
-      coalesce(r.state,'unreviewed') review_state,r.note
+      coalesce(r.state,'unreviewed') review_state,r.note,r.source_sha256,r.unit_sha256
       FROM units u JOIN sources s ON s.id=u.source_id
       LEFT JOIN reviews r ON r.source_id=u.source_id AND r.anchor=u.anchor
       WHERE ''' + ' AND '.join(clauses) + ' ORDER BY s.path,u.rowid LIMIT ?'
@@ -122,6 +149,10 @@ def search(db, query, *, source=None, limit=8, chars=1600, anchor=None):
             file = root / item['path']
             checked[item['id']] = file.is_file() and digest(file) == item['sha256']
         item['source_current'] = checked[item['id']]
+        bound_source = item.pop('source_sha256')
+        bound_unit = item.pop('unit_sha256')
+        if not item['source_current'] or bound_source != item['sha256'] or bound_unit != unit_digest(item['text'], item['metadata']):
+            item['review_state'], item['note'] = 'unreviewed', None
         pos = item['text'].lower().find(query.lower()) if query else 0
         start = max(0, pos - 150)
         item['text'] = item['text'][start:start + chars]
@@ -133,7 +164,8 @@ def search(db, query, *, source=None, limit=8, chars=1600, anchor=None):
 def review(db, source, anchor, state, note):
     if state not in REVIEW or not note.strip():
         raise ValueError('Review needs a valid state and a substantive note')
-    if not db.execute('SELECT 1 FROM units WHERE source_id=? AND anchor=?', (source, anchor)).fetchone():
+    unit = db.execute('SELECT text,metadata FROM units WHERE source_id=? AND anchor=?', (source, anchor)).fetchone()
+    if not unit:
         raise ValueError('Review target must be an existing source unit')
     row = db.execute('SELECT path,sha256 FROM sources WHERE id=?', (source,)).fetchone()
     root = Path(db.execute("SELECT value FROM config WHERE key='root'").fetchone()[0])
@@ -141,7 +173,11 @@ def review(db, source, anchor, state, note):
     if not file.is_file() or digest(file) != row['sha256']:
         raise ValueError('Rebuild or relocate the changed source before recording a review')
     with db:
-        db.execute('INSERT OR REPLACE INTO reviews VALUES(?,?,?,?)', (source, anchor, state, note))
+        previous = db.execute('SELECT * FROM reviews WHERE source_id=? AND anchor=?', (source, anchor)).fetchone()
+        if previous:
+            archive_review(db, previous, 'review superseded')
+        db.execute('INSERT OR REPLACE INTO reviews(source_id,anchor,state,note,source_sha256,unit_sha256) VALUES(?,?,?,?,?,?)',
+                   (source, anchor, state, note, row['sha256'], unit_digest(unit['text'], unit['metadata'])))
 
 
 def main():

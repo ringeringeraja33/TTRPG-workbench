@@ -46,7 +46,19 @@ def audit(plan):
 
 
 def projection(plan, player):
-    return {'clues': [c for c in plan['clues'] if 'all' in c['audience'] or player in c['audience']]}
+    if not isinstance(player,str) or not player.strip():
+        raise ValueError('Explicit player ID required')
+    clues=[]
+    for clue in plan['clues']:
+        audience=clue['audience']
+        if not isinstance(audience,list) or any(not isinstance(x,str) or not x for x in audience):
+            raise ValueError('Audience must be a list of player IDs')
+        for field in ('id','text'):
+            if field in clue and not isinstance(clue[field],str):
+                raise ValueError('Public clue fields must be text')
+        if 'all' in audience or player in audience:
+            clues.append({key:clue[key] for key in ('id','text') if key in clue})
+    return {'clues':clues}
 
 
 def main():

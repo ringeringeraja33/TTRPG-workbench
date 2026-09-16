@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "sources": ["GM original example: explicitly approved advancement; no system legality claim"],
+  "changes": {
+    "stats": {
+      "spot_hidden": {"label": "侦查", "aliases": ["Spot Hidden"], "value": 70}
+    },
+    "resources": {"hp": {"max": 20}}
+  }
+}
